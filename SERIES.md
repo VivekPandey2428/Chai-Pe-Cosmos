@@ -135,8 +135,8 @@ ask in character only after the payoff, never at the start.
 | # | Title | Fact(s) | Characters | Files |
 |---|-------|---------|------------|-------|
 | 1 | Chai Peete Hue Challan Kat Gaya! (Challan) | Earth spin 1,670 km/h; orbit 107,000 km/h; around the Milky Way 720,000+ km/h | guy, cop | `renders/challan_9x16_1080x1920.mp4`, `renders/challan_9x16_4K_2160x3840.mp4`, `thumbs/out/ep01-*` |
-| 2 | Wazan Ka Challan (Challan #2) | Mass vs weight: 168 kg on Earth reads 28 kg on the Moon (g 1/6), 400+ kg on Jupiter (g 2.53x); mass is the same everywhere | Tapri wala, Inspector Sahab | `episodes/ep02/` (draft) |
-| 3 | Chand ki FIR (Challan #3) | The Moon recedes 3.8 cm/yr (lunar laser ranging, Apollo retroreflectors); tides; Earth's day lengthens ~2 ms per century | Tapri wala, Inspector Sahab | `episodes/ep03/` (draft) |
+| 2 | Wazan Ka Challan (Challan #2) | Mass vs weight: 168 kg on Earth reads 28 kg on the Moon (g 1/6), 400+ kg on Jupiter (g 2.53x); mass is the same everywhere | Tapri wala, Inspector Sahab | `episodes/ep02/renders/challan-2-wazan-1080.mp4`, `thumbs/out/ep02-*`, `episodes/ep02/PUBLISH.md` |
+| 3 | Chand ki FIR (Challan #3) | The Moon recedes 3.8 cm/yr (lunar laser ranging, Apollo retroreflectors); tides; Earth's day lengthens ~2 ms per century | Tapri wala, Inspector Sahab | `episodes/ep03/renders/challan-3-chand-ki-fir-1080.mp4`, `thumbs/out/ep03-*`, `episodes/ep03/PUBLISH.md` |
 
 Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad from the hoodie pocket,
 "Sab ___ mein hain" end cards, the beacon dying when the cop loses.
@@ -157,3 +157,4 @@ Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad f
   The HyperFrames SFX library is then missing too: `assets/audio/local-sfx/` has synthesised whoosh/riser/pop/impact/tick.
 - Moon and Jupiter vertex colours need to be darker than they look (the bright key light washes them out).
 - Reusing an approved take: cut the line from the take on silences and get word times from Scribe on the original take.
+- 1080p finals with `tools/render-local.cjs` take ~1 h for two ~58 s episodes rendered in parallel on 4 cores (~2 s per frame each).
