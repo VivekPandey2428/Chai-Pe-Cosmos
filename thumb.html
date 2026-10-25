@@ -1,0 +1,89 @@
+<!doctype html>
+<!--
+  Chai Pe Cosmos thumbnail template. Every episode follows the same five rules:
+    1. one giant number (or 1-2 word answer): white, extruded, rim in the episode's accent colour
+    2. the heroes big and reacting (rendered by thumb-hero.html, or any transparent PNG)
+    3. a yellow sticker hook of 2-3 Hinglish words, tilted like a stamp
+    4. the episode's colour world with a light burst behind the heroes
+    5. the brand chip (mascot face + CHAI PE COSMOS) bottom-left, away from YouTube's timestamp (bottom-right)
+  Query: ?ep=thumbs/ep01.json&format=16x9 (1280x720) or 9x16 (1080x1920)
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      @font-face { font-family: "Studio Fredoka"; font-weight: 600; src: url("assets/fonts/fredoka-latin-600-normal.woff2") format("woff2"); }
+      @font-face { font-family: "Studio Fredoka"; font-weight: 700; src: url("assets/fonts/fredoka-latin-700-normal.woff2") format("woff2"); }
+      html, body { margin: 0; overflow: hidden; }
+      #t { position: absolute; inset: 0; overflow: hidden; font-family: "Studio Fredoka", sans-serif; }
+      .layer { position: absolute; inset: 0; }
+      #hero { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+      /* 1. the number: a stroked, extruded back plate under a clean white face */
+      .num { position: absolute; font-weight: 700; line-height: 1; white-space: nowrap; letter-spacing: -0.02em; }
+      .num .back, .num .face { position: absolute; left: 0; top: 0; }
+      .num .back { color: var(--rim); -webkit-text-stroke: var(--stroke) var(--rim); }
+      .num .face { color: #fff; position: relative; }
+      .num .unit { font-size: 0.36em; margin-left: 0.12em; letter-spacing: 0; }
+      .num .plus { font-size: 0.6em; vertical-align: 0.42em; margin-left: 0.02em; }
+      /* 3. the sticker hook */
+      .hook {
+        position: absolute; background: #ffd23f; color: #1b1020; font-weight: 700; line-height: 1;
+        padding: 0.22em 0.42em 0.26em; border-radius: 0.22em; transform: rotate(-5deg); white-space: nowrap;
+        box-shadow: 0 0.12em 0 #c99a00, 0 0.3em 0.6em rgba(40, 10, 30, 0.35); border: 0.06em solid #1b1020;
+      }
+      /* the radar reticle locked on a face: a ring with four ticks outside it, nothing across the face */
+      .reticle { position: absolute; border-radius: 50%; border: 7px solid #ff2d3d; box-shadow: 0 0 0 3px rgba(255,255,255,0.9), inset 0 0 0 3px rgba(255,255,255,0.9), 0 0 30px rgba(255,45,61,0.75); }
+      .reticle i { position: absolute; background: #ff2d3d; box-shadow: 0 0 0 3px rgba(255,255,255,0.9); border-radius: 4px; }
+      .reticle i.n, .reticle i.s { left: 50%; width: 8px; height: 22%; margin-left: -4px; }
+      .reticle i.n { top: -30%; } .reticle i.s { bottom: -30%; }
+      .reticle i.w, .reticle i.e { top: 50%; height: 8px; width: 22%; margin-top: -4px; }
+      .reticle i.w { left: -30%; } .reticle i.e { right: -30%; }
+      /* 5. brand chip */
+      .chip { position: absolute; display: flex; align-items: center; gap: 0.4em; background: rgba(27, 16, 32, 0.78); color: #fff; font-weight: 700; border-radius: 999px; padding: 0.18em 0.7em 0.18em 0.18em; letter-spacing: 0.02em; }
+      .chip img { width: 2.2em; height: 2.2em; border-radius: 50%; border: 0.1em solid #ffd23f; }
+    </style>
+  </head>
+  <body>
+    <div id="t"></div>
+    <script>
+      const q = new URLSearchParams(location.search);
+      const format = q.get("format");
+      Promise.all([fetch(q.get("ep")).then((r) => r.json()), fetch(q.get("anchors")).then((r) => r.json())]).then(([ep, anchors]) => {
+        const L = ep.formats[format].layout;
+        const t = document.getElementById("t");
+        const [w0, w1] = ep.world;
+        const px = (v) => `${v}px`;
+        let html = "";
+        // 4. the episode world + a light burst behind the heroes (+ police beacon glows for this episode)
+        html += `<div class="layer" style="background: radial-gradient(120% 95% at ${L.burst[0]}% ${L.burst[1]}%, ${w0} 0%, ${w1} 78%);"></div>`;
+        html += `<div class="layer" style="background: repeating-conic-gradient(from 0deg at ${L.burst[0]}% ${L.burst[1]}%, rgba(255,255,255,0.16) 0deg 7deg, rgba(255,255,255,0) 7deg 18deg); mask-image: radial-gradient(70% 70% at ${L.burst[0]}% ${L.burst[1]}%, #000 0%, transparent 75%); -webkit-mask-image: radial-gradient(70% 70% at ${L.burst[0]}% ${L.burst[1]}%, #000 0%, transparent 75%);"></div>`;
+        if (ep.glows) for (const g of ep.glows)
+          html += `<div class="layer" style="background: radial-gradient(${g.size}% ${g.size}% at ${g.at[0]}% ${g.at[1]}%, ${g.color} 0%, transparent 70%); mix-blend-mode: screen;"></div>`;
+        // 2. the heroes
+        html += `<img id="hero" src="${q.get("hero")}" />`;
+        if (ep.reticle && anchors[ep.reticle.on]) {
+          const [x, y] = anchors[ep.reticle.on], r = L.reticle;
+          html += `<div class="reticle" style="left:${px(x - r + (L.reticleNudge || [0, 0])[0])}; top:${px(y - r + (L.reticleNudge || [0, 0])[1])}; width:${px(2 * r)}; height:${px(2 * r)};"><i class="n"></i><i class="s"></i><i class="w"></i><i class="e"></i></div>`;
+        }
+        // 1. the number
+        const n = L.number;
+        const numInner = `${ep.number}${ep.plus ? '<span class="plus">+</span>' : ""}${ep.unit ? `<span class="unit">${ep.unit}</span>` : ""}`;
+        const extrude = Array.from({ length: 9 }, (_, i) => `0 ${(i + 1) * n.size * 0.009}px 0 ${ep.accentDeep}`).join(",");
+        html += `<div class="num" style="--rim:${ep.accent}; --stroke:${n.size * 0.085}px; left:${px(n.x)}; top:${px(n.y)}; font-size:${px(n.size)}; transform: rotate(${n.rot || 0}deg); transform-origin: left center;">
+          <div class="back" style="text-shadow:${extrude}, 0 ${n.size * 0.12}px ${n.size * 0.14}px rgba(40,10,30,0.4);">${numInner}</div>
+          <div class="face">${numInner}</div></div>`;
+        // 3. the hook
+        const h = L.hook;
+        html += `<div class="hook" style="left:${px(h.x)}; top:${px(h.y)}; font-size:${px(h.size)}; transform: rotate(${h.rot ?? -5}deg);">${ep.hook}</div>`;
+        // 5. the chip
+        const c = L.chip;
+        html += `<div class="chip" style="left:${px(c.x)}; top:${px(c.y)}; font-size:${px(c.size)};"><img src="brand/avatar-800x800.png" />CHAI PE COSMOS</div>`;
+        t.innerHTML = html;
+        document.fonts.ready.then(() => {
+          const img = document.getElementById("hero");
+          (img.complete ? Promise.resolve() : new Promise((r) => (img.onload = r))).then(() => requestAnimationFrame(() => (window.__done = true)));
+        });
+      });
+    </script>
+  </body>
+</html>

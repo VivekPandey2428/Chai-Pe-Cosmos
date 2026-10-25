@@ -1,0 +1,211 @@
+<!doctype html>
+<!--
+  Challan (9:16): a cosmic traffic cop pulls over a guy sipping chai for "speeding".
+  The 3D scene is assets/challan-scene.js; this file holds the type: number labels, dialogue captions, the end card.
+  Every frame is render(t), driven by one linear GSAP clock; caption times come from the dialogue's word timings.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Challan</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 600;
+        src: url("assets/fonts/fredoka-latin-600-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 700;
+        src: url("assets/fonts/fredoka-latin-700-normal.woff2") format("woff2");
+      }
+      #root {
+        position: absolute;
+        inset: 0;
+        /* follow the viewport so the same scene renders the 720p draft and the 1080p master */
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden;
+        background: #ff6b6b;
+      }
+      #w-bg,
+      #w-police {
+        position: absolute;
+        inset: 0;
+      }
+      #w-police {
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      #w-canvas,
+      #w-lines {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #w-stage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        transform-origin: 0 0;
+        font-family: "Studio Fredoka", sans-serif;
+        color: #ffffff;
+      }
+      .w-cap {
+        position: absolute;
+        left: 90px;
+        width: 900px;
+        top: 560px;
+        text-align: center;
+        opacity: 0;
+      }
+      .w-unit {
+        display: block;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 1;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .w-label {
+        display: block;
+        margin-top: 18px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* English subtitles for the Hinglish dialogue sit at the bottom of the safe band (above 1330 px); colour tells who speaks */
+      .cc {
+        position: absolute;
+        left: 70px;
+        width: 940px;
+        top: 1236px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.1;
+        opacity: 0;
+        text-shadow:
+          0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530,
+          0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* two-line captions rise so their last line still ends above 1330 px */
+      .cc-2 {
+        top: 1160px;
+      }
+      .cc-cop {
+        color: #ffffff;
+      }
+      .cc-guy {
+        color: #ffc896;
+      }
+      #w-end {
+        position: absolute;
+        left: 60px;
+        width: 960px;
+        top: 230px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 150px;
+        line-height: 1;
+        text-transform: uppercase;
+        text-shadow: 0 10px 0 #c2410c, 0 18px 30px rgba(0, 0, 0, 0.3);
+      }
+      #w-end span {
+        display: inline-block;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="world" data-start="0" data-duration="31.3" data-width="1080" data-height="1920">
+      <div id="w-bg"></div>
+      <div id="w-police"></div>
+      <canvas id="w-canvas" width="1080" height="1920"></canvas>
+      <canvas id="w-lines" width="1080" height="1920"></canvas>
+      <div id="w-stage" data-layout-allow-overflow>
+        <div class="w-cap" id="w-cap1">
+          <span class="w-unit" id="w-unit1">km/h</span>
+          <span class="w-label" id="w-label1">Earth ka spin</span>
+        </div>
+        <div class="w-cap" id="w-cap2">
+          <span class="w-unit" id="w-unit2">km/h</span>
+          <span class="w-label" id="w-label2">Sun ka chakkar</span>
+        </div>
+        <div class="w-cap" id="w-cap3">
+          <span class="w-unit" id="w-unit3">km/h · kam se kam</span>
+          <span class="w-label" id="w-label3">Milky Way ka chakkar</span>
+        </div>
+        <div class="w-cap" id="w-cap4">
+          <span class="w-unit" id="w-unit4">km/h · same to same</span>
+          <span class="w-label" id="w-label4">Hawaldar ki speed</span>
+        </div>
+        <div class="cc cc-cop" id="w-cc1">Hey hero! Stop!</div>
+        <div class="cc cc-cop" id="w-cc2">You're speeding!</div>
+        <div class="cc cc-guy" id="w-cc3">Me?</div>
+        <div class="cc cc-guy cc-2" id="w-cc4">I'm just sitting here<br />drinking chai!</div>
+        <div class="cc cc-cop" id="w-cc6">Sitting?</div>
+        <div class="cc cc-cop" id="w-cc7">The Earth is spinning</div>
+        <div class="cc cc-cop" id="w-cc8">at 1,670 km/h!</div>
+        <div class="cc cc-cop" id="w-cc9">Around the Sun,</div>
+        <div class="cc cc-cop" id="w-cc10">107,000!</div>
+        <div class="cc cc-cop" id="w-cc11">And around the galaxy,</div>
+        <div class="cc cc-cop cc-2" id="w-cc12">at least<br />720,000!</div>
+        <div class="cc cc-cop" id="w-cc14">Wait a minute…</div>
+        <div class="cc cc-cop" id="w-cc15">me too?</div>
+        <div class="cc cc-guy" id="w-cc16">Sit down, bro,</div>
+        <div class="cc cc-guy" id="w-cc17">have some chai.</div>
+        <div id="w-end"><span id="w-end1">Sab</span> <span id="w-end2">speeding</span><br /><span id="w-end3">mein</span> <span id="w-end4">hain</span></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var root = document.getElementById("root");
+        var duration = parseFloat(root.dataset.duration) || 31.3;
+        var clock = { t: 0 };
+        var host = { duration: duration, clock: clock, render: null };
+        window.__world = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (resolve) {
+          host.ready = resolve;
+        });
+
+        // scale the 1080x1920 type stage to whatever size the root renders at (720p draft or 1080p master)
+        var stage = document.getElementById("w-stage");
+        stage.style.transform = "scale(" + (window.innerWidth || 1080) / 1080 + ")";
+
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } }, 0);
+        // number labels: unit pops as the number lands, label follows, both leave on the next whip
+        [{"cap": "#w-cap1", "unit": "#w-unit1", "label": "#w-label1", "inAt": 10.67, "outAt": 12.27}, {"cap": "#w-cap2", "unit": "#w-unit2", "label": "#w-label2", "inAt": 14.25, "outAt": 15.95}, {"cap": "#w-cap3", "unit": "#w-unit3", "label": "#w-label3", "inAt": 18.42, "outAt": 20.1}, {"cap": "#w-cap4", "unit": "#w-unit4", "label": "#w-label4", "inAt": 21.4, "outAt": 24.3}].forEach(function (c) {
+          tl.fromTo(c.cap, { opacity: 0 }, { opacity: 1, duration: 0.01 }, c.inAt - 0.01);
+          tl.fromTo(c.unit, { y: 40, scale: 0.6 }, { y: 0, scale: 1, duration: 0.32, ease: "back.out(2.2)" }, c.inAt);
+          tl.fromTo(c.label, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.8)" }, c.inAt + 0.1);
+          tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
+        });
+        // dialogue captions: pop in on the first word, cut out when the phrase ends
+        [{"id": "#w-cc1", "in": 1.25, "out": 2.9}, {"id": "#w-cc2", "in": 2.95, "out": 4.4}, {"id": "#w-cc3", "in": 5.35, "out": 6.15}, {"id": "#w-cc4", "in": 6.17, "out": 8.05}, {"id": "#w-cc6", "in": 8.08, "out": 8.88}, {"id": "#w-cc7", "in": 8.9, "out": 10.48}, {"id": "#w-cc8", "in": 10.5, "out": 12.42}, {"id": "#w-cc9", "in": 12.5, "out": 14.05}, {"id": "#w-cc10", "in": 14.08, "out": 15.9}, {"id": "#w-cc11", "in": 15.95, "out": 17.35}, {"id": "#w-cc12", "in": 17.37, "out": 20.25}, {"id": "#w-cc14", "in": 22.15, "out": 23.5}, {"id": "#w-cc15", "in": 23.53, "out": 24.45}, {"id": "#w-cc16", "in": 26.9, "out": 28.12}, {"id": "#w-cc17", "in": 28.14, "out": 29.5}].forEach(function (c) {
+          tl.fromTo(c.id, { opacity: 0, scale: 0.86, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, c.in);
+          tl.to(c.id, { opacity: 0, duration: 0.06 }, c.out - 0.06);
+        });
+        // end card: four words slam in, one per beat
+        ["#w-end1", "#w-end2", "#w-end3", "#w-end4"].forEach(function (id, i) {
+          tl.fromTo(id, { opacity: 0, scale: 1.8, y: -30 }, { opacity: 1, scale: 1, y: 0, duration: 0.24, ease: "back.out(2.4)" }, 29.05 + i * 0.16);
+        });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+
+    <script type="module" src="assets/challan-scene.js"></script>
+  </body>
+</html>

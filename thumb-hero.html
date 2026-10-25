@@ -1,0 +1,51 @@
+<!doctype html>
+<!--
+  Thumbnail hero layer: renders the film's characters at one moment, from a camera set by the episode file,
+  on a transparent background. Also reports where each character's head lands on screen (window.__anchors),
+  so the layout can aim graphics (a radar reticle, a speech burst) at faces.
+  Query: ?ep=thumbs/ep01.json&format=16x9
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html, body { margin: 0; overflow: hidden; background: transparent; }
+      #root { position: absolute; inset: 0; overflow: hidden; }
+      #w-bg, #w-police { display: none; }
+      #w-canvas, #w-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root"><div id="w-bg"></div><div id="w-police"></div><canvas id="w-canvas"></canvas><canvas id="w-lines"></canvas></div>
+    <script>
+      const q = new URLSearchParams(location.search);
+      const format = q.get("format");
+      fetch(q.get("ep")).then((r) => r.json()).then((ep) => {
+        const shot = ep.formats[format].camera;
+        const host = { duration: 31.3, clock: { t: ep.scene.t }, render: null, gunScreen: ep.scene.gunScreen || null, hideSteam: !!ep.scene.hideSteam, copShout: !!ep.scene.copShout };
+        host.cameraOverride = (cam) => {
+          cam.fov = shot.fov;
+          cam.position.set(...shot.position);
+          cam.lookAt(...shot.look);
+          cam.updateProjectionMatrix();
+          cam.updateMatrixWorld(true);
+          const V = cam.position.constructor;
+          window.__anchors = {};
+          for (const [name, p] of Object.entries(ep.scene.anchors || {})) {
+            const v = new V(...p).project(cam);
+            window.__anchors[name] = [((v.x + 1) / 2) * innerWidth, ((1 - v.y) / 2) * innerHeight];
+          }
+        };
+        host.ready = () => {
+          host.render(ep.scene.t);
+          requestAnimationFrame(() => (window.__done = true));
+        };
+        window.__world = host;
+        const s = document.createElement("script");
+        s.type = "module";
+        s.src = "assets/challan-scene.js";
+        document.body.appendChild(s);
+      });
+    </script>
+  </body>
+</html>

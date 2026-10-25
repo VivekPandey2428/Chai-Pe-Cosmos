@@ -1,0 +1,85 @@
+<!doctype html>
+<!--
+  Channel art stills rendered from the film's own scene (assets/challan-scene.js).
+  ?mode=cover (2560x1440) or ?mode=avatar (800x800); the page seeks the scene to one moment and frames its own camera.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chai Pe Cosmos: channel art</title>
+    <style>
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 600;
+        src: url("assets/fonts/fredoka-latin-600-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 700;
+        src: url("assets/fonts/fredoka-latin-700-normal.woff2") format("woff2");
+      }
+      html, body { margin: 0; overflow: hidden; background: #ff6b6b; }
+      #root { position: absolute; inset: 0; overflow: hidden; }
+      #w-bg, #w-police, #w-canvas, #w-lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+      #w-police { opacity: 0; }
+      .type { position: absolute; font-family: "Studio Fredoka", sans-serif; color: #fff; }
+      #title {
+        font-weight: 700; font-size: 168px; line-height: 0.95; letter-spacing: -0.01em;
+        text-shadow: 0 11px 0 #c2410c, 0 22px 34px rgba(80, 20, 20, 0.28);
+      }
+      #title .pe { color: #ffe1c2; }
+      #tag {
+        font-weight: 600; font-size: 52px; line-height: 1.15;
+        text-shadow: 0 0 4px #2a1530, 2px 2px 0 #2a1530, -2px 2px 0 #2a1530, 2px -2px 0 #2a1530, -2px -2px 0 #2a1530;
+      }
+      #tag b { color: #ffd23f; font-weight: 700; }
+      .ring { position: absolute; border-radius: 50%; border: 6px solid rgba(255, 255, 255, 0.55); }
+      .dot { position: absolute; border-radius: 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="w-bg"></div>
+      <div id="w-police"></div>
+      <canvas id="w-canvas"></canvas>
+      <canvas id="w-lines"></canvas>
+    </div>
+    <div id="art"></div>
+    <script>
+      const mode = new URLSearchParams(location.search).get("mode") || "cover";
+      const host = { duration: 31.3, clock: { t: 29.9 }, render: null };
+      host.ready = () => {
+        host.render(29.9); // both relaxed, kulhads in hand, the beacon in a lazy blink
+        document.fonts.ready.then(() => requestAnimationFrame(() => (window.__done = true)));
+      };
+      window.__world = host;
+      host.cameraOverride = (cam) => {
+        if (mode === "cover") {
+          // the duo sits left of centre inside YouTube's 1546x423 safe band; the title takes the right
+          cam.fov = 22;
+          cam.position.set(4.7 + 0.06 * 33, 1.6 + 0.2 * 33, 33);
+          cam.lookAt(4.7, 1.6, 0);
+        } else {
+          // avatar: the mascot's face and kulhad, centred for YouTube's circle crop
+          // from his left, so the kulhad's steam rises beside his face, not across it
+          cam.fov = 30;
+          cam.position.set(-0.62 - 0.98, 2.38 + 0.45, 4.4);
+          cam.lookAt(-0.6, 2.32, 0.25);
+        }
+        cam.updateProjectionMatrix();
+      };
+      const art = document.getElementById("art");
+      if (mode === "cover") {
+        art.innerHTML = `
+          <div class="type" id="title" style="left:1140px; top:520px;">Chai <span class="pe">Pe</span><br />Cosmos</div>
+          <div class="type" id="tag" style="left:1146px; top:858px; font-size:47px;">Science, Hinglish mein. <b>Ek chai ke saath.</b></div>
+          <div class="ring" style="left:2140px; top:140px; width:520px; height:170px; transform: rotate(-12deg);"></div>
+          <div class="dot" style="left:2330px; top:150px; width:120px; height:120px; background: radial-gradient(circle at 40% 40%, #ffd166, #fb5607);"></div>
+          <div class="dot" style="left:2600px; top:265px; width:34px; height:34px; background: radial-gradient(circle at 40% 40%, #34c759, #1e3a8a);"></div>`;
+      } else {
+        art.innerHTML = "";
+      }
+    </script>
+    <script type="module" src="assets/challan-scene.js"></script>
+  </body>
+</html>

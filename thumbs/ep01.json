@@ -1,0 +1,141 @@
+{
+  "episode": 1,
+  "title": "Chai Peete Hue Challan Kat Gaya!",
+  "number": "720,000",
+  "plus": true,
+  "unit": "KM/H",
+  "hook": "CHAI PE CHALLAN?!",
+  "accent": "#FF4D9E",
+  "accentDeep": "#A3124F",
+  "world": [
+    "#FFD6A5",
+    "#FF6B6B"
+  ],
+  "glows": [
+    {
+      "color": "rgba(255,45,61,0.55)",
+      "at": [
+        6,
+        4
+      ],
+      "size": 55
+    },
+    {
+      "color": "rgba(45,123,255,0.55)",
+      "at": [
+        96,
+        6
+      ],
+      "size": 55
+    }
+  ],
+  "reticle": {
+    "on": "guy"
+  },
+  "scene": {
+    "t": 1.683,
+    "gunScreen": "720000+",
+    "anchors": {
+      "guy": [
+        -0.75,
+        2.74,
+        0.1
+      ],
+      "cop": [
+        1.05,
+        2.72,
+        0.5
+      ]
+    },
+    "hideSteam": true,
+    "copShout": true
+  },
+  "formats": {
+    "16x9": {
+      "size": [
+        1280,
+        720
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          -0.85,
+          3.5,
+          6.6
+        ],
+        "look": [
+          -0.85,
+          2.9,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          64,
+          58
+        ],
+        "number": {
+          "x": 40,
+          "y": 18,
+          "size": 168,
+          "rot": -2
+        },
+        "hook": {
+          "x": 40,
+          "y": 236,
+          "size": 56,
+          "rot": -7
+        },
+        "reticle": 118,
+        "chip": {
+          "x": 26,
+          "y": 646,
+          "size": 24
+        }
+      }
+    },
+    "9x16": {
+      "size": [
+        1080,
+        1920
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          0.12,
+          3.75,
+          11.6
+        ],
+        "look": [
+          0.12,
+          2.75,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          50,
+          52
+        ],
+        "number": {
+          "x": 70,
+          "y": 230,
+          "size": 196,
+          "rot": -3
+        },
+        "hook": {
+          "x": 150,
+          "y": 520,
+          "size": 72,
+          "rot": -5
+        },
+        "reticle": 128,
+        "chip": {
+          "x": 60,
+          "y": 1600,
+          "size": 40
+        }
+      }
+    }
+  }
+}

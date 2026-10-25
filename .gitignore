@@ -1,0 +1,11 @@
+# rebuildable
+node_modules/
+.hyperframes/
+__pycache__/
+*.pyc
+# too big for GitHub (100 MB per file); the 4K master is re-rendered with:
+#   npx hyperframes render -o renders/final4k-raw.mp4 -f 30 -q delivery --resolution portrait-4k
+renders/*4K*.mp4
+renders/*-raw.mp4
+# intermediate audio, rebuilt by tools/build-dialogue.py
+assets/audio/*-norm.wav
