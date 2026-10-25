@@ -9,3 +9,7 @@ renders/*4K*.mp4
 renders/*-raw.mp4
 # intermediate audio, rebuilt by tools/build-dialogue.py
 assets/audio/*-norm.wav
+
+# in-progress renders (silent picture before mastering) and their logs
+episodes/*/renders/silent-*.mp4
+episodes/*/renders/*.log
