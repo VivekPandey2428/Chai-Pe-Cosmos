@@ -23,7 +23,8 @@ All are designer-vinyl toys: chibi proportions (head about one third of the heig
 (no glossy plastic, no blush stickers), lit by the same studio key light + cool rim light as the planets.
 Models live in `assets/challan-scene.js` (`makeGuy`, `makeCop`, `makeFace`, `makeKulhad`, `makeDuo`).
 
-### The guy (the mascot): unnamed so far
+### Tapri wala (the guy, the mascot)
+- **Name on screen and in scripts: "Tapri wala"** (chosen for Challan #2 onward; same model as Episode 1).
 - Relaxed young Indian guy. Warm skin `#E8A87C`, short dark-brown hair `#3B2416` with a front **quiff**.
 - Dark oval eyes with a small white glint, eyebrows, small smile. Resting face: relaxed half-closed eyes.
 - Orange hoodie `#FF8A3D` (deep `#EE7428`, white drawstrings, kangaroo pocket), navy joggers `#1E3A8A`,
@@ -36,7 +37,8 @@ Models live in `assets/challan-scene.js` (`makeGuy`, `makeCop`, `makeFace`, `mak
 - Acting range built so far: blissful sip (eyes closed), startle (eyes wide + "o" mouth), confused (tilted brows),
   smug (one raised brow, smirk), laugh, offering a second kulhad from his hoodie pocket.
 
-### The cop: Hawaldar sahab
+### Inspector Sahab (the cop)
+- **Name on screen and in scripts: "Inspector Sahab"** (renamed from Hawaldar sahab for Challan #2 onward; same model as Episode 1).
 - Chubby Indian traffic policeman: khaki shirt `#C9A66B`, trousers `#9C7A45`, **pot belly**, brown belt with gold
   buckle, gold badge, epaulettes, black shoes. Skin `#C98B5E`.
 - **Big curled black moustache**, thick brows, bigger nose.
@@ -113,7 +115,15 @@ ask in character only after the payoff, never at the start.
   ("Aapka wazan Jupiter pe kitna hoga? Comment karo!"). Also put it in the pinned comment.
 - **Teaser of the next episode** in the last beat ("Agla challan: Chand ki FIR…").
 - **Loop-friendly ending** when the story allows: the last frame flows into the first.
-- **Series name:** "Hawaldar Sahab ke Challan": playlist + a small "Challan #N" tag on the thumbnail.
+- **Series name:** "Inspector Sahab ke Challan": playlist + a small "Challan #N" tag on the thumbnail.
+- **Subscribe-gag line bank** (rotate; log where each was used):
+  | Inspector Sahab | Tapri wala | Used in |
+  |---|---|---|
+  | Aur aap? Subscribe nahi kiya? Challan katega! | Chai pe milte hain! | (the playbook example) |
+  | Aur aap? Bina subscribe ke scroll? Seedha challan! | Chai thandi ho rahi hai, jaldi karo! | Challan #2 |
+  | Subscribe button dabaya? Nahi? Gravity se zyada bhaari challan! | Ek cutting aur, phir milte hain! | Challan #3 |
+  | Like nahi kiya? Like ka bhi challan banta hai! | Kulhad uthao, cosmos dekho! | |
+  | Bina subscribe ke yahan se jaana mana hai! | Agli chai, agla challan! | |
 - **Schedule:** 2–3 Shorts a week, same time (evenings, 7–9 pm IST).
 - **Upload checklist:** pinned comment with a playful question; reply to and heart comments in the first hour;
   "Related video" link to the previous episode; subscribe watermark (avatar) set in YouTube Studio → Branding;
@@ -125,6 +135,8 @@ ask in character only after the payoff, never at the start.
 | # | Title | Fact(s) | Characters | Files |
 |---|-------|---------|------------|-------|
 | 1 | Chai Peete Hue Challan Kat Gaya! (Challan) | Earth spin 1,670 km/h; orbit 107,000 km/h; around the Milky Way 720,000+ km/h | guy, cop | `renders/challan_9x16_1080x1920.mp4`, `renders/challan_9x16_4K_2160x3840.mp4`, `thumbs/out/ep01-*` |
+| 2 | Wazan Ka Challan (Challan #2) | Mass vs weight: 168 kg on Earth reads 28 kg on the Moon (g 1/6), 400+ kg on Jupiter (g 2.53x); mass is the same everywhere | Tapri wala, Inspector Sahab | `episodes/ep02/` (draft) |
+| 3 | Chand ki FIR (Challan #3) | The Moon recedes 3.8 cm/yr (lunar laser ranging, Apollo retroreflectors); tides; Earth's day lengthens ~2 ms per century | Tapri wala, Inspector Sahab | `episodes/ep03/` (draft) |
 
 Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad from the hoodie pocket,
 "Sab ___ mein hain" end cards, the beacon dying when the cop loses.
@@ -135,3 +147,13 @@ Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad f
 - Raised land faces on the low-poly Earth leave cracks; colour faces only, never lift them.
 - Short captions (<1 s) fail the reading check: merge them into two-line captions.
 - Thumbnail at 168 px wide is the real test: one number, one sticker, big faces.
+- Episodes 2+ live in `episodes/epNN/` with their own copy of the scene: `patch-scene.py` turns Episode 1's
+  `assets/challan-scene.js` into the episode by swapping only the timing, acting, worlds, camera and render blocks.
+  Story text (captions, number labels, callouts, end card) is in `story.json`, built by `tools/build-world.py`.
+- Dialogue: `dialogue.json` (line order + gaps) and `audio/words.json` (Scribe word times) -> `tools/build-dialogue-ep.py`.
+  Sound: `sfx.json` -> `tools/build-sfx-ep.py`. Master: `tools/master-ep.sh`.
+- When the HyperFrames CLI cannot be installed, `tools/render-local.cjs` renders the same composition with the
+  preinstalled Chromium (seeks `__timelines.world`, pipes PNG frames to ffmpeg): ~0.7 s per 720p frame.
+  The HyperFrames SFX library is then missing too: `assets/audio/local-sfx/` has synthesised whoosh/riser/pop/impact/tick.
+- Moon and Jupiter vertex colours need to be darker than they look (the bright key light washes them out).
+- Reusing an approved take: cut the line from the take on silences and get word times from Scribe on the original take.

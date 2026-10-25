@@ -1,0 +1,262 @@
+<!doctype html>
+<!--
+  Wazan Ka Challan (9:16). Challan #2: Inspector Sahab tickets the Tapri wala for 168 kilos on a chair; the Moon and Jupiter prove weight is gravity's game and mass stays the same.
+  Built on Episode 1, Challan (9:16): a cosmic traffic cop pulls over a guy sipping chai for "speeding".
+  The 3D scene is assets/challan-scene.js; this file holds the type: number labels, dialogue captions, the end card.
+  Every frame is render(t), driven by one linear GSAP clock; caption times come from the dialogue's word timings.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Wazan Ka Challan</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 600;
+        src: url("assets/fonts/fredoka-latin-600-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 700;
+        src: url("assets/fonts/fredoka-latin-700-normal.woff2") format("woff2");
+      }
+      #root {
+        position: absolute;
+        inset: 0;
+        /* follow the viewport so the same scene renders the 720p draft and the 1080p master */
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden;
+        background: #ff6b6b;
+      }
+      #w-bg,
+      #w-police {
+        position: absolute;
+        inset: 0;
+      }
+      #w-police {
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      #w-canvas,
+      #w-lines {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #w-stage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        transform-origin: 0 0;
+        font-family: "Studio Fredoka", sans-serif;
+        color: #ffffff;
+      }
+      .w-cap {
+        position: absolute;
+        left: 90px;
+        width: 900px;
+        top: 560px;
+        text-align: center;
+        opacity: 0;
+      }
+      .w-unit {
+        display: block;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 1;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .w-label {
+        display: block;
+        margin-top: 18px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* English subtitles for the Hinglish dialogue sit at the bottom of the safe band (above 1330 px); colour tells who speaks */
+      .cc {
+        position: absolute;
+        left: 70px;
+        width: 940px;
+        top: 1236px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.1;
+        opacity: 0;
+        text-shadow:
+          0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530,
+          0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* two-line captions rise so their last line still ends above 1330 px */
+      .cc-2 {
+        top: 1160px;
+      }
+      .cc-cop {
+        color: #ffffff;
+      }
+      .cc-guy {
+        color: #ffc896;
+      }
+      #w-end {
+        position: absolute;
+        left: 60px;
+        width: 960px;
+        top: 230px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 132px;
+        line-height: 1.02;
+        text-transform: uppercase;
+        text-shadow: 0 10px 0 #c2410c, 0 18px 30px rgba(0, 0, 0, 0.3);
+      }
+      #w-end span {
+        display: inline-block;
+        opacity: 0;
+      }
+      /* text-only callouts (no 3D number): a big word with an optional line under it */
+      .w-tag {
+        position: absolute;
+        left: 60px;
+        width: 960px;
+        text-align: center;
+        opacity: 0;
+        color: #ffffff;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .w-tag-main {
+        display: block;
+        font-weight: 700;
+        font-size: 84px;
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+      .w-tag-sub {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 54px;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="world" data-start="0" data-duration="57.13" data-width="1080" data-height="1920">
+      <div id="w-bg"></div>
+      <div id="w-police"></div>
+      <canvas id="w-canvas" width="1080" height="1920"></canvas>
+      <canvas id="w-lines" width="1080" height="1920"></canvas>
+      <div id="w-stage" data-layout-allow-overflow>
+        <div class="w-cap" id="w-cap1">
+          <span class="w-unit" id="w-unit1">kg</span>
+          <span class="w-label" id="w-label1">Kursi pe</span>
+        </div>
+        <div class="w-cap" id="w-cap2">
+          <span class="w-unit" id="w-unit2">kg · Chand pe</span>
+          <span class="w-label" id="w-label2">Gravity sirf 1/6</span>
+        </div>
+        <div class="w-cap" id="w-cap3">
+          <span class="w-unit" id="w-unit3">kg · Jupiter pe</span>
+          <span class="w-label" id="w-label3">Gravity 2.5x se zyada</span>
+        </div>
+        <div class="w-cap" id="w-cap4">
+          <span class="w-unit" id="w-unit4">kg · mass</span>
+          <span class="w-label" id="w-label4">Har jagah same</span>
+        </div>
+        <div class="w-tag" id="w-tag1" style="top: 330px;"><span class="w-tag-main">Mass = maal</span><span class="w-tag-sub">andar kitna maal hai</span></div>
+        <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Weight = force</span><span class="w-tag-sub">gravity ka kheench</span></div>
+        <div class="w-tag" id="w-tag3" style="top: 330px;"><span class="w-tag-main">Gravity 1/6</span><span class="w-tag-sub">Chand pe</span></div>
+        <div class="w-tag" id="w-tag4" style="top: 330px;"><span class="w-tag-main">Gravity 2.5x+</span><span class="w-tag-sub">Jupiter pe</span></div>
+        <div class="w-tag" id="w-tag5" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Jupiter pe aapka wazan?</span><span class="w-tag-sub">Comment karo!</span></div>
+        <div class="w-tag" id="w-tag6" style="top: 300px;"><span class="w-tag-main">Subscribe karo</span><span class="w-tag-sub">warna seedha challan!</span></div>
+        <div class="w-tag" id="w-tag7" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Agla challan:</span><span class="w-tag-sub">Chand ki FIR</span></div>
+        <div class="cc cc-cop" id="w-cc1">Stop!</div>
+        <div class="cc cc-cop cc-2" id="w-cc2">168 kilos<br />on a chair?</div>
+        <div class="cc cc-cop cc-2" id="w-cc3">That&#x27;s a<br />weight ticket!</div>
+        <div class="cc cc-guy" id="w-cc4">Wrong ticket, sir.</div>
+        <div class="cc cc-guy" id="w-cc5">Kilos are my mass:</div>
+        <div class="cc cc-guy cc-2" id="w-cc6">how much stuff<br />I&#x27;m made of.</div>
+        <div class="cc cc-guy" id="w-cc7">Weight is a force:</div>
+        <div class="cc cc-guy cc-2" id="w-cc8">how hard<br />gravity pulls.</div>
+        <div class="cc cc-cop" id="w-cc9">Meaning?</div>
+        <div class="cc cc-guy cc-2" id="w-cc10">On the Moon, gravity<br />is just a sixth.</div>
+        <div class="cc cc-guy cc-2" id="w-cc11">The same machine<br />would show only</div>
+        <div class="cc cc-guy" id="w-cc12">28 kilos!</div>
+        <div class="cc cc-cop" id="w-cc13">And on Jupiter?</div>
+        <div class="cc cc-guy" id="w-cc14">More than 2.5 times.</div>
+        <div class="cc cc-guy" id="w-cc15">Over 400 kilos!</div>
+        <div class="cc cc-cop cc-2" id="w-cc16">Then it&#x27;s<br />straight to jail!</div>
+        <div class="cc cc-guy cc-2" id="w-cc17">But my mass is 168<br />everywhere, sir.</div>
+        <div class="cc cc-guy cc-2" id="w-cc18">Change the planet,<br />same stuff.</div>
+        <div class="cc cc-cop cc-2" id="w-cc19">What would you<br />weigh on Jupiter?</div>
+        <div class="cc cc-cop" id="w-cc20">Comment!</div>
+        <div class="cc cc-cop" id="w-cc21">And you?</div>
+        <div class="cc cc-cop cc-2" id="w-cc22">Scrolling without<br />subscribing?</div>
+        <div class="cc cc-cop cc-2" id="w-cc23">Straight to<br />a ticket!</div>
+        <div class="cc cc-guy cc-2" id="w-cc24">The chai&#x27;s getting<br />cold, hurry up!</div>
+        <div class="cc cc-cop" id="w-cc25">Next ticket...</div>
+        <div class="cc cc-cop cc-2" id="w-cc26">an FIR against<br />the Moon...</div>
+        <div class="cc cc-guy" id="w-cc27">Well sir, I&#x27;m off...</div>
+        <div id="w-end"><span id="w-end1">Wazan</span><br /><span id="w-end2">gravity</span> <span id="w-end3">ka,</span><br /><span id="w-end4">maal</span> <span id="w-end5">apna</span></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var root = document.getElementById("root");
+        var duration = parseFloat(root.dataset.duration) || 57.13;
+        var clock = { t: 0 };
+        var host = { duration: duration, clock: clock, render: null };
+        window.__world = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (resolve) {
+          host.ready = resolve;
+        });
+
+        // scale the 1080x1920 type stage to whatever size the root renders at (720p draft or 1080p master)
+        var stage = document.getElementById("w-stage");
+        stage.style.transform = "scale(" + (window.innerWidth || 1080) / 1080 + ")";
+
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } }, 0);
+        // number labels: unit pops as the number lands, label follows, both leave on the next whip
+        [{"cap": "#w-cap1", "unit": "#w-unit1", "label": "#w-label1", "inAt": 2.78, "outAt": 5.95}, {"cap": "#w-cap2", "unit": "#w-unit2", "label": "#w-label2", "inAt": 22.01, "outAt": 23.4}, {"cap": "#w-cap3", "unit": "#w-unit3", "label": "#w-label3", "inAt": 27.01, "outAt": 29.05}, {"cap": "#w-cap4", "unit": "#w-unit4", "label": "#w-label4", "inAt": 33.03, "outAt": 36.6}].forEach(function (c) {
+          tl.fromTo(c.cap, { opacity: 0 }, { opacity: 1, duration: 0.01 }, c.inAt - 0.01);
+          tl.fromTo(c.unit, { y: 40, scale: 0.6 }, { y: 0, scale: 1, duration: 0.32, ease: "back.out(2.2)" }, c.inAt);
+          tl.fromTo(c.label, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.8)" }, c.inAt + 0.1);
+          tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
+        });
+        // text callouts: slam in like the number labels, leave fast
+        [{"id": "#w-tag1", "in": 9.78, "out": 12.85}, {"id": "#w-tag2", "in": 12.9, "out": 16.7}, {"id": "#w-tag3", "in": 19.17, "out": 21.6}, {"id": "#w-tag4", "in": 25.09, "out": 26.62}, {"id": "#w-tag5", "in": 40.67, "out": 43.8}, {"id": "#w-tag6", "in": 44.03, "out": 47.75}, {"id": "#w-tag7", "in": 50.64, "out": 54.5}].forEach(function (c) {
+          tl.fromTo(c.id, { opacity: 0, scale: 1.5, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.22, ease: "back.out(2.2)" }, c.in);
+          tl.to(c.id, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.out - 0.14);
+        });
+        // dialogue captions: pop in on the first word, cut out when the phrase ends
+        [{"id": "#w-cc1", "in": 1.0, "out": 1.95}, {"id": "#w-cc2", "in": 1.98, "out": 4.55}, {"id": "#w-cc3", "in": 4.62, "out": 5.95}, {"id": "#w-cc4", "in": 6.25, "out": 8.2}, {"id": "#w-cc5", "in": 8.22, "out": 10.52}, {"id": "#w-cc6", "in": 10.58, "out": 12.85}, {"id": "#w-cc7", "in": 12.9, "out": 14.22}, {"id": "#w-cc8", "in": 14.26, "out": 16.7}, {"id": "#w-cc9", "in": 16.91, "out": 17.6}, {"id": "#w-cc10", "in": 17.73, "out": 20.32}, {"id": "#w-cc11", "in": 20.37, "out": 21.97}, {"id": "#w-cc12", "in": 22.0, "out": 23.2}, {"id": "#w-cc13", "in": 23.52, "out": 24.8}, {"id": "#w-cc14", "in": 25.09, "out": 26.97}, {"id": "#w-cc15", "in": 27.01, "out": 28.97}, {"id": "#w-cc16", "in": 29.33, "out": 31.1}, {"id": "#w-cc17", "in": 31.35, "out": 34.88}, {"id": "#w-cc18", "in": 35.03, "out": 37.3}, {"id": "#w-cc19", "in": 40.67, "out": 42.92}, {"id": "#w-cc20", "in": 42.97, "out": 43.75}, {"id": "#w-cc21", "in": 44.03, "out": 44.9}, {"id": "#w-cc22", "in": 44.91, "out": 46.68}, {"id": "#w-cc23", "in": 46.91, "out": 47.72}, {"id": "#w-cc24", "in": 47.97, "out": 50.33}, {"id": "#w-cc25", "in": 50.64, "out": 52.1}, {"id": "#w-cc26", "in": 52.3, "out": 54.5}, {"id": "#w-cc27", "in": 54.76, "out": 56.6}].forEach(function (c) {
+          tl.fromTo(c.id, { opacity: 0, scale: 0.86, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, c.in);
+          tl.to(c.id, { opacity: 0, duration: 0.06 }, c.out - 0.06);
+        });
+        // end card: words slam in, one per beat, and clear before the sign-off
+        ["#w-end1", "#w-end2", "#w-end3", "#w-end4", "#w-end5"].forEach(function (id, i) {
+          tl.fromTo(id, { opacity: 0, scale: 1.8, y: -30 }, { opacity: 1, scale: 1, y: 0, duration: 0.24, ease: "back.out(2.4)" }, 38.75 + i * 0.16);
+          tl.to(id, { opacity: 0, duration: 0.12 }, 40.5 - 0.12);
+        });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+
+    <script type="module" src="assets/challan-scene.js"></script>
+  </body>
+</html>

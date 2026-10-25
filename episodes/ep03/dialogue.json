@@ -1,0 +1,62 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "gap": 0.9
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "gap": 0.3
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "gap": 0.25
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "gap": 0.3
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "gap": 0.3
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "gap": 0.3
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "gap": 0.35
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "gap": 0.3
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "gap": 2.9
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "gap": 0.3
+ },
+ {
+  "id": "c6",
+  "speaker": "cop",
+  "gap": 0.3
+ },
+ {
+  "id": "g6",
+  "speaker": "guy",
+  "gap": 0.3
+ }
+]
