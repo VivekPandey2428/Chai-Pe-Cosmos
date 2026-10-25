@@ -1,0 +1,144 @@
+{
+  "episode": 2,
+  "title": "Wazan Ka Challan",
+  "number": "28",
+  "plus": false,
+  "unit": "KG",
+  "hook": "CHAND PE DIET!",
+  "accent": "#4CC9F0",
+  "accentDeep": "#1B6F8A",
+  "world": [
+    "#FFD6A5",
+    "#FF6B6B"
+  ],
+  "glows": [
+    {
+      "color": "rgba(255,45,61,0.55)",
+      "at": [
+        6,
+        4
+      ],
+      "size": 55
+    },
+    {
+      "color": "rgba(45,123,255,0.55)",
+      "at": [
+        96,
+        6
+      ],
+      "size": 55
+    }
+  ],
+  "reticle": {
+    "on": "guy"
+  },
+  "scene": {
+    "t": 1.3,
+    "gunScreen": "168 KG",
+    "anchors": {
+      "guy": [
+        -0.75,
+        2.74,
+        0.1
+      ],
+      "cop": [
+        1.05,
+        2.72,
+        0.5
+      ]
+    },
+    "hideSteam": true,
+    "copShout": true,
+    "src": "episodes/ep02/assets/challan-scene.js",
+    "duration": 57.13
+  },
+  "formats": {
+    "16x9": {
+      "size": [
+        1280,
+        720
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          -0.85,
+          3.5,
+          6.6
+        ],
+        "look": [
+          -0.85,
+          2.9,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          64,
+          58
+        ],
+        "number": {
+          "x": 40,
+          "y": 18,
+          "size": 168,
+          "rot": -2
+        },
+        "hook": {
+          "x": 40,
+          "y": 236,
+          "size": 56,
+          "rot": -7
+        },
+        "reticle": 118,
+        "chip": {
+          "x": 26,
+          "y": 646,
+          "size": 24
+        }
+      }
+    },
+    "9x16": {
+      "size": [
+        1080,
+        1920
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          0.12,
+          3.75,
+          11.6
+        ],
+        "look": [
+          0.12,
+          2.75,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          50,
+          52
+        ],
+        "number": {
+          "x": 70,
+          "y": 250,
+          "size": 330,
+          "rot": -3
+        },
+        "hook": {
+          "x": 150,
+          "y": 600,
+          "size": 72,
+          "rot": -5
+        },
+        "reticle": 128,
+        "chip": {
+          "x": 60,
+          "y": 1600,
+          "size": 40
+        }
+      }
+    }
+  },
+  "seriesTag": "CHALLAN #2"
+}

@@ -41,6 +41,8 @@
       /* 5. brand chip */
       .chip { position: absolute; display: flex; align-items: center; gap: 0.4em; background: rgba(27, 16, 32, 0.78); color: #fff; font-weight: 700; border-radius: 999px; padding: 0.18em 0.7em 0.18em 0.18em; letter-spacing: 0.02em; }
       .chip img { width: 2.2em; height: 2.2em; border-radius: 50%; border: 0.1em solid #ffd23f; }
+      /* series tag ("Challan #N"), from the growth playbook: a small red pill above the chip */
+      .tag { position: absolute; background: #e63946; color: #fff; font-weight: 700; border-radius: 999px; padding: 0.2em 0.7em 0.24em; letter-spacing: 0.04em; border: 0.08em solid #1b1020; box-shadow: 0 0.1em 0 #8f1d27; }
     </style>
   </head>
   <body>
@@ -78,6 +80,10 @@
         // 5. the chip
         const c = L.chip;
         html += `<div class="chip" style="left:${px(c.x)}; top:${px(c.y)}; font-size:${px(c.size)};"><img src="brand/avatar-800x800.png" />CHAI PE COSMOS</div>`;
+        if (ep.seriesTag) {
+          const g = L.tag || { x: c.x, y: c.y - c.size * 2.3, size: c.size };
+          html += `<div class="tag" style="left:${px(g.x)}; top:${px(g.y)}; font-size:${px(g.size)};">${ep.seriesTag}</div>`;
+        }
         t.innerHTML = html;
         document.fonts.ready.then(() => {
           const img = document.getElementById("hero");

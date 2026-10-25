@@ -1,0 +1,141 @@
+{
+  "episode": 3,
+  "title": "Chand ki FIR",
+  "number": "3.8",
+  "plus": false,
+  "unit": "CM/SAAL",
+  "hook": "CHAND FARAAR!",
+  "accent": "#FFD23F",
+  "accentDeep": "#9A6B00",
+  "world": [
+    "#4B3A8C",
+    "#140C33"
+  ],
+  "glows": [
+    {
+      "color": "rgba(255,45,61,0.55)",
+      "at": [
+        6,
+        4
+      ],
+      "size": 55
+    },
+    {
+      "color": "rgba(45,123,255,0.55)",
+      "at": [
+        96,
+        6
+      ],
+      "size": 55
+    }
+  ],
+  "scene": {
+    "t": 1.25,
+    "gunScreen": "FARAAR!",
+    "anchors": {
+      "guy": [
+        -0.75,
+        2.74,
+        0.1
+      ],
+      "cop": [
+        1.05,
+        2.72,
+        0.5
+      ]
+    },
+    "hideSteam": true,
+    "copShout": true,
+    "src": "episodes/ep03/assets/challan-scene.js",
+    "duration": 59.09
+  },
+  "formats": {
+    "16x9": {
+      "size": [
+        1280,
+        720
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          -0.85,
+          3.5,
+          6.6
+        ],
+        "look": [
+          -0.85,
+          2.9,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          64,
+          58
+        ],
+        "number": {
+          "x": 40,
+          "y": 18,
+          "size": 168,
+          "rot": -2
+        },
+        "hook": {
+          "x": 40,
+          "y": 236,
+          "size": 56,
+          "rot": -7
+        },
+        "reticle": 118,
+        "chip": {
+          "x": 26,
+          "y": 646,
+          "size": 24
+        }
+      }
+    },
+    "9x16": {
+      "size": [
+        1080,
+        1920
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          0.12,
+          3.75,
+          11.6
+        ],
+        "look": [
+          0.12,
+          2.75,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          50,
+          52
+        ],
+        "number": {
+          "x": 70,
+          "y": 250,
+          "size": 250,
+          "rot": -3
+        },
+        "hook": {
+          "x": 150,
+          "y": 560,
+          "size": 72,
+          "rot": -5
+        },
+        "reticle": 128,
+        "chip": {
+          "x": 60,
+          "y": 1600,
+          "size": 40
+        }
+      }
+    }
+  },
+  "seriesTag": "CHALLAN #3"
+}

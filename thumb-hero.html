@@ -3,7 +3,7 @@
   Thumbnail hero layer: renders the film's characters at one moment, from a camera set by the episode file,
   on a transparent background. Also reports where each character's head lands on screen (window.__anchors),
   so the layout can aim graphics (a radar reticle, a speech burst) at faces.
-  Query: ?ep=thumbs/ep01.json&format=16x9
+  Query: ?ep=thumbs/ep01.json&format=16x9 (an episode file may set scene.src and scene.duration for its own scene)
 -->
 <html lang="en">
   <head>
@@ -22,7 +22,7 @@
       const format = q.get("format");
       fetch(q.get("ep")).then((r) => r.json()).then((ep) => {
         const shot = ep.formats[format].camera;
-        const host = { duration: 31.3, clock: { t: ep.scene.t }, render: null, gunScreen: ep.scene.gunScreen || null, hideSteam: !!ep.scene.hideSteam, copShout: !!ep.scene.copShout };
+        const host = { duration: ep.scene.duration || 31.3, clock: { t: ep.scene.t }, render: null, gunScreen: ep.scene.gunScreen || null, hideSteam: !!ep.scene.hideSteam, copShout: !!ep.scene.copShout };
         host.cameraOverride = (cam) => {
           cam.fov = shot.fov;
           cam.position.set(...shot.position);
@@ -43,7 +43,7 @@
         window.__world = host;
         const s = document.createElement("script");
         s.type = "module";
-        s.src = "assets/challan-scene.js";
+        s.src = ep.scene.src || "assets/challan-scene.js"; // episodes 2+ point at their own scene (episodes/epNN/assets/challan-scene.js)
         document.body.appendChild(s);
       });
     </script>
