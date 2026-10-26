@@ -158,3 +158,7 @@ Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad f
 - Moon and Jupiter vertex colours need to be darker than they look (the bright key light washes them out).
 - Reusing an approved take: cut the line from the take on silences and get word times from Scribe on the original take.
 - 1080p finals with `tools/render-local.cjs` take ~1 h for two ~58 s episodes rendered in parallel on 4 cores (~2 s per frame each).
+- Headless Chromium keeps a 2D canvas's last frame when the only change is `clearRect`: faint speed lines linger after each whip in
+  frame-by-frame renders. Hide the lines canvas between whips (`lines.style.visibility`), as the episode patches do.
+- Hook: Episode 1 kept 32% of Shorts-feed viewers (68% swiped). From Challan #2 the first frame is the cop mid-line with big hook text
+  ("168 KG KA CHALLAN?!") and no quiet lead-in; the whistle sits under the first line.

@@ -528,6 +528,9 @@ function render(t) {
 
 """)
 
+# headless Chromium keeps a 2D canvas's last frame when the only change is clearRect: hide the speed lines between whips
+src = src.replace("  lctx.clearRect(0, 0, LW, LH);\n  if (whip.level < 0.02) return;",
+                  "  lctx.clearRect(0, 0, LW, LH);\n  lines.style.visibility = whip.level < 0.02 ? \"hidden\" : \"visible\";\n  if (whip.level < 0.02) return;")
 src = src.replace('for (const ch of "0123456789,+")', 'for (const ch of "0123456789,+.")')
 src = src.replace("const fmt = (v) => Math.round(v).toLocaleString(\"en-US\");",
                   "const fmt = (v, dec = 0) => (dec ? v.toFixed(dec) : Math.round(v).toLocaleString(\"en-US\"));")

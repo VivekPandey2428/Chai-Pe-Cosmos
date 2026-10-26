@@ -1330,6 +1330,7 @@ const rndL = mulberry32(99);
 const LINES = Array.from({ length: 110 }, () => ({ a: rndL() * TAU, ph: rndL(), sp: 0.8 + rndL() * 1.2, w: 1 + rndL() * 3 }));
 function drawLines(t, whip) {
   lctx.clearRect(0, 0, LW, LH);
+  lines.style.visibility = whip.level < 0.02 ? "hidden" : "visible";
   if (whip.level < 0.02) return;
   const cx = LW / 2, cy = LH / 2, R = Math.hypot(cx, cy);
   lctx.lineCap = "round";
