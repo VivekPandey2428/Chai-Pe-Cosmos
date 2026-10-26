@@ -27,7 +27,7 @@ for i, c in enumerate(S["caps"], 1):
 tags_html, tags_js = [], []
 for i, t in enumerate(S.get("tags", []), 1):
     sub = f'<span class="w-tag-sub">{html.escape(t["sub"])}</span>' if t.get("sub") else ""
-    style = f'top: {t["top"]}px;' + (f' color: {t["color"]};' if t.get("color") else "")
+    style = f'top: {t["top"]}px;' + (f' color: {t["color"]};' if t.get("color") else "") + (f' font-size: {t["size"]}px;' if t.get("size") else "")
     tags_html.append(f'        <div class="w-tag" id="w-tag{i}" style="{style}"><span class="w-tag-main">{html.escape(t["text"])}</span>{sub}</div>')
     tags_js.append({"id": f"#w-tag{i}", "in": t["in"], "out": t["out"]})
 cc_html, cc_js = [], []
@@ -53,6 +53,7 @@ head = head.replace("<!--\n  Challan (9:16)", f"<!--\n  {S['title']} (9:16). {S.
 extra_css = """      /* text-only callouts (no 3D number): a big word with an optional line under it */
       .w-tag {
         position: absolute;
+        font-size: 84px;
         left: 60px;
         width: 960px;
         text-align: center;
@@ -63,7 +64,7 @@ extra_css = """      /* text-only callouts (no 3D number): a big word with an op
       .w-tag-main {
         display: block;
         font-weight: 700;
-        font-size: 84px;
+        font-size: 1em;
         line-height: 1.05;
         text-transform: uppercase;
       }
@@ -71,7 +72,7 @@ extra_css = """      /* text-only callouts (no 3D number): a big word with an op
         display: block;
         margin-top: 12px;
         font-weight: 600;
-        font-size: 54px;
+        font-size: 0.64em;
         line-height: 1.1;
         text-transform: uppercase;
       }

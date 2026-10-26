@@ -3,49 +3,281 @@
  "duration": 59.09,
  "scene_note": "Challan #3: Inspector Sahab files an FIR against the Moon for running away; the Tapri wala explains lunar laser ranging and tides.",
  "caps": [
-  {"unit": "cm · har saal", "label": "Chand door ja raha hai", "in": 11.06, "out": 13.1},
-  {"unit": "ms · lagbhag", "label": "100 saal mein din lamba", "in": 37.35, "out": 38.85}
+  {
+   "unit": "cm · har saal",
+   "label": "Chand door ja raha hai",
+   "in": 11.06,
+   "out": 13.1
+  },
+  {
+   "unit": "ms · lagbhag",
+   "label": "100 saal mein din lamba",
+   "in": 37.35,
+   "out": 38.85
+  }
  ],
  "tags": [
-  {"top": 330, "text": "Apollo mirror", "sub": "chand pe chhoda hua", "in": 15.68, "out": 16.95},
-  {"top": 330, "text": "Laser → mirror → wapas", "sub": "time naapo = distance", "in": 16.96, "out": 21.15},
-  {"top": 330, "text": "Tides", "sub": "= jwaar-bhaata", "in": 23.26, "out": 25.62},
-  {"top": 330, "text": "Samandar ka kheench", "sub": "chand ko aage khichta hai", "in": 25.66, "out": 28.58},
-  {"top": 330, "text": "Orbit badi", "sub": "chand aur door", "in": 28.62, "out": 31.03},
-  {"top": 330, "text": "Dharti ka din", "sub": "dheere dheere lamba", "in": 31.06, "out": 33.78},
-  {"top": 300, "text": "100 saal mein chand kitna door?", "sub": "Comment karo!", "in": 41.73, "out": 44.85, "color": "#FFD23F"},
-  {"top": 300, "text": "Subscribe karo", "sub": "warna bhaari challan!", "in": 45.25, "out": 49.6},
-  {"top": 300, "text": "Agla challan:", "sub": "Suraj ka bijli ka bill", "in": 52.17, "out": 55.35, "color": "#FFD23F"}
+  {
+   "hook": true,
+   "top": 130,
+   "text": "Chand pe FIR?!",
+   "size": 112,
+   "color": "#FFD23F",
+   "in": 0.4,
+   "out": 2.55
+  },
+  {
+   "top": 330,
+   "text": "Apollo mirror",
+   "sub": "chand pe chhoda hua",
+   "in": 15.68,
+   "out": 16.95
+  },
+  {
+   "top": 330,
+   "text": "Laser → mirror → wapas",
+   "sub": "time naapo = distance",
+   "in": 16.96,
+   "out": 21.15
+  },
+  {
+   "top": 330,
+   "text": "Tides",
+   "sub": "= jwaar-bhaata",
+   "in": 23.26,
+   "out": 25.62
+  },
+  {
+   "top": 330,
+   "text": "Samandar ka kheench",
+   "sub": "chand ko aage khichta hai",
+   "in": 25.66,
+   "out": 28.58
+  },
+  {
+   "top": 330,
+   "text": "Orbit badi",
+   "sub": "chand aur door",
+   "in": 28.62,
+   "out": 31.03
+  },
+  {
+   "top": 330,
+   "text": "Dharti ka din",
+   "sub": "dheere dheere lamba",
+   "in": 31.06,
+   "out": 33.78
+  },
+  {
+   "top": 300,
+   "text": "100 saal mein chand kitna door?",
+   "sub": "Comment karo!",
+   "in": 41.73,
+   "out": 44.85,
+   "color": "#FFD23F"
+  },
+  {
+   "top": 300,
+   "text": "Subscribe karo",
+   "sub": "warna bhaari challan!",
+   "in": 45.25,
+   "out": 49.6
+  },
+  {
+   "top": 300,
+   "text": "Agla challan:",
+   "sub": "Suraj ka bijli ka bill",
+   "in": 52.17,
+   "out": 55.35,
+   "color": "#FFD23F"
+  }
  ],
  "captions": [
-  {"who": "cop", "text": "Write an FIR!", "in": 0.9, "out": 2.4},
-  {"who": "cop", "text": "The Moon is on the run!", "in": 2.58, "out": 3.75},
-  {"who": "guy", "text": "On the run?", "in": 4.0, "out": 5.0},
-  {"who": "guy", "text": "Sir, I see it right here every night.", "in": 5.2, "out": 7.72},
-  {"who": "cop", "text": "You see it, but it's slipping away!", "in": 7.93, "out": 10.15},
-  {"who": "cop", "text": "Every year, 3.8 cm further!", "in": 10.34, "out": 12.95},
-  {"who": "guy", "text": "True, sir.", "in": 13.2, "out": 14.36},
-  {"who": "guy", "text": "Apollo left mirrors on the Moon.", "in": 14.4, "out": 16.92},
-  {"who": "guy", "text": "Fire a laser, time the light's return,", "in": 16.96, "out": 19.78},
-  {"who": "guy", "text": "and you've got the distance.", "in": 19.8, "out": 21.15},
-  {"who": "cop", "text": "So why is it running away?", "in": 21.42, "out": 23.0},
-  {"who": "guy", "text": "Tides!", "in": 23.26, "out": 25.62},
-  {"who": "guy", "text": "Earth's oceans tug the Moon forward,", "in": 25.66, "out": 28.58},
-  {"who": "guy", "text": "so its orbit keeps getting bigger.", "in": 28.62, "out": 31.03},
-  {"who": "guy", "text": "In return, Earth's day is getting longer.", "in": 31.06, "out": 33.8},
-  {"who": "cop", "text": "So my holiday gets longer?", "in": 34.09, "out": 35.62},
-  {"who": "guy", "text": "In 100 years,", "in": 35.87, "out": 36.8},
-  {"who": "guy", "text": "about 2 milliseconds, sir.", "in": 36.83, "out": 38.85},
-  {"who": "cop", "text": "How far will the Moon move in 100 years?", "in": 41.73, "out": 43.93},
-  {"who": "cop", "text": "Comment!", "in": 44.05, "out": 44.75},
-  {"who": "cop", "text": "Hit subscribe?", "in": 45.25, "out": 46.42},
-  {"who": "cop", "text": "No?", "in": 46.85, "out": 47.42},
-  {"who": "cop", "text": "A ticket heavier than gravity!", "in": 47.65, "out": 49.6},
-  {"who": "guy", "text": "One more cutting chai, then see you!", "in": 49.87, "out": 51.92},
-  {"who": "cop", "text": "Next ticket...", "in": 52.17, "out": 53.1},
-  {"who": "cop", "text": "the Sun's electricity bill!", "in": 53.46, "out": 55.35},
-  {"who": "guy", "text": "Sir...", "in": 55.6, "out": 56.52},
-  {"who": "guy", "text": "the Moon has moved a little further again!", "in": 56.56, "out": 58.7}
+  {
+   "who": "cop",
+   "text": "Write an FIR!",
+   "in": 0.9,
+   "out": 2.4
+  },
+  {
+   "who": "cop",
+   "text": "The Moon is on the run!",
+   "in": 2.58,
+   "out": 3.75
+  },
+  {
+   "who": "guy",
+   "text": "On the run?",
+   "in": 4.0,
+   "out": 5.0
+  },
+  {
+   "who": "guy",
+   "text": "Sir, I see it right here every night.",
+   "in": 5.2,
+   "out": 7.72
+  },
+  {
+   "who": "cop",
+   "text": "You see it, but it's slipping away!",
+   "in": 7.93,
+   "out": 10.15
+  },
+  {
+   "who": "cop",
+   "text": "Every year, 3.8 cm further!",
+   "in": 10.34,
+   "out": 12.95
+  },
+  {
+   "who": "guy",
+   "text": "True, sir.",
+   "in": 13.2,
+   "out": 14.36
+  },
+  {
+   "who": "guy",
+   "text": "Apollo left mirrors on the Moon.",
+   "in": 14.4,
+   "out": 16.92
+  },
+  {
+   "who": "guy",
+   "text": "Fire a laser, time the light's return,",
+   "in": 16.96,
+   "out": 19.78
+  },
+  {
+   "who": "guy",
+   "text": "and you've got the distance.",
+   "in": 19.8,
+   "out": 21.15
+  },
+  {
+   "who": "cop",
+   "text": "So why is it running away?",
+   "in": 21.42,
+   "out": 23.0
+  },
+  {
+   "who": "guy",
+   "text": "Tides!",
+   "in": 23.26,
+   "out": 25.62
+  },
+  {
+   "who": "guy",
+   "text": "Earth's oceans tug the Moon forward,",
+   "in": 25.66,
+   "out": 28.58
+  },
+  {
+   "who": "guy",
+   "text": "so its orbit keeps getting bigger.",
+   "in": 28.62,
+   "out": 31.03
+  },
+  {
+   "who": "guy",
+   "text": "In return, Earth's day is getting longer.",
+   "in": 31.06,
+   "out": 33.8
+  },
+  {
+   "who": "cop",
+   "text": "So my holiday gets longer?",
+   "in": 34.09,
+   "out": 35.62
+  },
+  {
+   "who": "guy",
+   "text": "In 100 years,",
+   "in": 35.87,
+   "out": 36.8
+  },
+  {
+   "who": "guy",
+   "text": "about 2 milliseconds, sir.",
+   "in": 36.83,
+   "out": 38.85
+  },
+  {
+   "who": "cop",
+   "text": "How far will the Moon move in 100 years?",
+   "in": 41.73,
+   "out": 43.93
+  },
+  {
+   "who": "cop",
+   "text": "Comment!",
+   "in": 44.05,
+   "out": 44.75
+  },
+  {
+   "who": "cop",
+   "text": "Hit subscribe?",
+   "in": 45.25,
+   "out": 46.42
+  },
+  {
+   "who": "cop",
+   "text": "No?",
+   "in": 46.85,
+   "out": 47.42
+  },
+  {
+   "who": "cop",
+   "text": "A ticket heavier than gravity!",
+   "in": 47.65,
+   "out": 49.6
+  },
+  {
+   "who": "guy",
+   "text": "One more cutting chai, then see you!",
+   "in": 49.87,
+   "out": 51.92
+  },
+  {
+   "who": "cop",
+   "text": "Next ticket...",
+   "in": 52.17,
+   "out": 53.1
+  },
+  {
+   "who": "cop",
+   "text": "the Sun's electricity bill!",
+   "in": 53.46,
+   "out": 55.35
+  },
+  {
+   "who": "guy",
+   "text": "Sir...",
+   "in": 55.6,
+   "out": 56.52
+  },
+  {
+   "who": "guy",
+   "text": "the Moon has moved a little further again!",
+   "in": 56.56,
+   "out": 58.7
+  }
  ],
- "end": {"lines": [["Chand", "bhi"], ["faraar"], ["mein", "hai"]], "at": 39.75, "out": 41.55, "size": 140}
+ "end": {
+  "lines": [
+   [
+    "Chand",
+    "bhi"
+   ],
+   [
+    "faraar"
+   ],
+   [
+    "mein",
+    "hai"
+   ]
+  ],
+  "at": 39.75,
+  "out": 41.55,
+  "size": 140
+ }
 }

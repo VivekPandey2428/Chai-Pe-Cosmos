@@ -13,3 +13,4 @@ assets/audio/*-norm.wav
 # in-progress renders (silent picture before mastering) and their logs
 episodes/*/renders/silent-*.mp4
 episodes/*/renders/*.log
+episodes/*/assets/audio/mix-full.wav

@@ -1139,7 +1139,7 @@ const up = new THREE.Vector3(0, 1, 0);
 // chair-world shot list: [start, look-at, direction, distance]; a shot either cuts in or blends from the last one
 const SHOTS_V = [
   { t: 0, look: [-0.45, 2.15, 0.2], dir: [0.3, 0.12, 1], dist: 5.6, to: { dist: 5.0 } }, // hook: the guy sipping, the gun pokes in
-  { t: 1.0, look: [0.95, 2.45, 0.5], dir: [-0.4, 0.1, 1], dist: 4.8, to: { dist: 4.5 } }, // "रुको!": the cop
+  { t: 0.8, look: [0.95, 2.45, 0.5], dir: [-0.4, 0.1, 1], dist: 4.8, to: { dist: 4.5 } }, // "रुको!": the cop (the edited cut opens here)
   { t: 2.5, blend: 0.4, look: [0.3, 2.75, 0.35], dir: [-0.15, 0.14, 1], dist: 8.2 }, // the 168 lands above the chair
   { t: 6.15, look: [0.1, 2.2, 0.25], dir: [0.06, 0.24, 1], dist: 10.2, to: { dist: 9.2 } }, // the guy explains: two-shot
   { t: 16.85, look: [1.0, 2.75, 0.5], dir: [-0.35, 0.08, 1], dist: 4.0 }, // "मतलब?"

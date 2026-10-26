@@ -1,6 +1,6 @@
 // Renders a HyperFrames-style episode without the HyperFrames CLI: serves the folder, opens the world composition
 // in headless Chromium, seeks window.__timelines.world frame by frame and pipes screenshots into ffmpeg.
-// Usage: node tools/render-local.cjs <episode-dir> <out.mp4> [--width 720] [--fps 30] [--from 0] [--to END] [--stills t1,t2,...]
+// Usage: node tools/render-local.cjs <episode-dir> <out.mp4> [--width 720] [--fps 30] [--from 0] [--to END] [--edl a-b,c-d] [--stills t1,t2,...]
 const { chromium } = require("playwright");
 const { spawn } = require("child_process");
 const http = require("http");
@@ -54,12 +54,16 @@ const server = http.createServer((req, res) => {
   } else {
     const from = parseFloat(opt("--from", "0"));
     const to = parseFloat(opt("--to", String(dur)));
-    const n = Math.round((to - from) * fps);
+    // --edl "a-b,c-d": an edit list in the composition's time; frames walk the kept ranges back to back
+    const edl = opt("--edl", null) ? opt("--edl").split(",").map((r) => r.split("-").map(Number)) : [[from, to]];
+    const total = edl.reduce((s, [a, b]) => s + (b - a), 0);
+    const n = Math.round(total * fps);
+    const srcTime = (tn) => { for (const [a, b] of edl) { if (tn < b - a) return a + tn; tn -= b - a; } const [, b] = edl[edl.length - 1]; return b - 1e-3; };
     const ff = spawn("ffmpeg", ["-y", "-v", "error", "-f", "image2pipe", "-framerate", String(fps), "-c:v", "png", "-i", "-",
       "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p", out], { stdio: ["pipe", "inherit", "inherit"] });
     const t0 = Date.now();
     for (let i = 0; i < n; i++) {
-      await seek(from + i / fps);
+      await seek(srcTime(i / fps));
       const buf = await page.screenshot({ type: "png" });
       if (!ff.stdin.write(buf)) await new Promise((r) => ff.stdin.once("drain", r));
       if (i % 60 === 0) console.log(`frame ${i}/${n}  ${((Date.now() - t0) / 1000).toFixed(0)}s`);

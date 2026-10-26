@@ -126,6 +126,7 @@
       /* text-only callouts (no 3D number): a big word with an optional line under it */
       .w-tag {
         position: absolute;
+        font-size: 84px;
         left: 60px;
         width: 960px;
         text-align: center;
@@ -136,7 +137,7 @@
       .w-tag-main {
         display: block;
         font-weight: 700;
-        font-size: 84px;
+        font-size: 1em;
         line-height: 1.05;
         text-transform: uppercase;
       }
@@ -144,7 +145,7 @@
         display: block;
         margin-top: 12px;
         font-weight: 600;
-        font-size: 54px;
+        font-size: 0.64em;
         line-height: 1.1;
         text-transform: uppercase;
       }
@@ -173,13 +174,14 @@
           <span class="w-unit" id="w-unit4">kg · mass</span>
           <span class="w-label" id="w-label4">Har jagah same</span>
         </div>
-        <div class="w-tag" id="w-tag1" style="top: 330px;"><span class="w-tag-main">Mass = maal</span><span class="w-tag-sub">andar kitna maal hai</span></div>
-        <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Weight = force</span><span class="w-tag-sub">gravity ka kheench</span></div>
-        <div class="w-tag" id="w-tag3" style="top: 330px;"><span class="w-tag-main">Gravity 1/6</span><span class="w-tag-sub">Chand pe</span></div>
-        <div class="w-tag" id="w-tag4" style="top: 330px;"><span class="w-tag-main">Gravity 2.5x+</span><span class="w-tag-sub">Jupiter pe</span></div>
-        <div class="w-tag" id="w-tag5" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Jupiter pe aapka wazan?</span><span class="w-tag-sub">Comment karo!</span></div>
-        <div class="w-tag" id="w-tag6" style="top: 300px;"><span class="w-tag-main">Subscribe karo</span><span class="w-tag-sub">warna seedha challan!</span></div>
-        <div class="w-tag" id="w-tag7" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Agla challan:</span><span class="w-tag-sub">Chand ki FIR</span></div>
+        <div class="w-tag" id="w-tag1" style="top: 130px; color: #FFD23F; font-size: 112px;"><span class="w-tag-main">168 KG ka challan?!</span></div>
+        <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Mass = maal</span><span class="w-tag-sub">andar kitna maal hai</span></div>
+        <div class="w-tag" id="w-tag3" style="top: 330px;"><span class="w-tag-main">Weight = force</span><span class="w-tag-sub">gravity ka kheench</span></div>
+        <div class="w-tag" id="w-tag4" style="top: 330px;"><span class="w-tag-main">Gravity 1/6</span><span class="w-tag-sub">Chand pe</span></div>
+        <div class="w-tag" id="w-tag5" style="top: 330px;"><span class="w-tag-main">Gravity 2.5x+</span><span class="w-tag-sub">Jupiter pe</span></div>
+        <div class="w-tag" id="w-tag6" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Jupiter pe aapka wazan?</span><span class="w-tag-sub">Comment karo!</span></div>
+        <div class="w-tag" id="w-tag7" style="top: 300px;"><span class="w-tag-main">Subscribe karo</span><span class="w-tag-sub">warna seedha challan!</span></div>
+        <div class="w-tag" id="w-tag8" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Agla challan:</span><span class="w-tag-sub">Chand ki FIR</span></div>
         <div class="cc cc-cop" id="w-cc1">Stop!</div>
         <div class="cc cc-cop cc-2" id="w-cc2">168 kilos<br />on a chair?</div>
         <div class="cc cc-cop cc-2" id="w-cc3">That&#x27;s a<br />weight ticket!</div>
@@ -238,7 +240,7 @@
           tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
         });
         // text callouts: slam in like the number labels, leave fast
-        [{"id": "#w-tag1", "in": 9.78, "out": 12.85}, {"id": "#w-tag2", "in": 12.9, "out": 16.7}, {"id": "#w-tag3", "in": 19.17, "out": 21.6}, {"id": "#w-tag4", "in": 25.09, "out": 26.62}, {"id": "#w-tag5", "in": 40.67, "out": 43.8}, {"id": "#w-tag6", "in": 44.03, "out": 47.75}, {"id": "#w-tag7", "in": 50.64, "out": 54.5}].forEach(function (c) {
+        [{"id": "#w-tag1", "in": 0.4, "out": 2.4}, {"id": "#w-tag2", "in": 9.78, "out": 12.85}, {"id": "#w-tag3", "in": 12.9, "out": 16.7}, {"id": "#w-tag4", "in": 19.17, "out": 21.6}, {"id": "#w-tag5", "in": 25.09, "out": 26.62}, {"id": "#w-tag6", "in": 40.67, "out": 43.8}, {"id": "#w-tag7", "in": 44.03, "out": 47.75}, {"id": "#w-tag8", "in": 50.64, "out": 54.5}].forEach(function (c) {
           tl.fromTo(c.id, { opacity: 0, scale: 1.5, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.22, ease: "back.out(2.2)" }, c.in);
           tl.to(c.id, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.out - 0.14);
         });
