@@ -82,6 +82,10 @@ Models live in `assets/challan-scene.js` (`makeGuy`, `makeCop`, `makeFace`, `mak
   gives a free hand for that video.
 - **Libraries/fonts via npm only, never a CDN.** Vendored copies live in `assets/vendor/`.
 - **Sound:** effects 8–12 dB under the dialogue, never covering a word; master −14 LUFS, true peak about −1 dBTP.
+- **Background music (from Challan #4):** a music bed 20 dB under the dialogue's loudness (about −34 LUFS against −14 LUFS
+  dialogue), dipping a little more under each line. Trending YouTube songs are never mixed into the file (Content ID claims,
+  no licence outside YouTube's editor): either the person adds the trending sound in the YouTube app at upload (Add sound,
+  added sound at ~10% volume, original at 100%), or a royalty-free track from YouTube Studio → Audio library is mixed in here.
 - Show frames before the final render; draft at 720 first.
 
 ## Pipeline (how episode 1 was made)
