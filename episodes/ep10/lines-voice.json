@@ -1,0 +1,47 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[shouting] एक चम्मच का वज़न सौ करोड़ टन से ज़्यादा?! Machine ख़राब है!"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] Machine सही है साहब, ये neutron star का माल है!"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[confused] Neutron star क्या होता है?"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[explaining] एक बड़े तारे की लाश! सूरज से ज़्यादा माल, एक शहर जितनी जगह में!"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[stern] तो चम्मच वापस करो!"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[laughs] उठाओगे कैसे, साहब?"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[playful] एक चम्मच neutron star कितने हाथी के बराबर? Comment करो!"
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला challan... आप बताओ!"
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, चम्मच तो चाय के लिए था..."
+ }
+]

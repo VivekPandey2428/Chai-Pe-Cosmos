@@ -1,0 +1,41 @@
+{
+ "title": "Late-Latif Suraj",
+ "duration": 42.94,
+ "scene_note": "Challan #7: Inspector Sahab books the Sun for arriving 8 min 20 s late; the Tapri wala explains that light takes time to travel.",
+ "caps": [
+  {"unit": "min 20 sec", "label": "roz late!", "in": 2.2, "out": 4.45},
+  {"unit": "second", "label": "chaand ki roshni", "in": 20.64, "out": 22.45}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Suraj late hai?!", "size": 112, "color": "#FFD23F", "in": 0.2, "out": 1.9},
+  {"top": 330, "text": "Roshni ka safar", "sub": "Suraj → Dharti: 8 min 20 sec", "in": 4.9, "out": 8.7},
+  {"top": 330, "text": "Suraj bujh gaya!", "sub": "par roshni abhi raaste mein hai", "in": 14.4, "out": 17.6},
+  {"top": 330, "text": "~10 nanosecond", "sub": "3 m door = 10 ns purane", "color": "#FFD23F", "in": 26.8, "out": 28.7},
+  {"top": 300, "text": "Woh tara kitna purana?", "sub": "Comment karo!", "color": "#FFD23F", "in": 30.15, "out": 34.95},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 35.0, "out": 35.95},
+  {"top": 300, "text": "Agla challan:", "sub": "Saturn ka swimming pool", "color": "#FFD23F", "in": 36.0, "out": 39.3}
+ ],
+ "captions": [
+  {"who": "cop", "text": "Sun!", "in": 0.6, "out": 1.5},
+  {"who": "cop", "text": "You're 8 min 20 s late every day!", "in": 1.64, "out": 4.6},
+  {"who": "guy", "text": "Not late, sir,", "in": 4.8, "out": 6.3},
+  {"who": "guy", "text": "light has to travel!", "in": 6.4, "out": 8.72},
+  {"who": "cop", "text": "So the Sun I'm seeing...", "in": 8.92, "out": 11.8},
+  {"who": "guy", "text": "is 8 minutes old!", "in": 12.0, "out": 13.9},
+  {"who": "guy", "text": "If it switched off now,", "in": 14.0, "out": 15.1},
+  {"who": "guy", "text": "we wouldn't know for 8 minutes.", "in": 15.16, "out": 17.6},
+  {"who": "cop", "text": "And the Moon?", "in": 17.8, "out": 18.84},
+  {"who": "guy", "text": "Moonlight is about", "in": 19.04, "out": 20.55},
+  {"who": "guy", "text": "1.3 seconds old!", "in": 20.64, "out": 22.56},
+  {"who": "cop", "text": "Then I'm in the present!", "in": 22.76, "out": 24.76},
+  {"who": "guy", "text": "Sir,", "in": 24.96, "out": 25.8},
+  {"who": "guy", "text": "you look a few nanoseconds old too!", "in": 25.92, "out": 28.72},
+  {"who": "cop", "text": "How old could the star you're looking at be?", "in": 30.22, "out": 34.0},
+  {"who": "cop", "text": "Comment!", "in": 34.22, "out": 34.94},
+  {"who": "cop", "text": "Next ticket...", "in": 35.69, "out": 37.2},
+  {"who": "cop", "text": "Saturn's swimming pool...", "in": 37.37, "out": 39.37},
+  {"who": "guy", "text": "Sir,", "in": 39.82, "out": 40.5},
+  {"who": "guy", "text": "you're always late...", "in": 40.56, "out": 42.24}
+ ],
+ "end": {"lines": [["Sab"], ["purane"], ["dikhte", "hain!"]], "at": 29.0, "out": 30.07, "size": 118}
+}

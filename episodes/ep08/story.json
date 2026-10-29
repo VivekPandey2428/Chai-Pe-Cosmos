@@ -1,0 +1,38 @@
+{
+ "title": "Saturn ka Swimming Pool",
+ "duration": 41.8,
+ "scene_note": "Challan #8: Inspector Sahab finds a swimming pool for Saturn; the Tapri wala explains that Saturn is less dense than water.",
+ "caps": [
+  {"unit": "gram / cm³", "label": "Saturn · paani = 1", "in": 11.29, "out": 13.7},
+  {"unit": "gram / cm³", "label": "Earth · seedha neeche!", "in": 19.81, "out": 21.7}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Saturn paani mein tairega?!", "size": 92, "color": "#FFD23F", "in": 0.15, "out": 2.6},
+  {"top": 330, "text": "Paani se halka!", "sub": "0.69 < 1", "color": "#FFD23F", "in": 13.75, "out": 15.8},
+  {"top": 330, "text": "Glug glug!", "sub": "Earth doob gayi", "in": 21.75, "out": 22.85},
+  {"top": 330, "text": "Pool > 1.2 lakh km!", "sub": "Saturn itna chauda hai", "color": "#FFD23F", "in": 26.4, "out": 28.6},
+  {"top": 300, "text": "Ghar mein kya tairta hai?", "sub": "Comment karo!", "color": "#FFD23F", "in": 30.1, "out": 33.9},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 33.95, "out": 34.9},
+  {"top": 300, "text": "Agla challan:", "sub": "Webb telescope ki parking", "color": "#FFD23F", "in": 34.95, "out": 38.4}
+ ],
+ "captions": [
+  {"who": "cop", "text": "A swimming pool for Saturn?", "in": 0.6, "out": 2.55},
+  {"who": "cop", "text": "Illegal!", "in": 2.68, "out": 3.64},
+  {"who": "guy", "text": "Sir, Saturn would float on water!", "in": 3.84, "out": 6.96},
+  {"who": "cop", "text": "A planet that big... would float?", "in": 7.16, "out": 9.75},
+  {"who": "guy", "text": "Its density is just 0.69,", "in": 9.95, "out": 12.9},
+  {"who": "guy", "text": "water's is 1!", "in": 12.97, "out": 14.3},
+  {"who": "guy", "text": "Lighter than water!", "in": 14.42, "out": 15.81},
+  {"who": "cop", "text": "So Earth would float too?", "in": 16.01, "out": 18.01},
+  {"who": "guy", "text": "No sir, Earth is 5.5,", "in": 18.21, "out": 21.2},
+  {"who": "guy", "text": "it'd sink straight down!", "in": 21.25, "out": 22.77},
+  {"who": "cop", "text": "Fine, I'll grant the permit.", "in": 22.97, "out": 25.37},
+  {"who": "guy", "text": "Just need a pool bigger than Saturn, sir.", "in": 25.57, "out": 28.64},
+  {"who": "cop", "text": "What floats on water in your home?", "in": 30.14, "out": 33.0},
+  {"who": "cop", "text": "Comment!", "in": 33.18, "out": 33.9},
+  {"who": "cop", "text": "Next ticket...", "in": 34.65, "out": 36.3},
+  {"who": "cop", "text": "the Webb telescope's parking...", "in": 36.41, "out": 38.49},
+  {"who": "guy", "text": "Sir, should I bring a swimsuit?", "in": 38.94, "out": 41.1}
+ ],
+ "end": {"lines": [["Bada"], ["matlab"], ["bhaari", "nahi!"]], "at": 28.92, "out": 29.99, "size": 120}
+}

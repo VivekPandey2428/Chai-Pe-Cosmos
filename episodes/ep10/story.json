@@ -1,0 +1,34 @@
+{
+ "title": "Wazan Ka Challan 2: Ek Chammach",
+ "duration": 34.05,
+ "scene_note": "Challan #10: Inspector Sahab's scale meets a teaspoon of neutron star; the Tapri wala explains neutron stars. A callback to Challan #2.",
+ "caps": [
+  {"unit": "crore ton", "label": "ek chammach!", "in": 2.04, "out": 5.3}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Ek chammach = 100 crore ton?!", "size": 88, "color": "#FFD23F", "in": 0.15, "out": 1.7},
+  {"top": 330, "text": "Neutron star", "sub": "ek mare hue taare ka dil", "in": 9.9, "out": 11.8},
+  {"top": 330, "text": "Suraj se bhaari", "sub": "par sirf ~20 km chauda", "color": "#FFD23F", "in": 14.1, "out": 17.3},
+  {"top": 300, "text": "Kitne haathi?", "sub": "Comment karo!", "color": "#FFD23F", "in": 22.45, "out": 26.6},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 26.68, "out": 27.6},
+  {"top": 300, "text": "Agla challan:", "sub": "aap batao! Comment mein likho", "color": "#FFD23F", "in": 27.65, "out": 29.95}
+ ],
+ "captions": [
+  {"who": "cop", "text": "One spoon weighs over 100 crore tonnes?!", "in": 0.6, "out": 3.95},
+  {"who": "cop", "text": "The machine's broken!", "in": 4.2, "out": 5.48},
+  {"who": "guy", "text": "The machine's fine, sir,", "in": 5.68, "out": 7.4},
+  {"who": "guy", "text": "this is neutron-star stuff!", "in": 7.52, "out": 9.68},
+  {"who": "cop", "text": "What's a neutron star?", "in": 9.88, "out": 11.72},
+  {"who": "guy", "text": "The corpse of a big star!", "in": 11.92, "out": 13.9},
+  {"who": "guy", "text": "More stuff than the Sun,", "in": 14.08, "out": 15.55},
+  {"who": "guy", "text": "packed into a city-sized space!", "in": 15.64, "out": 17.28},
+  {"who": "cop", "text": "Then return the spoon!", "in": 17.48, "out": 19.17},
+  {"who": "guy", "text": "How will you lift it, sir?", "in": 19.37, "out": 20.97},
+  {"who": "cop", "text": "A spoon of neutron star = how many elephants?", "in": 22.47, "out": 25.6},
+  {"who": "cop", "text": "Comment!", "in": 25.75, "out": 26.63},
+  {"who": "cop", "text": "Next ticket...", "in": 27.38, "out": 28.9},
+  {"who": "cop", "text": "you tell me!", "in": 29.06, "out": 29.94},
+  {"who": "guy", "text": "Sir, the spoon was for the chai...", "in": 30.39, "out": 33.35}
+ ],
+ "end": {"lines": [["Wazan"], ["ka", "challan"], ["phir", "se!"]], "at": 21.25, "out": 22.32, "size": 120}
+}

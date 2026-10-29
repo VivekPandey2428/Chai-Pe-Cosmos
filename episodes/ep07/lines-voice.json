@@ -1,0 +1,57 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[shouting] सूरज! रोज़ आठ minute बीस second late आते हो!"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] Late नहीं साहब, रोशनी को सफ़र करना पड़ता है!"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[suspicious] मतलब जो सूरज दिख रहा है..."
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[excited] वो आठ minute पुराना है! अभी बुझ जाए, तो भी आठ minute तक पता नहीं चलेगा।"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[curious] और चाँद?"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[explaining] चाँद की रोशनी लगभग एक point तीन second पुरानी!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[smug] तो मैं तो अभी का हूँ!"
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[laughs] साहब, आप भी कुछ nanosecond पुराने दिख रहे हो!"
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[playful] जो तारा आप देख रहे हो, वो कितना पुराना हो सकता है? Comment करो!"
+ },
+ {
+  "id": "c6",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला challan... Saturn का swimming pool..."
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, आप तो हमेशा late..."
+ }
+]

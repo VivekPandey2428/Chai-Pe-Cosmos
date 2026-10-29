@@ -1,0 +1,57 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[shouting] ये telescope पंद्रह लाख किलोमीटर दूर क्यों खड़ा है?!"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] साहब, ये L2 है, space की official parking!"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[confused] Parking? Space में?"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[explaining] यहाँ सूरज और धरती का खिंचाव ऐसा balance है, कि telescope धरती के साथ-साथ चलता है।"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[curious] और चाँद से कितना दूर?"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[excited] चाँद से लगभग चार गुना दूर!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[smug] Free parking? Challan बनता है!"
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[laughs] Free नहीं साहब, बीच-बीच में engine चलाना पड़ता है, parking का भी petrol लगता है!"
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[playful] Webb telescope का mirror कितने टुकड़ों का है? Comment करो!"
+ },
+ {
+  "id": "c6",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला challan... एक चम्मच का वज़न..."
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, parking slip..."
+ }
+]

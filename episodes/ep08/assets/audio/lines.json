@@ -1,0 +1,474 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "start": 0.44,
+  "words": [
+   {
+    "text": "Saturn",
+    "start": 0.6,
+    "end": 1.0
+   },
+   {
+    "text": "के",
+    "start": 1.08,
+    "end": 1.133
+   },
+   {
+    "text": "लिए",
+    "start": 1.16,
+    "end": 1.32
+   },
+   {
+    "text": "swimming",
+    "start": 1.48,
+    "end": 1.8
+   },
+   {
+    "text": "pool?",
+    "start": 1.88,
+    "end": 2.6
+   },
+   {
+    "text": "Illegal!",
+    "start": 2.68,
+    "end": 3.64
+   }
+  ]
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "start": 3.6,
+  "words": [
+   {
+    "text": "साहब,",
+    "start": 3.84,
+    "end": 4.72
+   },
+   {
+    "text": "Saturn",
+    "start": 4.88,
+    "end": 5.28
+   },
+   {
+    "text": "तो",
+    "start": 5.32,
+    "end": 5.44
+   },
+   {
+    "text": "पानी",
+    "start": 5.52,
+    "end": 5.8
+   },
+   {
+    "text": "में",
+    "start": 5.84,
+    "end": 6.0
+   },
+   {
+    "text": "तैर",
+    "start": 6.08,
+    "end": 6.28
+   },
+   {
+    "text": "जाएगा!",
+    "start": 6.32,
+    "end": 6.96
+   }
+  ]
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "start": 6.947,
+  "words": [
+   {
+    "text": "इतना",
+    "start": 7.16,
+    "end": 7.427
+   },
+   {
+    "text": "बड़ा",
+    "start": 7.507,
+    "end": 7.747
+   },
+   {
+    "text": "planet...",
+    "start": 7.827,
+    "end": 8.587
+   },
+   {
+    "text": "तैरेगा?",
+    "start": 8.867,
+    "end": 9.747
+   }
+  ]
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "start": 9.81,
+  "words": [
+   {
+    "text": "उसकी",
+    "start": 9.947,
+    "end": 10.13
+   },
+   {
+    "text": "density",
+    "start": 10.21,
+    "end": 10.69
+   },
+   {
+    "text": "सिर्फ़",
+    "start": 10.85,
+    "end": 11.17
+   },
+   {
+    "text": "zero",
+    "start": 11.29,
+    "end": 11.41
+   },
+   {
+    "text": "point",
+    "start": 11.57,
+    "end": 11.81
+   },
+   {
+    "text": "छह",
+    "start": 11.97,
+    "end": 12.13
+   },
+   {
+    "text": "नौ",
+    "start": 12.21,
+    "end": 12.397
+   },
+   {
+    "text": "है,",
+    "start": 12.45,
+    "end": 12.93
+   },
+   {
+    "text": "पानी",
+    "start": 12.97,
+    "end": 13.25
+   },
+   {
+    "text": "की",
+    "start": 13.33,
+    "end": 13.57
+   },
+   {
+    "text": "एक!",
+    "start": 13.73,
+    "end": 14.37
+   },
+   {
+    "text": "पानी",
+    "start": 14.423,
+    "end": 14.69
+   },
+   {
+    "text": "से",
+    "start": 14.77,
+    "end": 14.93
+   },
+   {
+    "text": "हल्का!",
+    "start": 14.97,
+    "end": 15.81
+   }
+  ]
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "start": 15.93,
+  "words": [
+   {
+    "text": "तो",
+    "start": 16.01,
+    "end": 16.41
+   },
+   {
+    "text": "Earth",
+    "start": 16.73,
+    "end": 16.97
+   },
+   {
+    "text": "भी",
+    "start": 17.05,
+    "end": 17.13
+   },
+   {
+    "text": "तैरेगी?",
+    "start": 17.21,
+    "end": 18.01
+   }
+  ]
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "start": 17.33,
+  "words": [
+   {
+    "text": "नहीं",
+    "start": 18.21,
+    "end": 18.53
+   },
+   {
+    "text": "साहब,",
+    "start": 18.61,
+    "end": 19.33
+   },
+   {
+    "text": "Earth",
+    "start": 19.41,
+    "end": 19.73
+   },
+   {
+    "text": "पाँच",
+    "start": 19.81,
+    "end": 20.05
+   },
+   {
+    "text": "point",
+    "start": 20.21,
+    "end": 20.45
+   },
+   {
+    "text": "पाँच,",
+    "start": 20.49,
+    "end": 21.17
+   },
+   {
+    "text": "सीधा",
+    "start": 21.25,
+    "end": 21.65
+   },
+   {
+    "text": "डूब",
+    "start": 21.81,
+    "end": 22.05
+   },
+   {
+    "text": "जाएगी!",
+    "start": 22.09,
+    "end": 22.77
+   }
+  ]
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "start": 22.49,
+  "words": [
+   {
+    "text": "ठीक",
+    "start": 22.97,
+    "end": 23.21
+   },
+   {
+    "text": "है,",
+    "start": 23.29,
+    "end": 24.01
+   },
+   {
+    "text": "permit",
+    "start": 24.09,
+    "end": 24.41
+   },
+   {
+    "text": "दे",
+    "start": 24.45,
+    "end": 24.57
+   },
+   {
+    "text": "देता",
+    "start": 24.61,
+    "end": 24.85
+   },
+   {
+    "text": "हूँ।",
+    "start": 24.89,
+    "end": 25.37
+   }
+  ]
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "start": 25.362,
+  "words": [
+   {
+    "text": "बस",
+    "start": 25.57,
+    "end": 25.842
+   },
+   {
+    "text": "pool",
+    "start": 26.162,
+    "end": 26.402
+   },
+   {
+    "text": "Saturn",
+    "start": 26.642,
+    "end": 27.002
+   },
+   {
+    "text": "से",
+    "start": 27.042,
+    "end": 27.162
+   },
+   {
+    "text": "बड़ा",
+    "start": 27.202,
+    "end": 27.362
+   },
+   {
+    "text": "चाहिए,",
+    "start": 27.442,
+    "end": 28.002
+   },
+   {
+    "text": "साहब।",
+    "start": 28.042,
+    "end": 28.642
+   }
+  ]
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "start": 29.982,
+  "words": [
+   {
+    "text": "आपके",
+    "start": 30.142,
+    "end": 30.502
+   },
+   {
+    "text": "घर",
+    "start": 30.542,
+    "end": 30.702
+   },
+   {
+    "text": "में",
+    "start": 30.742,
+    "end": 31.022
+   },
+   {
+    "text": "कौन",
+    "start": 31.062,
+    "end": 31.262
+   },
+   {
+    "text": "सी",
+    "start": 31.342,
+    "end": 31.422
+   },
+   {
+    "text": "चीज़",
+    "start": 31.502,
+    "end": 31.742
+   },
+   {
+    "text": "पानी",
+    "start": 31.782,
+    "end": 32.022
+   },
+   {
+    "text": "पे",
+    "start": 32.062,
+    "end": 32.142
+   },
+   {
+    "text": "तैरती",
+    "start": 32.222,
+    "end": 32.542
+   },
+   {
+    "text": "है?",
+    "start": 32.582,
+    "end": 33.022
+   },
+   {
+    "text": "Comment",
+    "start": 33.182,
+    "end": 33.342
+   },
+   {
+    "text": "करो!",
+    "start": 33.382,
+    "end": 33.902
+   }
+  ]
+ },
+ {
+  "id": "c6",
+  "speaker": "cop",
+  "start": 34.572,
+  "words": [
+   {
+    "text": "अगला",
+    "start": 34.652,
+    "end": 34.972
+   },
+   {
+    "text": "challan...",
+    "start": 35.132,
+    "end": 35.772
+   },
+   {
+    "text": "Webb",
+    "start": 36.412,
+    "end": 36.652
+   },
+   {
+    "text": "telescope",
+    "start": 36.732,
+    "end": 37.292
+   },
+   {
+    "text": "की",
+    "start": 37.332,
+    "end": 37.532
+   },
+   {
+    "text": "parking...",
+    "start": 37.612,
+    "end": 38.492
+   }
+  ]
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "start": 38.782,
+  "words": [
+   {
+    "text": "साहब,",
+    "start": 38.942,
+    "end": 39.582
+   },
+   {
+    "text": "swimming",
+    "start": 39.742,
+    "end": 40.062
+   },
+   {
+    "text": "costume",
+    "start": 40.182,
+    "end": 40.382
+   },
+   {
+    "text": "लाऊँ?",
+    "start": 40.462,
+    "end": 41.102
+   }
+  ]
+ }
+]

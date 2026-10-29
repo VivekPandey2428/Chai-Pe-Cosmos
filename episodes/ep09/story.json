@@ -1,0 +1,39 @@
+{
+ "title": "No Parking: Webb Telescope",
+ "duration": 43.51,
+ "scene_note": "Challan #9: Inspector Sahab tickets the James Webb telescope for parking in space; the Tapri wala explains the L2 point.",
+ "caps": [
+  {"unit": "lakh km", "label": "Dharti se door!", "in": 1.5, "out": 4.3},
+  {"unit": "guna door", "label": "chaand se", "in": 21.14, "out": 22.4}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Space mein no parking?!", "size": 100, "color": "#FFD23F", "in": 0.15, "out": 1.45},
+  {"top": 330, "text": "L2 = parking!", "sub": "Dharti se 15 lakh km", "in": 6.3, "out": 9.3},
+  {"top": 330, "text": "Suraj + Dharti ka kheench", "sub": "balance = saath-saath chakkar", "in": 13.2, "out": 17.5},
+  {"top": 330, "text": "Station-keeping!", "sub": "beech-beech mein engine", "color": "#FFD23F", "in": 27.0, "out": 31.2},
+  {"top": 300, "text": "Webb ka mirror", "sub": "kitne tukde? Comment karo!", "color": "#FFD23F", "in": 32.7, "out": 36.5},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 36.55, "out": 37.5},
+  {"top": 300, "text": "Agla challan:", "sub": "Ek chammach ka wazan", "color": "#FFD23F", "in": 37.55, "out": 40.7}
+ ],
+ "captions": [
+  {"who": "cop", "text": "Why is this telescope parked 15 lakh km away?!", "in": 0.6, "out": 4.46},
+  {"who": "guy", "text": "Sir, this is L2,", "in": 4.66, "out": 7.2},
+  {"who": "guy", "text": "space's official parking!", "in": 7.34, "out": 9.3},
+  {"who": "cop", "text": "Parking? In space?", "in": 9.5, "out": 11.42},
+  {"who": "guy", "text": "Here the Sun's and Earth's pulls balance,", "in": 11.62, "out": 14.85},
+  {"who": "guy", "text": "so the telescope moves along with Earth.", "in": 14.9, "out": 17.54},
+  {"who": "cop", "text": "And how far from the Moon?", "in": 17.74, "out": 19.74},
+  {"who": "guy", "text": "About 4 times farther than the Moon!", "in": 19.94, "out": 22.42},
+  {"who": "cop", "text": "Free parking?", "in": 22.62, "out": 23.8},
+  {"who": "cop", "text": "That's a ticket!", "in": 23.9, "out": 25.26},
+  {"who": "guy", "text": "Not free, sir,", "in": 25.46, "out": 26.8},
+  {"who": "guy", "text": "it has to fire its engine now and then,", "in": 26.9, "out": 29.3},
+  {"who": "guy", "text": "even parking costs fuel!", "in": 29.46, "out": 31.22},
+  {"who": "cop", "text": "How many pieces is Webb's mirror made of?", "in": 32.72, "out": 35.4},
+  {"who": "cop", "text": "Comment!", "in": 35.56, "out": 36.48},
+  {"who": "cop", "text": "Next ticket...", "in": 37.23, "out": 38.8},
+  {"who": "cop", "text": "the weight of one spoon...", "in": 38.91, "out": 40.75},
+  {"who": "guy", "text": "Sir, your parking slip...", "in": 41.2, "out": 42.81}
+ ],
+ "end": {"lines": [["Space"], ["mein", "bhi"], ["parking", "full!"]], "at": 31.5, "out": 32.57, "size": 120}
+}
