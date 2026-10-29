@@ -74,6 +74,10 @@ Models live in `assets/challan-scene.js` (`makeGuy`, `makeCop`, `makeFace`, `mak
 6. **Resolution:** chai together. **End card** with the moral in Roman Hinglish, held ~2 s.
 
 ## Rules that are not negotiable
+- **Length and pace (from Challan #4, learned from #2's retention):** 30–40 s. The first big number or space whip lands
+  within 5 s. No line runs longer than ~5 s without a visual change (a number, a whip, a new shot). Show the payoff, then
+  explain. The subscribe ask is a ~1 s on-screen moment or the pinned comment, not a 7 s spoken beat at the end (under 10%
+  of viewers reach the end of a 56 s Short).
 - **Facts:** research every number, keep only what sources agree on; if they disagree, show a defensible floor
   with "+" and say "kam se kam" / "at least". The spoken number must match the on-screen number exactly
   (episode 1 re-recorded "सत्रह सौ" → "सोलह सौ सत्तर" for 1,670).
@@ -166,3 +170,8 @@ Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad f
   frame-by-frame renders. Hide the lines canvas between whips (`lines.style.visibility`), as the episode patches do.
 - Hook: Episode 1 kept 32% of Shorts-feed viewers (68% swiped). From Challan #2 the first frame is the cop mid-line with big hook text
   ("168 KG KA CHALLAN?!") and no quiet lead-in; the whistle sits under the first line.
+- Challan #2 (56 s): 56.2% stayed to watch (Episode 1: 32%) thanks to the open-on-the-line hook, but retention fell steadily
+  0:03-0:15 through the 10 s mass/weight explanation (about 40% left by 0:15, under 10% at the end), average view 0:22.
+  Views stopped at ~330 after the first test. Fix: shorter (30-40 s), show the Moon number early, no long speeches.
+- Challan #3 was re-cut before posting to 39.6 s: laser detour, the orbit clause, the spoken subscribe gag and the sign-off
+  were removed (`episodes/ep03/edl.txt`).
