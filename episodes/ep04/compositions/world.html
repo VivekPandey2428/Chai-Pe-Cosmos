@@ -1,0 +1,247 @@
+<!doctype html>
+<!--
+  Suraj ka Bijli ka Bill (9:16). Challan #4: Inspector Sahab bills the Sun for its electricity; the Tapri wala explains fusion and the chai leaf.
+  Built on Episode 1, Challan (9:16): a cosmic traffic cop pulls over a guy sipping chai for "speeding".
+  The 3D scene is assets/challan-scene.js; this file holds the type: number labels, dialogue captions, the end card.
+  Every frame is render(t), driven by one linear GSAP clock; caption times come from the dialogue's word timings.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Suraj ka Bijli ka Bill</title>
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 600;
+        src: url("assets/fonts/fredoka-latin-600-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Studio Fredoka";
+        font-weight: 700;
+        src: url("assets/fonts/fredoka-latin-700-normal.woff2") format("woff2");
+      }
+      #root {
+        position: absolute;
+        inset: 0;
+        /* follow the viewport so the same scene renders the 720p draft and the 1080p master */
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden;
+        background: #ff6b6b;
+      }
+      #w-bg,
+      #w-police {
+        position: absolute;
+        inset: 0;
+      }
+      #w-police {
+        opacity: 0;
+        mix-blend-mode: screen;
+      }
+      #w-canvas,
+      #w-lines {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #w-stage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1080px;
+        height: 1920px;
+        transform-origin: 0 0;
+        font-family: "Studio Fredoka", sans-serif;
+        color: #ffffff;
+      }
+      .w-cap {
+        position: absolute;
+        left: 90px;
+        width: 900px;
+        top: 560px;
+        text-align: center;
+        opacity: 0;
+      }
+      .w-unit {
+        display: block;
+        font-weight: 700;
+        font-size: 88px;
+        line-height: 1;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .w-label {
+        display: block;
+        margin-top: 18px;
+        font-weight: 600;
+        font-size: 56px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* English subtitles for the Hinglish dialogue sit at the bottom of the safe band (above 1330 px); colour tells who speaks */
+      .cc {
+        position: absolute;
+        left: 70px;
+        width: 940px;
+        top: 1236px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 1.1;
+        opacity: 0;
+        text-shadow:
+          0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530,
+          0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      /* two-line captions rise so their last line still ends above 1330 px */
+      .cc-2 {
+        top: 1160px;
+      }
+      .cc-cop {
+        color: #ffffff;
+      }
+      .cc-guy {
+        color: #ffc896;
+      }
+      #w-end {
+        position: absolute;
+        left: 60px;
+        width: 960px;
+        top: 230px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 140px;
+        line-height: 1.02;
+        text-transform: uppercase;
+        text-shadow: 0 10px 0 #c2410c, 0 18px 30px rgba(0, 0, 0, 0.3);
+      }
+      #w-end span {
+        display: inline-block;
+        opacity: 0;
+      }
+      /* text-only callouts (no 3D number): a big word with an optional line under it */
+      .w-tag {
+        position: absolute;
+        font-size: 84px;
+        left: 60px;
+        width: 960px;
+        text-align: center;
+        opacity: 0;
+        color: #ffffff;
+        text-shadow: 0 0 4px #2a1530, 3px 3px 0 #2a1530, -3px 3px 0 #2a1530, 3px -3px 0 #2a1530, -3px -3px 0 #2a1530, 0 8px 18px rgba(0, 0, 0, 0.35);
+      }
+      .w-tag-main {
+        display: block;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.05;
+        text-transform: uppercase;
+      }
+      .w-tag-sub {
+        display: block;
+        margin-top: 12px;
+        font-weight: 600;
+        font-size: 0.64em;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="world" data-start="0" data-duration="39.37" data-width="1080" data-height="1920">
+      <div id="w-bg"></div>
+      <div id="w-police"></div>
+      <canvas id="w-canvas" width="1080" height="1920"></canvas>
+      <canvas id="w-lines" width="1080" height="1920"></canvas>
+      <div id="w-stage" data-layout-allow-overflow>
+        <div class="w-cap" id="w-cap1">
+          <span class="w-unit" id="w-unit1">lakh saal ki bijli</span>
+          <span class="w-label" id="w-label1">sirf 1 second mein</span>
+        </div>
+        <div class="w-cap" id="w-cap2">
+          <span class="w-unit" id="w-unit2">crore ton · har second</span>
+          <span class="w-label" id="w-label2">hydrogen → helium</span>
+        </div>
+        <div class="w-tag" id="w-tag1" style="top: 130px; color: #FFD23F; font-size: 112px;"><span class="w-tag-main">Suraj ka bill?!</span></div>
+        <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Fusion!</span><span class="w-tag-sub">hydrogen + hydrogen → helium</span></div>
+        <div class="w-tag" id="w-tag3" style="top: 330px;"><span class="w-tag-main">Chai ki patti</span><span class="w-tag-sub">isi dhoop se ugi!</span></div>
+        <div class="w-tag" id="w-tag4" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Kitne ghar chalenge?</span><span class="w-tag-sub">Comment karo!</span></div>
+        <div class="w-tag" id="w-tag5" style="top: 300px;"><span class="w-tag-main">Subscribe karo</span><span class="w-tag-sub">warna challan!</span></div>
+        <div class="w-tag" id="w-tag6" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Agla challan:</span><span class="w-tag-sub">Venus ka overtime</span></div>
+        <div class="cc cc-cop" id="w-cc1">Sun!</div>
+        <div class="cc cc-cop" id="w-cc2">In one second,</div>
+        <div class="cc cc-cop cc-2" id="w-cc3">the world&#x27;s power<br />for 6 lakh+ years?</div>
+        <div class="cc cc-cop" id="w-cc4">Pay the bill!</div>
+        <div class="cc cc-guy" id="w-cc5">Good catch, sir,</div>
+        <div class="cc cc-guy cc-2" id="w-cc6">but nobody can<br />pay this bill!</div>
+        <div class="cc cc-cop cc-2" id="w-cc7">Where does all this<br />power come from?</div>
+        <div class="cc cc-guy" id="w-cc8">Fusion!</div>
+        <div class="cc cc-guy cc-2" id="w-cc9">Every second, about<br />60 crore tonnes</div>
+        <div class="cc cc-guy cc-2" id="w-cc10">of hydrogen<br />become helium.</div>
+        <div class="cc cc-cop" id="w-cc11">So the bill stands!</div>
+        <div class="cc cc-guy" id="w-cc12">Sir,</div>
+        <div class="cc cc-guy cc-2" id="w-cc13">even your<br />chai leaves</div>
+        <div class="cc cc-guy cc-2" id="w-cc14">grew in this<br />sunshine!</div>
+        <div class="cc cc-cop cc-2" id="w-cc15">How many homes could<br />the Sun&#x27;s power run?</div>
+        <div class="cc cc-cop" id="w-cc16">Comment!</div>
+        <div class="cc cc-cop" id="w-cc17">Next ticket...</div>
+        <div class="cc cc-cop" id="w-cc18">Venus&#x27;s overtime...</div>
+        <div class="cc cc-guy" id="w-cc19">Sir,</div>
+        <div class="cc cc-guy cc-2" id="w-cc20">at least get the<br />bill signed...</div>
+        <div id="w-end"><span id="w-end1">Bill</span><br /><span id="w-end2">chai</span> <span id="w-end3">se</span><br /><span id="w-end4">bharo!</span></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var root = document.getElementById("root");
+        var duration = parseFloat(root.dataset.duration) || 39.37;
+        var clock = { t: 0 };
+        var host = { duration: duration, clock: clock, render: null };
+        window.__world = host;
+        window.__hf = window.__hf || {};
+        window.__hf.buildReady = window.__hf.buildReady || {};
+        window.__hf.buildReady["world"] = new Promise(function (resolve) {
+          host.ready = resolve;
+        });
+
+        // scale the 1080x1920 type stage to whatever size the root renders at (720p draft or 1080p master)
+        var stage = document.getElementById("w-stage");
+        stage.style.transform = "scale(" + (window.innerWidth || 1080) / 1080 + ")";
+
+        var tl = gsap.timeline({ paused: true });
+        tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } }, 0);
+        // number labels: unit pops as the number lands, label follows, both leave on the next whip
+        [{"cap": "#w-cap1", "unit": "#w-unit1", "label": "#w-label1", "inAt": 4.34, "outAt": 6.9}, {"cap": "#w-cap2", "unit": "#w-unit2", "label": "#w-label2", "inAt": 15.89, "outAt": 18.9}].forEach(function (c) {
+          tl.fromTo(c.cap, { opacity: 0 }, { opacity: 1, duration: 0.01 }, c.inAt - 0.01);
+          tl.fromTo(c.unit, { y: 40, scale: 0.6 }, { y: 0, scale: 1, duration: 0.32, ease: "back.out(2.2)" }, c.inAt);
+          tl.fromTo(c.label, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.8)" }, c.inAt + 0.1);
+          tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
+        });
+        // text callouts: slam in like the number labels, leave fast
+        [{"id": "#w-tag1", "in": 0.4, "out": 2.6}, {"id": "#w-tag2", "in": 13.7, "out": 15.45}, {"id": "#w-tag3", "in": 23.0, "out": 25.6}, {"id": "#w-tag4", "in": 27.3, "out": 31.1}, {"id": "#w-tag5", "in": 31.15, "out": 32.15}, {"id": "#w-tag6", "in": 32.2, "out": 35.5}].forEach(function (c) {
+          tl.fromTo(c.id, { opacity: 0, scale: 1.5, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.22, ease: "back.out(2.2)" }, c.in);
+          tl.to(c.id, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.out - 0.14);
+        });
+        // dialogue captions: pop in on the first word, cut out when the phrase ends
+        [{"id": "#w-cc1", "in": 0.9, "out": 1.75}, {"id": "#w-cc2", "in": 1.86, "out": 3.05}, {"id": "#w-cc3", "in": 3.14, "out": 5.95}, {"id": "#w-cc4", "in": 6.3, "out": 7.06}, {"id": "#w-cc5", "in": 7.31, "out": 8.6}, {"id": "#w-cc6", "in": 8.91, "out": 11.15}, {"id": "#w-cc7", "in": 11.4, "out": 13.4}, {"id": "#w-cc8", "in": 13.65, "out": 14.6}, {"id": "#w-cc9", "in": 14.69, "out": 16.9}, {"id": "#w-cc10", "in": 16.93, "out": 19.09}, {"id": "#w-cc11", "in": 19.34, "out": 21.42}, {"id": "#w-cc12", "in": 21.67, "out": 22.45}, {"id": "#w-cc13", "in": 22.55, "out": 23.9}, {"id": "#w-cc14", "in": 23.91, "out": 25.59}, {"id": "#w-cc15", "in": 27.29, "out": 29.95}, {"id": "#w-cc16", "in": 30.17, "out": 31.13}, {"id": "#w-cc17", "in": 31.88, "out": 33.3}, {"id": "#w-cc18", "in": 33.56, "out": 35.56}, {"id": "#w-cc19", "in": 36.01, "out": 36.8}, {"id": "#w-cc20", "in": 36.89, "out": 38.57}].forEach(function (c) {
+          tl.fromTo(c.id, { opacity: 0, scale: 0.86, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, c.in);
+          tl.to(c.id, { opacity: 0, duration: 0.06 }, c.out - 0.06);
+        });
+        // end card: words slam in, one per beat, and clear before the sign-off
+        ["#w-end1", "#w-end2", "#w-end3", "#w-end4"].forEach(function (id, i) {
+          tl.fromTo(id, { opacity: 0, scale: 1.8, y: -30 }, { opacity: 1, scale: 1, y: 0, duration: 0.24, ease: "back.out(2.4)" }, 25.95 + i * 0.16);
+          tl.to(id, { opacity: 0, duration: 0.12 }, 27.25 - 0.12);
+        });
+        window.__timelines = window.__timelines || {};
+        window.__timelines["world"] = tl;
+      })();
+    </script>
+
+    <script type="module" src="assets/challan-scene.js"></script>
+  </body>
+</html>

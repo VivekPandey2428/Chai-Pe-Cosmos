@@ -1,0 +1,41 @@
+{
+ "title": "Mars pe Illegal Construction",
+ "duration": 40.15,
+ "scene_note": "Challan #6: Inspector Sahab finds a 22 km building on Mars without permission; the Tapri wala explains Olympus Mons.",
+ "caps": [
+  {"unit": "km ooncha", "label": "bina permission!", "in": 1.58, "out": 4.5},
+  {"unit": "guna ooncha", "label": "Everest se", "in": 11.88, "out": 13.2}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "22 km ki building?!", "size": 104, "color": "#FFD23F", "in": 0.15, "out": 1.55},
+  {"top": 330, "text": "Volcano!", "sub": "Olympus Mons", "in": 6.43, "out": 9.3},
+  {"top": 330, "text": "Everest: 8.8 km", "sub": "Olympus Mons: 22 km", "in": 13.3, "out": 15.2},
+  {"top": 330, "text": "Zameen khisakti nahi", "sub": "lava ek hi jagah jamta gaya", "in": 15.5, "out": 19.7},
+  {"top": 330, "text": "Maharashtra jitna!", "sub": "lagbhag 600 km chauda", "in": 22.9, "out": 24.6},
+  {"top": 300, "text": "Olympus Mons pe chadhai", "sub": "kitne din? Comment karo!", "color": "#FFD23F", "in": 27.9, "out": 31.7},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 31.75, "out": 32.75},
+  {"top": 300, "text": "Agla challan:", "sub": "Late-Latif Suraj", "color": "#FFD23F", "in": 32.8, "out": 36.2}
+ ],
+ "captions": [
+  {"who": "cop", "text": "A 22 km tall building on Mars?", "in": 0.9, "out": 3.55},
+  {"who": "cop", "text": "Without permission?!", "in": 3.62, "out": 4.66},
+  {"who": "guy", "text": "Not a building, sir,", "in": 4.91, "out": 6.35},
+  {"who": "guy", "text": "it's a volcano!", "in": 6.43, "out": 7.75},
+  {"who": "guy", "text": "Olympus Mons!", "in": 7.87, "out": 9.31},
+  {"who": "cop", "text": "Taller than Everest?", "in": 9.56, "out": 10.79},
+  {"who": "guy", "text": "2.5 times taller than Everest!", "in": 11.04, "out": 13.04},
+  {"who": "cop", "text": "How did it get so big?", "in": 13.29, "out": 15.21},
+  {"who": "guy", "text": "Mars's crust doesn't move,", "in": 15.46, "out": 17.4},
+  {"who": "guy", "text": "so lava kept piling up in one spot.", "in": 17.46, "out": 19.7},
+  {"who": "cop", "text": "Then knock it down!", "in": 19.95, "out": 20.92},
+  {"who": "guy", "text": "Sir, it's nearly as big as Maharashtra!", "in": 21.17, "out": 24.5},
+  {"who": "guy", "text": "Where will you get a bulldozer?", "in": 24.65, "out": 26.21},
+  {"who": "cop", "text": "How many days to climb Olympus Mons?", "in": 27.91, "out": 30.8},
+  {"who": "cop", "text": "Comment!", "in": 30.91, "out": 31.75},
+  {"who": "cop", "text": "Next ticket...", "in": 32.5, "out": 34.1},
+  {"who": "cop", "text": "the late-latif Sun...", "in": 34.26, "out": 36.26},
+  {"who": "guy", "text": "Sir,", "in": 36.71, "out": 37.4},
+  {"who": "guy", "text": "just get permission from Mars...", "in": 37.51, "out": 39.35}
+ ],
+ "end": {"lines": [["Volcano"], ["ka"], ["challan", "fail!"]], "at": 26.45, "out": 27.8, "size": 130}
+}

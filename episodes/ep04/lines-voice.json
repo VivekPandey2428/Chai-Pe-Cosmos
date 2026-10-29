@@ -1,0 +1,47 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[shouting] सूरज! एक second में, दुनिया की कम से कम छह लाख साल की बिजली? Bill भरो!"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] सही पकड़ा साहब, पर ये bill कोई नहीं भर पाएगा!"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[confused] इतनी बिजली आती कहाँ से?"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[excited] Fusion! हर second लगभग साठ करोड़ टन hydrogen को helium बना देता है।"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[smug] तो bill तो बनता है!"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[laughs] साहब, आपकी चाय की पत्ती भी इसी धूप से उगी है!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[playful] सूरज की बिजली से कितने घर चल सकते हैं? Comment करो!"
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला challan... Venus का overtime..."
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, bill पे sign तो करा लो..."
+ }
+]

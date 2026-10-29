@@ -1,0 +1,52 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[shouting] Venus! तुम्हारा दिन ख़त्म ही नहीं होता?!"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] साहब, Venus अपना एक चक्कर दो सौ तैंतालीस दिन में लगाता है!"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[suspicious] और साल?"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[excited] सूरज का चक्कर सिर्फ़ दो सौ पच्चीस दिन में! दिन, साल से लंबा!"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[confused] उल्टा चल रहा है क्या?"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[laughs] हाँ! Venus उल्टा घूमता है, वहाँ सूरज पश्चिम से निकलता है!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[shocked] मतलब duty की एक shift... दो सौ तैंतालीस दिन की?!"
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[playful] Venus के साल से आपकी उम्र कितनी होगी? Comment करो!"
+ },
+ {
+  "id": "c6",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला challan... Mars पे illegal construction..."
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, आपकी shift ख़त्म हुई?"
+ }
+]

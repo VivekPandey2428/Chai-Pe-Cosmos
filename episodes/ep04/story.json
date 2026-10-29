@@ -1,0 +1,40 @@
+{
+ "title": "Suraj ka Bijli ka Bill",
+ "duration": 39.37,
+ "scene_note": "Challan #4: Inspector Sahab bills the Sun for its electricity; the Tapri wala explains fusion and the chai leaf.",
+ "caps": [
+  {"unit": "lakh saal ki bijli", "label": "sirf 1 second mein", "in": 4.34, "out": 6.9},
+  {"unit": "crore ton · har second", "label": "hydrogen → helium", "in": 15.89, "out": 18.9}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Suraj ka bill?!", "size": 112, "color": "#FFD23F", "in": 0.4, "out": 2.6},
+  {"top": 330, "text": "Fusion!", "sub": "hydrogen + hydrogen → helium", "in": 13.7, "out": 15.45},
+  {"top": 330, "text": "Chai ki patti", "sub": "isi dhoop se ugi!", "in": 23.0, "out": 25.6},
+  {"top": 300, "text": "Kitne ghar chalenge?", "sub": "Comment karo!", "color": "#FFD23F", "in": 27.3, "out": 31.1},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 31.15, "out": 32.15},
+  {"top": 300, "text": "Agla challan:", "sub": "Venus ka overtime", "color": "#FFD23F", "in": 32.2, "out": 35.5}
+ ],
+ "captions": [
+  {"who": "cop", "text": "Sun!", "in": 0.9, "out": 1.75},
+  {"who": "cop", "text": "In one second,", "in": 1.86, "out": 3.05},
+  {"who": "cop", "text": "the world's power for 6 lakh+ years?", "in": 3.14, "out": 5.95},
+  {"who": "cop", "text": "Pay the bill!", "in": 6.3, "out": 7.06},
+  {"who": "guy", "text": "Good catch, sir,", "in": 7.31, "out": 8.6},
+  {"who": "guy", "text": "but nobody can pay this bill!", "in": 8.91, "out": 11.15},
+  {"who": "cop", "text": "Where does all this power come from?", "in": 11.4, "out": 13.4},
+  {"who": "guy", "text": "Fusion!", "in": 13.65, "out": 14.6},
+  {"who": "guy", "text": "Every second, about 60 crore tonnes", "in": 14.69, "out": 16.9},
+  {"who": "guy", "text": "of hydrogen become helium.", "in": 16.93, "out": 19.09},
+  {"who": "cop", "text": "So the bill stands!", "in": 19.34, "out": 21.42},
+  {"who": "guy", "text": "Sir,", "in": 21.67, "out": 22.45},
+  {"who": "guy", "text": "even your chai leaves", "in": 22.55, "out": 23.9},
+  {"who": "guy", "text": "grew in this sunshine!", "in": 23.91, "out": 25.59},
+  {"who": "cop", "text": "How many homes could the Sun's power run?", "in": 27.29, "out": 29.95},
+  {"who": "cop", "text": "Comment!", "in": 30.17, "out": 31.13},
+  {"who": "cop", "text": "Next ticket...", "in": 31.88, "out": 33.3},
+  {"who": "cop", "text": "Venus's overtime...", "in": 33.56, "out": 35.56},
+  {"who": "guy", "text": "Sir,", "in": 36.01, "out": 36.8},
+  {"who": "guy", "text": "at least get the bill signed...", "in": 36.89, "out": 38.57}
+ ],
+ "end": {"lines": [["Bill"], ["chai", "se"], ["bharo!"]], "at": 25.95, "out": 27.25, "size": 140}
+}

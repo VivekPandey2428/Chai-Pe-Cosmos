@@ -1,0 +1,42 @@
+{
+ "title": "Venus ka Overtime",
+ "duration": 40.92,
+ "scene_note": "Challan #5: Inspector Sahab books Venus for a day that never ends; the Tapri wala explains Venus's slow, backwards spin.",
+ "caps": [
+  {"unit": "din", "label": "apni dhuri pe 1 chakkar", "in": 6.91, "out": 9.2},
+  {"unit": "din", "label": "Suraj ka 1 chakkar = 1 saal", "in": 12.41, "out": 13.9}
+ ],
+ "tags": [
+  {"hook": true, "top": 130, "text": "Venus ka overtime?!", "size": 104, "color": "#FFD23F", "in": 0.4, "out": 2.6},
+  {"top": 330, "text": "Din > Saal!", "sub": "sirf Venus pe", "color": "#FFD23F", "in": 13.97, "out": 15.75},
+  {"top": 330, "text": "Ulta ghoomta hai!", "sub": "baaki planets se ulta", "in": 17.7, "out": 20.3},
+  {"top": 330, "text": "Suraj pashchim se!", "sub": "west se sunrise", "in": 20.4, "out": 22.6},
+  {"top": 330, "text": "1 shift = 243 din", "color": "#FFD23F", "in": 25.25, "out": 26.8},
+  {"top": 300, "text": "Venus ke saal mein", "sub": "aapki umar? Comment karo!", "color": "#FFD23F", "in": 28.5, "out": 32.55},
+  {"top": 300, "text": "Subscribe karo", "sub": "warna challan!", "in": 32.6, "out": 33.6},
+  {"top": 300, "text": "Agla challan:", "sub": "Mars pe illegal construction", "color": "#FFD23F", "in": 33.65, "out": 37.3}
+ ],
+ "captions": [
+  {"who": "cop", "text": "Venus!", "in": 0.9, "out": 1.75},
+  {"who": "cop", "text": "Does your day never end?!", "in": 1.86, "out": 3.94},
+  {"who": "guy", "text": "Sir, Venus turns once", "in": 4.19, "out": 6.85},
+  {"who": "guy", "text": "in 243 days!", "in": 6.91, "out": 9.07},
+  {"who": "cop", "text": "And its year?", "in": 9.32, "out": 10.84},
+  {"who": "guy", "text": "It goes round the Sun", "in": 11.09, "out": 12.35},
+  {"who": "guy", "text": "in just 225 days!", "in": 12.41, "out": 13.85},
+  {"who": "guy", "text": "Its day is longer than its year!", "in": 13.97, "out": 15.73},
+  {"who": "cop", "text": "Is it running backwards?", "in": 15.98, "out": 17.42},
+  {"who": "guy", "text": "Yes!", "in": 17.67, "out": 18.45},
+  {"who": "guy", "text": "Venus spins backwards,", "in": 18.55, "out": 20.3},
+  {"who": "guy", "text": "the Sun rises in the west there!", "in": 20.39, "out": 22.55},
+  {"who": "cop", "text": "So one duty shift...", "in": 22.8, "out": 25.15},
+  {"who": "cop", "text": "lasts 243 days?!", "in": 25.24, "out": 26.8},
+  {"who": "cop", "text": "How old would you be in Venus years?", "in": 28.5, "out": 31.5},
+  {"who": "cop", "text": "Comment!", "in": 31.62, "out": 32.58},
+  {"who": "cop", "text": "Next ticket...", "in": 33.33, "out": 34.9},
+  {"who": "cop", "text": "illegal construction on Mars...", "in": 35.09, "out": 37.33},
+  {"who": "guy", "text": "Sir,", "in": 37.78, "out": 38.4},
+  {"who": "guy", "text": "is your shift over yet?", "in": 38.44, "out": 40.12}
+ ],
+ "end": {"lines": [["Shift"], ["kabhi"], ["khatam", "nahi!"]], "at": 27.05, "out": 28.4, "size": 130}
+}
