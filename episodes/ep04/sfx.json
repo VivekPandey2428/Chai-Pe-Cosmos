@@ -2,14 +2,6 @@
  "duration": 39.37,
  "cues": [
   [
-   "whistle",
-   "own:whistle.mp3",
-   "afade=t=out:st=0.9:d=0.3",
-   0.3,
-   0.0,
-   9
-  ],
-  [
    "zap0",
    "own:radar.mp3",
    "anull",
