@@ -29,7 +29,7 @@ cop = {
     "handR": [[0, "UP"], [26.9, "UP"], [27.3, "LOW"], [28.3, "LOW"], [28.55, "AIM", "back"], [33.3, "AIM"], [33.55, "UP", "back"], [DUR, "UP"]],
     "handL": [[0, "HIP"], [0.85, "HIP"], [1.0, "STOP", "back"], [2.6, "STOP"], [2.9, "HIP"], [24.2, "HIP"], [24.4, "STOP", "back"],
               [26.6, "STOP"], [26.9, "HIP"], [27.45, "HIP"], [27.6, "TAKE", "back"], [27.7, "TAKE"], [27.85, "HOLD"], [27.95, "SIP"],
-              [28.3, "SIP"], [28.45, "HOLD"], [40.3, "HOLD"], [40.7, "HIP"]],
+              [28.3, "SIP"], [28.45, "HOLD"], [39.0, "HOLD"], [39.35, "HIP"]],
     "lid": [[0, -0.75], [22.75, -0.75], [22.9, -0.3], [24.85, -0.3], [24.95, -1.8, "snap"], [26.85, -1.8], [27.15, 0.35], [27.5, 0.35],
             [27.6, -0.9], [27.95, -0.9], [28.0, 1.1], [28.3, 1.1], [28.45, -0.75], [DUR, -0.75]],
     "aim": [[0, "venus"], [26.9, "down"], [28.45, "cam"], [33.4, "mars"], [37.7, "venus"]],
@@ -42,7 +42,7 @@ cop = {
     "mood": {"shout": [0.9], "hopeful": [[22.8, 24.85]], "shock": [[24.9, 26.85]], "sad": [[26.85, 27.5]], "sheepish": [[27.5, 28.45]],
              "sip": [[27.95, 28.35]], "toCam": [[28.45, 33.4]], "lookSky": [[-1, 4.1], [22.75, 24.4], [33.4, 37.4], [38.6, 99]]},
 }
-act = {"guy": guy, "cop": cop, "k2": {"pop": 27.05, "give": 27.65, "sipA": 27.95, "sipB": 28.35, "end": 40.3}, "alt": []}
+act = {"guy": guy, "cop": cop, "k2": {"pop": 27.05, "give": 27.65, "sipA": 27.95, "sipB": 28.35, "end": 39.0}, "alt": []}
 
 nums = [
     {"value": 243, "fly": 6.6, "land": 6.91, "lock": 7.95, "out": 9.2, "rim": "#FFB703"},  # "दो सौ तैंतालीस दिन"
@@ -68,7 +68,7 @@ shots = [
 space_shots = [
     {"t": 4.1, "look": "venus", "dir": [0, 0.2, 1], "dist": 9.0},  # Venus turning, slowly: 243
     {"t": 9.3, "blend": 1.6, "look": [0, 0, 0], "dir": [0, 1, 0.5], "dist": 40},  # "और साल?": up over the orbit
-    {"t": 15.9, "blend": 0.9, "look": "venus", "dir": [0.12, 0.25, 1], "dist": 8.5},  # the spin runs backwards
+    {"t": 15.9, "look": "venus", "dir": [0.12, 0.25, 1], "dist": 8.5},  # the spin runs backwards
     {"t": 20.2, "blend": 0.7, "look": "venusTop", "dir": [0, 0.06, 1], "dist": 3.6},  # Venus's horizon: the Sun rises in the west
 ]
 
