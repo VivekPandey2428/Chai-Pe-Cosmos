@@ -1,0 +1,141 @@
+{
+  "episode": 6,
+  "title": "Mars pe Illegal Construction",
+  "number": "22",
+  "plus": false,
+  "unit": "KM OONCHI",
+  "hook": "BINA PERMISSION!",
+  "accent": "#FB5607",
+  "accentDeep": "#8A2E0B",
+  "world": [
+    "#3E2A6E",
+    "#120A2A"
+  ],
+  "glows": [
+    {
+      "color": "rgba(255,45,61,0.55)",
+      "at": [
+        6,
+        4
+      ],
+      "size": 55
+    },
+    {
+      "color": "rgba(45,123,255,0.55)",
+      "at": [
+        96,
+        6
+      ],
+      "size": 55
+    }
+  ],
+  "scene": {
+    "t": 5.2,
+    "gunScreen": "22 KM!",
+    "anchors": {
+      "guy": [
+        -0.75,
+        2.74,
+        0.1
+      ],
+      "cop": [
+        1.05,
+        2.72,
+        0.5
+      ]
+    },
+    "hideSteam": true,
+    "copShout": true,
+    "src": "episodes/ep06/assets/challan-scene.js",
+    "duration": 40.15
+  },
+  "formats": {
+    "16x9": {
+      "size": [
+        1280,
+        720
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          -0.85,
+          3.5,
+          6.6
+        ],
+        "look": [
+          -0.85,
+          2.9,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          64,
+          58
+        ],
+        "number": {
+          "x": 40,
+          "y": 18,
+          "size": 168,
+          "rot": -2
+        },
+        "hook": {
+          "x": 40,
+          "y": 236,
+          "size": 56,
+          "rot": -7
+        },
+        "reticle": 118,
+        "chip": {
+          "x": 26,
+          "y": 646,
+          "size": 24
+        }
+      }
+    },
+    "9x16": {
+      "size": [
+        1080,
+        1920
+      ],
+      "camera": {
+        "fov": 30,
+        "position": [
+          0.12,
+          3.75,
+          11.6
+        ],
+        "look": [
+          0.12,
+          2.75,
+          0.2
+        ]
+      },
+      "layout": {
+        "burst": [
+          50,
+          52
+        ],
+        "number": {
+          "x": 70,
+          "y": 250,
+          "size": 250,
+          "rot": -3
+        },
+        "hook": {
+          "x": 150,
+          "y": 560,
+          "size": 72,
+          "rot": -5
+        },
+        "reticle": 128,
+        "chip": {
+          "x": 60,
+          "y": 1600,
+          "size": 40
+        }
+      }
+    }
+  },
+  "seriesTag": "CHALLAN #6"
+}
