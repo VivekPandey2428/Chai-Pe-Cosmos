@@ -2,14 +2,6 @@
  "duration": 43.51,
  "cues": [
   [
-   "whistle",
-   "own:whistle.mp3",
-   "afade=t=out:st=0.9:d=0.3",
-   0.3,
-   0.0,
-   9
-  ],
-  [
    "riser0",
    "lib:riser.wav",
    "atrim=0.3:1.7,asetpts=PTS-STARTPTS",

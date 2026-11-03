@@ -22,6 +22,10 @@ hl = act["cop"]["handL"]
 hl += [[19.3, "HIP"], [19.6, [0.05, 0.95, 1.05], "back"], [20.9, [0.05, 1.0, 1.05]], [21.15, "HIP"]]
 hl.sort(key=lambda k: k[0])
 act["cop"]["mood"]["confused"].append([19.5, 20.95])
+# the kulhad leaves before the last shot so the loop matches frame 0
+_e = act["k2"]["end"]
+act["k2"]["end"] = 32.3
+act["cop"]["handL"] = [[32.3 if k[0] == _e else 32.7 if k[0] == round(_e + 0.4, 2) else k[0], *k[1:]] for k in act["cop"]["handL"]]
 
 nums = [
     {"value": 100, "plus": True, "fly": 1.7, "land": 2.04, "lock": 3.0, "out": 5.3, "rim": "#B983FF"},  # "सौ करोड़ टन से ज़्यादा"
