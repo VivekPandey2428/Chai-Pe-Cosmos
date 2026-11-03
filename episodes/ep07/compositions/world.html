@@ -166,7 +166,7 @@
           <span class="w-unit" id="w-unit2">second</span>
           <span class="w-label" id="w-label2">chaand ki roshni</span>
         </div>
-        <div class="w-tag" id="w-tag1" style="top: 130px; color: #FFD23F; font-size: 112px;"><span class="w-tag-main">Suraj late hai?!</span></div>
+        <div class="w-tag" id="w-tag1" style="top: 300px; color: #FFD23F; font-size: 124px;"><span class="w-tag-main">Suraj late hai?!</span></div>
         <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Roshni ka safar</span><span class="w-tag-sub">Suraj → Dharti: 8 min 20 sec</span></div>
         <div class="w-tag" id="w-tag3" style="top: 330px;"><span class="w-tag-main">Suraj bujh gaya!</span><span class="w-tag-sub">par roshni abhi raaste mein hai</span></div>
         <div class="w-tag" id="w-tag4" style="top: 330px; color: #FFD23F;"><span class="w-tag-main">~10 nanosecond</span><span class="w-tag-sub">3 m door = 10 ns purane</span></div>
@@ -224,7 +224,7 @@
           tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
         });
         // text callouts: slam in like the number labels, leave fast
-        [{"id": "#w-tag1", "in": 0.2, "out": 1.9}, {"id": "#w-tag2", "in": 4.9, "out": 8.7}, {"id": "#w-tag3", "in": 14.4, "out": 17.6}, {"id": "#w-tag4", "in": 26.8, "out": 28.7}, {"id": "#w-tag5", "in": 30.15, "out": 34.95}, {"id": "#w-tag6", "in": 35.0, "out": 35.95}, {"id": "#w-tag7", "in": 36.0, "out": 39.3}].forEach(function (c) {
+        [{"id": "#w-tag1", "in": 0.15, "out": 1.9}, {"id": "#w-tag2", "in": 4.9, "out": 8.7}, {"id": "#w-tag3", "in": 14.4, "out": 17.6}, {"id": "#w-tag4", "in": 26.8, "out": 28.7}, {"id": "#w-tag5", "in": 30.15, "out": 34.95}, {"id": "#w-tag6", "in": 35.0, "out": 35.95}, {"id": "#w-tag7", "in": 36.0, "out": 39.3}].forEach(function (c) {
           tl.fromTo(c.id, { opacity: 0, scale: 1.5, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.22, ease: "back.out(2.2)" }, c.in);
           tl.to(c.id, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.out - 0.14);
         });

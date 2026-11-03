@@ -17,6 +17,10 @@ SPACE = [[4.75, 22.68]]
 act, shots, T = standard(HERE, {"dur": DUR, "space": SPACE, "hook": "sun", "tease": "saturn", "alt": [[35.6, 39.6]],
                                 "screen": {"hook": "LATE!", "punch": "10 ns", "tease": "SATURN"}})
 act["guy"]["mood"]["lookUp"].append([1.5, 4.5])
+# the kulhad leaves before the last shot so the loop matches frame 0
+_e = act["k2"]["end"]
+act["k2"]["end"] = 40.6
+act["cop"]["handL"] = [[40.6 if k[0] == _e else 41.0 if k[0] == round(_e + 0.4, 2) else k[0], *k[1:]] for k in act["cop"]["handL"]]
 
 nums = [
     {"value": 8, "fly": 1.9, "land": 2.2, "lock": 3.1, "out": 4.45, "rim": "#FFB703"},  # "आठ minute बीस second"
