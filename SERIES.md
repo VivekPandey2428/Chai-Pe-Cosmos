@@ -139,6 +139,19 @@ ask in character only after the payoff, never at the start.
 - **Measure:** "Viewed vs. swiped away" (aim 70%+) and subscribers gained per Short; keep what works and log it
   under Lessons.
 
+## Series ideas (queued)
+The challan series stays as an occasional special. Next main series: **"Chai Pe Kyun?"** (one everyday sky "why?"
+question per Short, ~25 s: big question at frame 0, one-line answer, one visual, "aaj raat khud dekho", comment question,
+teaser). First ten: aasmaan neela kyun; shaam ko suraj laal kyun; chaand saath kyun chalta hai; taare tim-timate kyun,
+planet nahi; din mein taare kahan; chaand ka shape kyun badalta hai; garmi-sardi kyun (tilt, not distance); suraj
+poorab se kyun; toota taara kya hai; bijli pehle, awaaz baad mein kyun (seconds ÷ 3 = km).
+
+Kept by the user for the series after that (do not drop them):
+- **"Sach ya Jhooth?"**: space myths with a buzzer, e.g. "Great Wall space se dikhti hai?" ❌. Very simple, great for
+  comments (viewers vote before the reveal); each answer is a yes/no, so pair it with one surprising "why".
+- **"Agar…?"**: what-ifs, e.g. "Agar chaand gayab ho jaaye?". Fun and shareable, but the explanations get complicated:
+  keep each to one consequence and one visual.
+
 ## Episode log
 | # | Title | Fact(s) | Characters | Files |
 |---|-------|---------|------------|-------|
