@@ -1,0 +1,153 @@
+{
+ "title": "Aasmaan neela kyun hai?",
+ "duration": 34.2,
+ "scene_note": "Chai Pe Kyun? #1: why the sky is blue.",
+ "caps": [],
+ "tags": [
+  {
+   "hook": true,
+   "top": 300,
+   "text": "Aasmaan neela kyun?",
+   "size": 120,
+   "color": "#FFD23F",
+   "in": 0.0,
+   "out": 2.9
+  },
+  {
+   "top": 330,
+   "text": "Dhoop = saare rang",
+   "sub": "safed roshni mein rainbow",
+   "in": 7.1,
+   "out": 9.15
+  },
+  {
+   "top": 330,
+   "text": "Neela sabse zyada bikharta",
+   "sub": "isliye aasmaan neela",
+   "color": "#7FD8FF",
+   "in": 11.2,
+   "out": 14.5
+  },
+  {
+   "top": 330,
+   "text": "Ghar pe try karo!",
+   "sub": "paani + 2 boond doodh + torch",
+   "color": "#FFD23F",
+   "in": 17.3,
+   "out": 22.6
+  },
+  {
+   "top": 300,
+   "text": "Chaand pe aasmaan?",
+   "sub": "kis rang ka? Comment karo!",
+   "color": "#FFD23F",
+   "in": 23.04,
+   "out": 26.66
+  },
+  {
+   "top": 300,
+   "text": "Subscribe karo",
+   "sub": "roz ek naya sawaal",
+   "in": 26.68,
+   "out": 27.61
+  },
+  {
+   "top": 300,
+   "text": "Agla sawaal:",
+   "sub": "shaam ko suraj laal kyun?",
+   "color": "#FFD23F",
+   "in": 27.66,
+   "out": 31.7
+  }
+ ],
+ "captions": [
+  {
+   "who": "cop",
+   "text": "Arey, why is the sky blue?",
+   "in": 0.15,
+   "out": 2.83
+  },
+  {
+   "who": "cop",
+   "text": "Who painted it?",
+   "in": 3.11,
+   "out": 4.23
+  },
+  {
+   "who": "guy",
+   "text": "Not paint, sir: sunlight!",
+   "in": 4.43,
+   "out": 6.99
+  },
+  {
+   "who": "guy",
+   "text": "Sunlight hides all the colours.",
+   "in": 7.07,
+   "out": 9.15
+  },
+  {
+   "who": "guy",
+   "text": "Tiny bits of air",
+   "in": 9.35,
+   "out": 11.03
+  },
+  {
+   "who": "guy",
+   "text": "scatter blue light the most, everywhere.",
+   "in": 11.19,
+   "out": 14.47
+  },
+  {
+   "who": "cop",
+   "text": "So the whole sky fills with blue!",
+   "in": 14.67,
+   "out": 17.08
+  },
+  {
+   "who": "guy",
+   "text": "Try it: two drops of milk in water,",
+   "in": 17.28,
+   "out": 20.16
+  },
+  {
+   "who": "guy",
+   "text": "shine a torch: it looks blue from the side!",
+   "in": 20.32,
+   "out": 22.64
+  },
+  {
+   "who": "cop",
+   "text": "What colour is the sky on the Moon?",
+   "in": 23.09,
+   "out": 25.65
+  },
+  {
+   "who": "cop",
+   "text": "Comment!",
+   "in": 25.73,
+   "out": 26.61
+  },
+  {
+   "who": "cop",
+   "text": "Next question...",
+   "in": 27.51,
+   "out": 29.11
+  },
+  {
+   "who": "cop",
+   "text": "why is the Sun red in the evening?",
+   "in": 29.27,
+   "out": 31.67
+  },
+  {
+   "who": "guy",
+   "text": "Sir, look up...",
+   "in": 32.02,
+   "out": 33.7
+  }
+ ],
+ "end": {
+  "lines": [],
+  "at": 99
+ }
+}

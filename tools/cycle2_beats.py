@@ -174,3 +174,95 @@ def standard(ep, spec):
         shots.insert(0, {"t": 0, **CU_GUY, "dist": 5.0})
     times = {"T": T, "C": C, "S": S, "Z": Z, "P": P, "shock": shock0, "k2": k2, "punch": punch, "comment": comment, "tease": tease, "loop": loop, "L": L}
     return {"guy": guy, "cop": cop, "k2": k2, "alt": spec.get("alt", [])}, shots, times
+
+
+SKY_LOW = {"look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1]}
+
+
+def kyun(ep, spec):
+    """Beats for "Chai Pe Kyun?" (no challan): Sahab asks, looking up; the Tapri wala explains with hand gestures; the
+    question is visual at frame 0 (a low wide shot of the sky); comment and subscribe to camera; teaser; the last shot
+    matches frame 0. spec = {dur, space, screen: {hook, tease}, extra_shots, frame0: shot dict (optional)}."""
+    lines = json.load(open(os.path.join(ep, "assets/audio/lines.json"), encoding="utf-8"))
+    voice = {l["id"]: l["prompt"] for l in json.load(open(os.path.join(ep, "lines-voice.json"), encoding="utf-8"))}
+    D, space = spec["dur"], spec["space"]
+    L = [{"id": l["id"], "who": l["speaker"], "a": l["words"][0]["start"], "b": l["words"][-1]["end"],
+          "tag": re.match(r"\[(\w+)\]", voice[l["id"]]).group(1), "text": voice[l["id"]]} for l in lines]
+    comment = next(l for l in L if "Comment" in l["text"])
+    tease = next(l for l in L if l["tag"] == "mysterious")
+    loop = L[-1]
+    C, S, Z, P = round(comment["a"] - 0.1, 2), round(comment["b"] + 0.05, 2), round(tease["a"] - 0.05, 2), round(loop["a"] - 0.05, 2)
+    home = lambda t: not in_space(t, space)
+    win = lambda l, pre=0.1, post=0.1: [round(l["a"] - pre, 2), round(l["b"] + post, 2)]
+    cop_mood = {"confused": [], "hopeful": [], "smug": [], "suspicious": [], "toCam": [[C, Z]], "lookSky": [], "shout": []}
+    for l in L:
+        if l["who"] != "cop" or l in (comment, tease):
+            continue
+        key = {"curious": "confused", "suspicious": "suspicious", "surprised": "hopeful", "amused": "smug"}.get(l["tag"])
+        if key:
+            cop_mood[key].append(win(l))
+        if l is L[0]:
+            cop_mood["lookSky"].append([-1, round(l["b"] + 0.2, 2)])
+    cop_mood["lookSky"] += [[Z + 0.1, round(tease["b"] + 0.2, 2)], [round(D - 1.2, 2), 99]]
+    hl = [[0, "HIP"]]
+    first = L[0]
+    if first["who"] == "cop":
+        hl += [[first["a"] + 0.2, "HIP"], [first["a"] + 0.45, "STOP", "back"], [first["b"] - 0.2, "STOP"], [first["b"] + 0.15, "HIP"]]
+    cop = {"handR": [[0, "LOW"], [D, "LOW"]], "handL": hl, "lid": [[0, -0.75], [D, -0.75]], "aim": [[0, "down"], [C, "cam"], [Z, "down"]],
+           "beam": [], "screen": [[0, spec["screen"]["hook"], 0], [C, "COMMENT", 0], [S, "SUBSCRIBE?", 1], [Z, spec["screen"]["tease"], 0]],
+           "duty": [[S, Z]], "lazyFrom": 0, "sweat": [-2, -1], "mood": cop_mood}
+    gR = [[0, "SIP_R"], [0.85, "SIP_R"], [1.1, "REST_R", "back"]]
+    gL = [[0, "REST_L"]]
+    gmood = {"startle": [], "smug": [], "laugh": [], "sip": [[-1, 0.9], [round(D - 0.3, 2), 99]], "lookUp": [], "confused": []}
+    gest = [("RAISE_R", None), (None, "OPEN_L"), ("TOAST_R", None), (None, "POINT_UP")]
+    gi = 0
+    for l in L[1:]:
+        if l["who"] != "guy" or not home(l["a"]) or l is loop:
+            if l["who"] == "guy" and l["tag"] in ("amused", "casual"):
+                gmood["smug"].append(win(l))
+            continue
+        r, lh = gest[gi % len(gest)]
+        gi += 1
+        a0, b0 = round(l["a"] + 0.1, 2), round(l["b"] - 0.15, 2)
+        if r:
+            gR += [[a0, "REST_R"], [a0 + 0.25, r, "back"], [b0, r], [b0 + 0.3, "REST_R"]]
+        else:
+            gL += [[a0, "REST_L"], [a0 + 0.25, lh, "back"], [b0, lh], [b0 + 0.3, "REST_L"]]
+        if l["tag"] in ("amused", "casual"):
+            gmood["smug"].append(win(l))
+        if l["tag"] == "laughs":
+            gmood["laugh"].append([round(l["a"] - 0.05, 2), round(l["a"] + 0.75, 2)])
+    gR += [[P, "REST_R"], [P + 0.25, "SKY_R", "back"], [round(D - 0.65, 2), "SKY_R"], [round(D - 0.3, 2), "SIP_R"]]
+    gR.sort(key=lambda k: k[0])
+    gL.sort(key=lambda k: k[0])
+    if first["who"] == "cop":
+        gmood["lookUp"].append([0.3, round(first["b"] + 0.2, 2)])
+    gmood["lookUp"].append([Z + 0.2, round(tease["b"], 2)])
+    glid = [[0, 1.1], [0.85, 1.1], [1.0, -0.85], [round(D - 0.35, 2), -0.85], [round(D - 0.25, 2), 1.1]]
+    for a, b in gmood["laugh"]:
+        glid += [[a - 0.05, -0.85], [a + 0.05, 0.05], [b - 0.1, 0.05], [b, -0.85]]
+    glid.sort(key=lambda k: k[0])
+    guy = {"handR": gR, "handL": gL, "lid": glid, "yaw": [[0, 0], [0.95, 0], [1.15, 0.55, "back"], [round(D - 0.6, 2), 0.55], [round(D - 0.2, 2), 0]],
+           "mood": gmood}
+    f0 = spec.get("frame0", {**SKY_LOW, "dist": 11.0})
+    shots = [{"t": 0, **f0, "to": {"dist": f0["dist"] * 0.92}}]
+    for a, b in space:
+        if b < D:
+            shots.append({"t": b, **TWO, "dist": 9.6})
+    for l in L:
+        if not home(l["a"]) or l in (comment, tease, loop) or l is first:
+            continue
+        t0 = round(l["a"] - 0.15, 2)
+        if any(abs(t0 - b) < 0.45 for a, b in space):
+            t0 = round(l["a"] + 0.35, 2)
+        shots.append({"t": t0, "blend": 0.45, **(CU_GUY if l["who"] == "guy" else CU_COP), "dist": 4.8})
+    if home(first["a"]) and first["b"] - first["a"] > 2.5:
+        shots.append({"t": round(first["a"] + 2.4, 2), "blend": 0.6, **CU_COP, "dist": 5.0})
+    shots += [{"t": C, "look": [1.05, 2.75, 0.75], "dir": [0.12, 0.1, 1], "dist": 4.4, "to": {"dist": 4.0}},
+              {"t": Z, **SKY_LOW, "dist": 12.0},
+              {"t": P, **CU_GUY, "dist": 5.0, "to": {"dist": 4.7}},
+              {"t": round(D - 1.2, 2), "blend": 0.8, **f0, "to": {"dist": f0["dist"]}}]
+    shots += spec.get("extra_shots", [])
+    shots.sort(key=lambda s: s["t"])
+    act = {"guy": guy, "cop": cop, "k2": {"pop": 99, "give": 99.5, "sipA": 99.6, "sipB": 99.8, "end": 99.9}, "alt": spec.get("alt", [])}
+    return act, shots, {"C": C, "S": S, "Z": Z, "P": P, "L": L}

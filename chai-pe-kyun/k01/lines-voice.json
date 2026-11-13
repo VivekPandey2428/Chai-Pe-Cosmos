@@ -1,0 +1,42 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[curious] अरे, ये आसमान नीला क्यों है? Paint किसने किया?"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[amused] Paint नहीं साहब, धूप! धूप में सारे रंग छुपे हैं।"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[explaining] हवा के छोटे-छोटे कण नीले रंग को सबसे ज़्यादा इधर-उधर बिखेर देते हैं।"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[surprised] तो पूरा आसमान नीले से भर गया!"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[excited] घर पे try करो: पानी में दो बूँद दूध, torch मारो, side से नीला दिखेगा!"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[playful] चाँद पे आसमान किस रंग का होगा? Comment करो!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला सवाल... शाम को सूरज लाल क्यों?"
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, ऊपर देखो..."
+ }
+]

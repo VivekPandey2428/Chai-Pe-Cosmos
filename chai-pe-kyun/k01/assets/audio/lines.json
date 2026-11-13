@@ -1,0 +1,128 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "start": 0.07,
+  "words": [
+   {
+    "text": "Arey, why is the sky blue?",
+    "start": 0.15,
+    "end": 2.83
+   },
+   {
+    "text": "Who painted it?",
+    "start": 3.11,
+    "end": 4.23
+   }
+  ]
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "start": 4.11,
+  "words": [
+   {
+    "text": "Not paint, sir: sunlight!",
+    "start": 4.43,
+    "end": 6.99
+   },
+   {
+    "text": "Sunlight hides all the colours.",
+    "start": 7.07,
+    "end": 9.15
+   }
+  ]
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "start": 9.19,
+  "words": [
+   {
+    "text": "Tiny bits of air",
+    "start": 9.35,
+    "end": 11.03
+   },
+   {
+    "text": "scatter blue light the most, everywhere.",
+    "start": 11.19,
+    "end": 14.47
+   }
+  ]
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "start": 14.6,
+  "words": [
+   {
+    "text": "So the whole sky fills with blue!",
+    "start": 14.67,
+    "end": 17.08
+   }
+  ]
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "start": 17.12,
+  "words": [
+   {
+    "text": "Try it: two drops of milk in water,",
+    "start": 17.28,
+    "end": 20.16
+   },
+   {
+    "text": "shine a torch: it looks blue from the side!",
+    "start": 20.32,
+    "end": 22.64
+   }
+  ]
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "start": 22.93,
+  "words": [
+   {
+    "text": "What colour is the sky on the Moon?",
+    "start": 23.09,
+    "end": 25.65
+   },
+   {
+    "text": "Comment!",
+    "start": 25.73,
+    "end": 26.61
+   }
+  ]
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "start": 27.35,
+  "words": [
+   {
+    "text": "Next question...",
+    "start": 27.51,
+    "end": 29.11
+   },
+   {
+    "text": "why is the Sun red in the evening?",
+    "start": 29.27,
+    "end": 31.67
+   }
+  ]
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "start": 31.86,
+  "words": [
+   {
+    "text": "Sir, look up...",
+    "start": 32.02,
+    "end": 33.7
+   }
+  ]
+ }
+]

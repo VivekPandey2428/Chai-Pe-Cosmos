@@ -1,0 +1,123 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "start": 0.02,
+  "words": [
+   {
+    "text": "Wherever I go, the Moon follows me!",
+    "start": 0.26,
+    "end": 3.54
+   },
+   {
+    "text": "Is it chasing me?",
+    "start": 4.1,
+    "end": 5.3
+   }
+  ]
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "start": 5.356,
+  "words": [
+   {
+    "text": "Not chasing, sir: the Moon is very far,",
+    "start": 5.5,
+    "end": 9.036
+   },
+   {
+    "text": "about 3,84,000 km!",
+    "start": 9.076,
+    "end": 12.316
+   }
+  ]
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "start": 12.436,
+  "words": [
+   {
+    "text": "Nearby trees and poles fall behind fast...",
+    "start": 12.516,
+    "end": 15.796
+   }
+  ]
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "start": 15.927,
+  "words": [
+   {
+    "text": "...but something that far never changes direction.",
+    "start": 15.996,
+    "end": 19.047
+   }
+  ]
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "start": 19.167,
+  "words": [
+   {
+    "text": "Watch tonight as you walk:",
+    "start": 19.247,
+    "end": 20.807
+   },
+   {
+    "text": "the tree runs, the Moon stays!",
+    "start": 21.007,
+    "end": 23.727
+   }
+  ]
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "start": 24.017,
+  "words": [
+   {
+    "text": "Does the Sun move with us too?",
+    "start": 24.177,
+    "end": 26.297
+   },
+   {
+    "text": "Comment!",
+    "start": 26.497,
+    "end": 27.297
+   }
+  ]
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "start": 28.037,
+  "words": [
+   {
+    "text": "Next question...",
+    "start": 28.197,
+    "end": 29.477
+   },
+   {
+    "text": "why do stars twinkle?",
+    "start": 29.797,
+    "end": 31.877
+   }
+  ]
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "start": 32.067,
+  "words": [
+   {
+    "text": "Sir, the Moon is still behind you...",
+    "start": 32.227,
+    "end": 35.187
+   }
+  ]
+ }
+]

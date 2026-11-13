@@ -1,0 +1,128 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "start": 0.02,
+  "words": [
+   {
+    "text": "Why does the Sun turn red in the evening?",
+    "start": 0.26,
+    "end": 3.14
+   },
+   {
+    "text": "Is it blushing?",
+    "start": 3.22,
+    "end": 4.5
+   }
+  ]
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "start": 3.82,
+  "words": [
+   {
+    "text": "Not blushing, sir:",
+    "start": 4.7,
+    "end": 6.3
+   },
+   {
+    "text": "a long road!",
+    "start": 6.46,
+    "end": 7.66
+   }
+  ]
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "start": 7.7,
+  "words": [
+   {
+    "text": "At noon, sunlight comes straight down.",
+    "start": 7.86,
+    "end": 10.02
+   },
+   {
+    "text": "In the evening it slants: a long trip through air.",
+    "start": 10.1,
+    "end": 13.46
+   }
+  ]
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "start": 13.5,
+  "words": [
+   {
+    "text": "Remember, blue scatters the most?",
+    "start": 13.66,
+    "end": 16.54
+   },
+   {
+    "text": "On the way the blue is lost, red-orange is left.",
+    "start": 16.62,
+    "end": 20.22
+   }
+  ]
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "start": 20.1,
+  "words": [
+   {
+    "text": "So the blue got off on the way!",
+    "start": 20.42,
+    "end": 23.46
+   }
+  ]
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "start": 23.67,
+  "words": [
+   {
+    "text": "What colour is a sunset on Mars?",
+    "start": 23.91,
+    "end": 26.51
+   },
+   {
+    "text": "Comment!",
+    "start": 26.71,
+    "end": 27.59
+   }
+  ]
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "start": 28.33,
+  "words": [
+   {
+    "text": "Next question...",
+    "start": 28.49,
+    "end": 30.17
+   },
+   {
+    "text": "why does the Moon follow us?",
+    "start": 30.25,
+    "end": 32.81
+   }
+  ]
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "start": 33.0,
+  "words": [
+   {
+    "text": "Sir, watch again tomorrow morning...",
+    "start": 33.16,
+    "end": 35.56
+   }
+  ]
+ }
+]

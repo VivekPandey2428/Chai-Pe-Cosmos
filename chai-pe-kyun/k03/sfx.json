@@ -1,0 +1,73 @@
+{
+ "duration": 35.69,
+ "cues": [
+  [
+   "zap0",
+   "own:radar.mp3",
+   "anull",
+   0.6,
+   0.15,
+   12
+  ],
+  [
+   "riser0",
+   "lib:riser.wav",
+   "atrim=0.3:1.7,asetpts=PTS-STARTPTS",
+   1.25,
+   12.42,
+   11
+  ],
+  [
+   "whooshIn0",
+   "lib:whoosh.wav",
+   "asetrate=39690,aresample=44100",
+   0.333,
+   12.42,
+   10
+  ],
+  [
+   "whooshOut0",
+   "lib:whoosh.wav",
+   "asetrate=55125,aresample=44100",
+   0.24,
+   19.15,
+   8
+  ],
+  [
+   "pop0",
+   "lib:pop.wav",
+   "anull",
+   0.01,
+   16.0,
+   12
+  ],
+  [
+   "camzap",
+   "own:radar.mp3",
+   "atrim=0:0.5,afade=t=out:st=0.4:d=0.1",
+   0.12,
+   24.08,
+   10
+  ],
+  [
+   "zap1",
+   "own:radar.mp3",
+   "atrim=0:0.5,afade=t=out:st=0.4:d=0.1",
+   0.12,
+   27.35,
+   10
+  ]
+ ],
+ "booms": [
+  [
+   9.68,
+   0.9
+  ]
+ ],
+ "ticks": [
+  [
+   9.35,
+   10.6
+  ]
+ ]
+}

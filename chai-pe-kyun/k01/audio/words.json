@@ -1,0 +1,88 @@
+{
+"c1": [
+{
+"text": "Arey, why is the sky blue?",
+"start": 0.08,
+"end": 2.76
+},
+{
+"text": "Who painted it?",
+"start": 3.04,
+"end": 4.16
+}
+],
+"g1": [
+{
+"text": "Not paint, sir: sunlight!",
+"start": 0.32,
+"end": 2.88
+},
+{
+"text": "Sunlight hides all the colours.",
+"start": 2.96,
+"end": 5.04
+}
+],
+"g2": [
+{
+"text": "Tiny bits of air",
+"start": 0.16,
+"end": 1.84
+},
+{
+"text": "scatter blue light the most, everywhere.",
+"start": 2.0,
+"end": 5.28
+}
+],
+"c2": [
+{
+"text": "So the whole sky fills with blue!",
+"start": 0.07,
+"end": 2.48
+}
+],
+"g3": [
+{
+"text": "Try it: two drops of milk in water,",
+"start": 0.16,
+"end": 3.04
+},
+{
+"text": "shine a torch: it looks blue from the side!",
+"start": 3.2,
+"end": 5.52
+}
+],
+"c3": [
+{
+"text": "What colour is the sky on the Moon?",
+"start": 0.16,
+"end": 2.72
+},
+{
+"text": "Comment!",
+"start": 2.8,
+"end": 3.68
+}
+],
+"c4": [
+{
+"text": "Next question...",
+"start": 0.16,
+"end": 1.76
+},
+{
+"text": "why is the Sun red in the evening?",
+"start": 1.92,
+"end": 4.32
+}
+],
+"g4": [
+{
+"text": "Sir, look up...",
+"start": 0.16,
+"end": 1.84
+}
+]
+}

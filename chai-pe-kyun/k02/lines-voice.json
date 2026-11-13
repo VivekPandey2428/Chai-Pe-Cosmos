@@ -1,0 +1,42 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "prompt": "[curious] शाम को सूरज लाल क्यों हो जाता है? शर्मा रहा है क्या?"
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "prompt": "[laughs] शर्मा नहीं रहा साहब, लंबा रास्ता!"
+ },
+ {
+  "id": "g2",
+  "speaker": "guy",
+  "prompt": "[explaining] दोपहर को धूप सीधी आती है। शाम को तिरछी, हवा में बहुत लंबा सफ़र।"
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "prompt": "[explaining] याद है, नीला सबसे ज़्यादा बिखरता है? रास्ते में नीला खो जाता है, लाल-नारंगी बच जाता है।"
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "prompt": "[amused] मतलब नीला रंग रास्ते में ही उतर गया!"
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "prompt": "[playful] Mars पे sunset किस रंग का होता है? Comment करो!"
+ },
+ {
+  "id": "c4",
+  "speaker": "cop",
+  "prompt": "[mysterious] अगला सवाल... चाँद हमारे साथ क्यों चलता है?"
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "prompt": "[casual] साहब, कल सुबह फिर देखना..."
+ }
+]
