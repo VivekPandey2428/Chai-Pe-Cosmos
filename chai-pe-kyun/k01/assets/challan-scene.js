@@ -951,7 +951,7 @@ const airG = new THREE.Group();
 const rndA = mulberry32(17);
 const MOL = Array.from({ length: 34 }, () => {
   const m = new THREE.Mesh(new THREE.IcosahedronGeometry(0.16, 1), glossy("#DDE6F5", { roughness: 0.4 }));
-  m.position.set(-5 + 10 * rndA(), -3 + 6 * rndA(), -1 + 2 * rndA());
+  m.position.set(-5 + 10 * rndA(), -3 + 4.6 * rndA(), -1 + 2 * rndA());
   airG.add(m);
   return m;
 });
@@ -961,7 +961,7 @@ const PHOT = Array.from({ length: 30 }, (_, i) => {
   s.scale.setScalar(0.85);
   airG.add(s);
   const a = rndA() * TAU;
-  return { s, blue: i % 3 === 0, y: -2.6 + 5.2 * rndA(), ph: rndA(), hit: -2 + 4 * rndA(), dir: new THREE.Vector3(Math.cos(a), Math.sin(a), 0.4 * (rndA() - 0.5)) };
+  return { s, blue: i % 3 === 0, y: -2.6 + 4.2 * rndA(), ph: rndA(), hit: -2 + 4 * rndA(), dir: new THREE.Vector3(Math.cos(a), Math.sin(a), 0.4 * (rndA() - 0.5)) };
 });
 epWorld.add(airG);
 // C: milky water and a torch
