@@ -91,6 +91,6 @@ further) → the Moon following you.
   generator needs one small change for this format: no trombone/kulhad/end-card beat (there is no challan). The
   "reversal" is replaced by the try-it-yourself beat.
 - **Sources for the descriptions:** NASA Space Place "Why is the sky blue?"
-  (https://spaceplace.nasa.gov/blue-sky/), NASA "Blue sunset on Mars"
-  (https://science.nasa.gov/resource/curiositys-sunset-on-mars/), NASA Moon facts
+  (https://spaceplace.nasa.gov/blue-sky/), NASA/JPL "Curiosity captures blue sunset on Mars" (May 2015; link to be checked
+  before publishing), NASA Moon facts
   (https://science.nasa.gov/moon/facts/).
