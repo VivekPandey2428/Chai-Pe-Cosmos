@@ -14,3 +14,4 @@ assets/audio/*-norm.wav
 episodes/*/renders/silent-*.mp4
 episodes/*/renders/*.log
 episodes/*/assets/audio/mix-full.wav
+chai-pe-kyun/*/renders/silent-*.mp4
