@@ -19,15 +19,15 @@ const K = (Math.min(W, H) / 1080) * DPR; // device-pixel scale for 2D drawing an
 
 // ---------------------------------------------------------------- timing (dialogue track: assets/audio/lines.json)
 // Chai Pe Kyun #2: Shaam ko suraj laal kyun?: built by tools/cycle2_patch.py from episodes/<ep>/patch-scene.py (all timing and acting is data)
-const DUR = 36.06;
-const SPACE = [[7.78, 20.32]];
-const WHIPS = [{"c": 7.78, "b": 0.22, "a": 0.2, "dir": -1, "k": 1.1}, {"c": 20.32, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}];
-const NUMS = [];
-const ACT = {"guy": {"handR": [[0, "SIP_R"], [0.85, "SIP_R"], [1.1, "REST_R", "back"], [4.8, "REST_R"], [5.05, "RAISE_R", "back"], [7.51, "RAISE_R"], [7.81, "REST_R"], [33.11, "REST_R"], [33.36, "SKY_R", "back"], [35.41, "SKY_R"], [35.76, "SIP_R"]], "handL": [[0, "REST_L"]], "lid": [[0, 1.1], [0.85, 1.1], [1.0, -0.85], [4.6000000000000005, -0.85], [4.7, 0.05], [5.3500000000000005, 0.05], [5.45, -0.85], [35.71, -0.85], [35.81, 1.1]], "yaw": [[0, 0], [0.95, 0], [1.15, 0.55, "back"], [35.46, 0.55], [35.86, 0]], "mood": {"startle": [], "smug": [[33.06, 35.66]], "laugh": [[4.65, 5.45]], "sip": [[-1, 0.9], [35.76, 99]], "lookUp": [[0.3, 4.7], [28.64, 32.81]], "confused": []}}, "cop": {"handR": [[0, "LOW"], [36.06, "LOW"]], "handL": [[0, "HIP"], [0.46, "HIP"], [0.71, "STOP", "back"], [4.3, "STOP"], [4.65, "HIP"]], "lid": [[0, -0.75], [36.06, -0.75]], "aim": [[0, "down"], [23.81, "cam"], [28.44, "down"]], "beam": [], "screen": [[0, "LAAL?", 0], [23.81, "COMMENT", 0], [27.64, "SUBSCRIBE?", 1], [28.44, "CHAAND?", 0]], "duty": [[27.64, 28.44]], "lazyFrom": 0, "sweat": [-2, -1], "mood": {"confused": [[0.16, 4.6]], "hopeful": [], "smug": [[20.32, 23.56]], "suspicious": [], "toCam": [[23.81, 28.44]], "lookSky": [[-1, 4.7], [28.540000000000003, 33.01], [34.86, 99]], "shout": []}}, "k2": {"pop": 99, "give": 99.5, "sipA": 99.6, "sipB": 99.8, "end": 99.9}, "alt": [[28.4, 33.0]]};
+const DUR = 33.85;
+const SPACE = [[7.18, 17.72]];
+const WHIPS = [{"c": 7.18, "b": 0.22, "a": 0.2, "dir": -1, "k": 1.1}, {"c": 17.72, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}];
+const NUMS = [{"value": 40, "fly": 10.62, "land": 10.92, "lock": 11.7, "out": 12.25, "rim": "#FF8A3D"}];
+const ACT = {"guy": {"handR": [[0, "SIP_R"], [0.85, "SIP_R"], [1.1, "REST_R", "back"], [4.46, "REST_R"], [4.71, "RAISE_R", "back"], [6.95, "RAISE_R"], [7.25, "REST_R"], [31.21, "REST_R"], [31.46, "SKY_R", "back"], [33.2, "SKY_R"], [33.55, "SIP_R"]], "handL": [[0, "REST_L"]], "lid": [[0, 1.1], [0.85, 1.1], [1.0, -0.85], [4.26, -0.85], [4.359999999999999, 0.05], [5.010000000000001, 0.05], [5.11, -0.85], [33.5, -0.85], [33.6, 1.1]], "yaw": [[0, 0], [0.95, 0], [1.15, 0.55, "back"], [33.25, 0.55], [33.65, 0]], "mood": {"startle": [], "smug": [[31.16, 33.25]], "laugh": [[4.31, 5.11]], "sip": [[-1, 0.9], [33.55, 99]], "lookUp": [[0.3, 4.41], [27.09, 30.96]], "confused": []}}, "cop": {"handR": [[0, "LOW"], [33.85, "LOW"]], "handL": [[0, "HIP"], [0.46, "HIP"], [0.71, "STOP", "back"], [4.012, "STOP"], [4.362, "HIP"]], "lid": [[0, -0.75], [33.85, -0.75]], "aim": [[0, "down"], [21.47, "cam"], [26.89, "down"]], "beam": [], "screen": [[0, "LAAL?", 0], [17.9, "CHALLAN!", 1], [21.3, "LAAL?", 0], [21.47, "COMMENT", 0], [26.09, "SUBSCRIBE?", 1], [26.89, "CHAAND?", 0]], "duty": [[26.09, 26.89]], "lazyFrom": 0, "sweat": [-2, -1], "mood": {"confused": [[0.16, 4.31]], "hopeful": [], "smug": [[17.73, 21.32]], "suspicious": [], "toCam": [[21.47, 26.89]], "lookSky": [[-1, 4.41], [26.990000000000002, 31.16], [32.65, 99]], "shout": []}}, "k2": {"pop": 99, "give": 99.5, "sipA": 99.6, "sipB": 99.8, "end": 99.9}, "alt": [[27.1, 31.0]]};
 // speaking windows for lip flap (first to last word of each line)
 const TALK = {
-  cop: [[0.26, 4.5], [20.42, 23.46], [23.91, 27.59], [28.49, 32.81]],
-  guy: [[4.7, 7.66], [7.86, 13.46], [13.66, 20.22], [33.16, 35.56]],
+  cop: [[0.26, 4.21], [17.83, 21.22], [21.57, 26.04], [26.94, 30.96]],
+  guy: [[4.36, 7.1], [7.25, 12.15], [12.3, 17.63], [31.26, 33.15]],
 };
 
 // ---------------------------------------------------------------- helpers
@@ -950,19 +950,23 @@ setSun.scale.setScalar(2.6);
 const SEGS = 14;
 const setBeam = Array.from({ length: SEGS }, (_, i) => {
   const u = (i + 0.5) / SEGS;
-  const c = new THREE.Color("#FFFFFF").lerp(new THREE.Color("#FF6A1A"), Math.pow(u, 1.3));
-  const m = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 1, 10), glowMat(c, 0.85));
+  const c = new THREE.Color("#FFF8E8").lerp(new THREE.Color("#FF3A00"), Math.pow(u, 0.7));
+  const m = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 1, 10), new THREE.MeshBasicMaterial({ color: c, toneMapped: false, depthTest: false }));
+  m.renderOrder = 5;
   m.rotation.z = Math.atan2(OBS.y - SET_FROM.y, OBS.x - SET_FROM.x) - Math.PI / 2;
   m.userData.u = u;
   epWorld.add(m);
   return m;
 });
 epWorld.add(setSun);
+const arrive = new THREE.Sprite(haloMat("rgba(255,110,30,1)", "rgba(255,80,20,0)"));
+arrive.position.copy(OBS);
+epWorld.add(arrive);
 const rndP = mulberry32(29);
 const PHOT = Array.from({ length: 26 }, (_, i) => {
   const blue = i % 2 === 0;
   const s = new THREE.Sprite(haloMat(blue ? "rgba(80,170,255,1)" : "rgba(255,140,60,1)", "rgba(0,0,0,0)"));
-  s.scale.setScalar(blue ? 0.85 : 0.6);
+  s.scale.setScalar(blue ? 1.15 : 0.6);
   epWorld.add(s);
   const a = (rndP() < 0.5 ? 1 : -1) * (0.6 + 0.9 * rndP());
   return { s, blue, ph: i / 26, out: 0.25 + 0.5 * rndP(), dir: new THREE.Vector3(0.3, Math.sin(a), Math.cos(a) * 0.6) };
@@ -977,9 +981,13 @@ function episodeRender(t, name) {
   skySun.material.color.setRGB(1, 0.7, 0.55);
   skySunHalo.position.copy(skySun.position);
   skySunHalo.scale.setScalar(7.5 * (1 - 0.6 * night));
-  const rise = outBack(seg(t, 28.7, 29.7), 1.2) * (1 - inOutSine(seg(t, 32.6, 33.2)));
-  skyMoon.visible = skyMoonGlow.visible = rise > 0.01;
+  // the Moon rises for the teaser and fades out in place (it must not slide down past Sahab)
+  const rise = outBack(seg(t, 27.3, 28.3), 1.2);
+  const fade = 1 - seg(t, 30.7, 31.2);
+  skyMoon.visible = skyMoonGlow.visible = rise > 0.01 && fade > 0.01;
   skyMoon.position.set(2.2, lerp(1.0, 5.4, rise), -7);
+  skyMoon.scale.setScalar(Math.max(0.001, fade));
+  skyMoonGlow.material.opacity = fade;
   skyMoonGlow.position.copy(skyMoon.position);
   skyMoonGlow.scale.setScalar(2.6);
   if (name === "chair") stars.visible = night > 0.3;
@@ -987,14 +995,14 @@ function episodeRender(t, name) {
   key.color.set(name === "chair" ? (night > 0.5 ? "#e8ecff" : "#ffc89a") : "#fff1e0");
 
   bigEarth.rotation.y = 0.05 * t;
-  // noon beam first ("दोपहर को धूप सीधी आती है"), then the sunset beam ("शाम को तिरछी")
-  const noon = outExpo(seg(t, 7.9, 8.5)) * (1 - seg(t, 10.0, 10.3));
+  // the noon beam for comparison, the sunset beam on "शाम को धूप तिरछी" (both stay through "40 गुना")
+  const noon = outExpo(seg(t, 7.3, 7.8)) * (1 - seg(t, 12.1, 12.4));
   noonSun.visible = noonBeam.visible = noon > 0.01;
   const top = new THREE.Vector3(0, 2.3, 0);
   noonBeam.position.copy(top).lerp(OBS, 0.5 * noon);
   noonBeam.scale.set(1, top.distanceTo(OBS) * noon + 0.001, 1);
   noonBeam.position.y = top.y - (top.y - OBS.y) * noon * 0.5;
-  const set = outExpo(seg(t, 10.1, 11.0));
+  const set = outExpo(seg(t, 7.9, 8.8));
   setSun.visible = set > 0.01;
   const len = SET_FROM.distanceTo(OBS);
   const dir = OBS.clone().sub(SET_FROM).normalize();
@@ -1004,12 +1012,15 @@ function episodeRender(t, name) {
     m.position.copy(SET_FROM).addScaledVector(dir, len * u);
     m.scale.set(1, len / SEGS + 0.02, 1);
   });
-  // photons ride the sunset beam; the blue ones are knocked out of it on the way (13.7-20.2)
-  const pOn = t > 11.2 && t < 20.3;
+  // photons ride the sunset beam; the blue ones are knocked out of it on the way ("नीला ... उतर जाता है")
+  const pOn = t > 12.3 && t < 17.8;
+  const arr = seg(t, 15.9, 16.4);
+  arrive.visible = arr > 0.01 && t < 17.8;
+  arrive.scale.setScalar(2.6 * arr * (1 + 0.08 * Math.sin(TAU * 2 * t)));
   PHOT.forEach((p) => {
-    p.s.visible = pOn;
+    p.s.visible = pOn && p.blue; // the beam itself carries the warm colours; warm sprites piled on it read as white
     if (!pOn) return;
-    const u = (((t - 11.2) / 2.6 + p.ph) % 1 + 1) % 1;
+    const u = (((t - 12.3) / 2.2 + p.ph) % 1 + 1) % 1;
     const along = SET_FROM.clone().addScaledVector(dir, len * u);
     if (p.blue && u > p.out) p.s.position.copy(SET_FROM).addScaledVector(dir, len * p.out).addScaledVector(p.dir, (u - p.out) * 4);
     else p.s.position.copy(along);
@@ -1149,8 +1160,8 @@ scene.add(galaxyWorld);
 
 // ---------------------------------------------------------------- camera
 const up = new THREE.Vector3(0, 1, 0);
-const SHOTS_V = [{"t": 0, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 10.120000000000001}}, {"t": 2.66, "blend": 0.6, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 5.0}, {"t": 4.55, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 20.32, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 9.6}, {"t": 20.77, "blend": 0.45, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 4.8}, {"t": 23.81, "look": [1.05, 2.75, 0.75], "dir": [0.12, 0.1, 1], "dist": 4.4, "to": {"dist": 4.0}}, {"t": 28.44, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 12.0}, {"t": 33.11, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 5.0, "to": {"dist": 4.7}}, {"t": 34.86, "blend": 0.8, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 11.0}}];
-const SPACE_SHOTS_V = [{"t": 7.78, "look": [0, 0, 0], "dir": [0, 0.05, 1], "dist": 24}, {"t": 13.6, "blend": 1.0, "look": [-1.0, -0.3, 0], "dir": [0.05, 0.08, 1], "dist": 21}];
+const SHOTS_V = [{"t": 0, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 10.120000000000001}}, {"t": 2.66, "blend": 0.6, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 5.0}, {"t": 4.21, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 17.72, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 9.6}, {"t": 18.18, "blend": 0.45, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 4.8}, {"t": 21.47, "look": [1.05, 2.75, 0.75], "dir": [0.12, 0.1, 1], "dist": 4.4, "to": {"dist": 4.0}}, {"t": 26.89, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 12.0}, {"t": 31.21, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 5.0, "to": {"dist": 4.7}}, {"t": 32.65, "blend": 0.8, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 11.0}}];
+const SPACE_SHOTS_V = [{"t": 7.18, "look": [0, 0, 0], "dir": [0, 0.05, 1], "dist": 24}, {"t": 12.3, "blend": 1.0, "look": [-1.0, -0.3, 0], "dir": [0.05, 0.08, 1], "dist": 21}];
 const scaleShots = (list) => list.map((s) => ({ ...s, dist: s.dist * 0.62, to: s.to ? { dist: s.to.dist * 0.62 } : undefined }));
 const SHOTS = VERTICAL ? SHOTS_V : scaleShots(SHOTS_V);
 const SPACE_SHOTS = VERTICAL ? SPACE_SHOTS_V : scaleShots(SPACE_SHOTS_V);

@@ -1,88 +1,103 @@
 {
-"c1": [
-{
-"text": "Why does the Sun turn red in the evening?",
-"start": 0.24,
-"end": 3.12
-},
-{
-"text": "Is it blushing?",
-"start": 3.2,
-"end": 4.48
-}
-],
-"g1": [
-{
-"text": "Not blushing, sir:",
-"start": 0.88,
-"end": 2.48
-},
-{
-"text": "a long road!",
-"start": 2.64,
-"end": 3.84
-}
-],
-"g2": [
-{
-"text": "At noon, sunlight comes straight down.",
-"start": 0.16,
-"end": 2.32
-},
-{
-"text": "In the evening it slants: a long trip through air.",
-"start": 2.4,
-"end": 5.76
-}
-],
-"g3": [
-{
-"text": "Remember, blue scatters the most?",
-"start": 0.16,
-"end": 3.04
-},
-{
-"text": "On the way the blue is lost, red-orange is left.",
-"start": 3.12,
-"end": 6.72
-}
-],
-"c2": [
-{
-"text": "So the blue got off on the way!",
-"start": 0.32,
-"end": 3.36
-}
-],
-"c3": [
-{
-"text": "What colour is a sunset on Mars?",
-"start": 0.24,
-"end": 2.84
-},
-{
-"text": "Comment!",
-"start": 3.04,
-"end": 3.92
-}
-],
-"c4": [
-{
-"text": "Next question...",
-"start": 0.16,
-"end": 1.84
-},
-{
-"text": "why does the Moon follow us?",
-"start": 1.92,
-"end": 4.48
-}
-],
-"g4": [
-{
-"text": "Sir, watch again tomorrow morning...",
-"start": 0.16,
-"end": 2.56
-}
-]
+ "c1": [
+  {
+   "text": "Why does the Sun turn red in the evening?",
+   "start": 0.24,
+   "end": 3.12
+  },
+  {
+   "text": "Is it blushing?",
+   "start": 3.2,
+   "end": 4.48
+  }
+ ],
+ "g1": [
+  {
+   "text": "Not blushing, sir:",
+   "start": 0.88,
+   "end": 2.48
+  },
+  {
+   "text": "a long road!",
+   "start": 2.64,
+   "end": 3.84
+  }
+ ],
+ "g2": [
+  {
+   "text": "In the evening sunlight slants,",
+   "start": 0.08,
+   "end": 1.77
+  },
+  {
+   "text": "so it crosses about 40× more air than at noon!",
+   "start": 2.15,
+   "end": 5.56
+  }
+ ],
+ "g3": [
+  {
+   "text": "And blue scatters the most,",
+   "start": 0.08,
+   "end": 2.3
+  },
+  {
+   "text": "so blue gets off on the way.",
+   "start": 2.67,
+   "end": 4.0
+  },
+  {
+   "text": "Only red-orange arrives!",
+   "start": 4.41,
+   "end": 6.22
+  }
+ ],
+ "c2": [
+  {
+   "text": "Blue deserves a challan:",
+   "start": 0.08,
+   "end": 2.05
+  },
+  {
+   "text": "it got off mid-route!",
+   "start": 2.31,
+   "end": 3.81
+  }
+ ],
+ "c3": [
+  {
+   "text": "Mars is the RED planet...",
+   "start": 0.08,
+   "end": 2.12
+  },
+  {
+   "text": "so what colour is its sunset? Comment!",
+   "start": 2.42,
+   "end": 5.01
+  }
+ ],
+ "c4": [
+  {
+   "text": "Next question...",
+   "start": 0.16,
+   "end": 1.84
+  },
+  {
+   "text": "why does the Moon follow us?",
+   "start": 1.92,
+   "end": 4.48
+  }
+ ],
+ "g4": [
+  {
+   "text": "Look, sir,",
+   "start": 0.08,
+   "end": 0.88
+  },
+  {
+   "text": "it's red again...",
+   "start": 1.14,
+   "end": 2.18
+  }
+ ]
 }

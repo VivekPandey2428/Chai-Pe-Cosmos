@@ -7,17 +7,17 @@
  {
   "id": "g1",
   "speaker": "guy",
-  "gap": 0.2
+  "gap": 0.15
  },
  {
   "id": "g2",
   "speaker": "guy",
-  "gap": 0.2
+  "gap": 0.15
  },
  {
   "id": "g3",
   "speaker": "guy",
-  "gap": 0.2
+  "gap": 0.15
  },
  {
   "id": "c2",
@@ -27,7 +27,7 @@
  {
   "id": "c3",
   "speaker": "cop",
-  "gap": 0.45
+  "gap": 0.35
  },
  {
   "id": "c4",
@@ -37,6 +37,6 @@
  {
   "id": "g4",
   "speaker": "guy",
-  "gap": 0.35
+  "gap": 0.3
  }
 ]

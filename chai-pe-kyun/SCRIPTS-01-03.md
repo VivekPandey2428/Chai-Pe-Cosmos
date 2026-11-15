@@ -37,26 +37,26 @@ further) → the Moon following you.
 
 ---
 
-## Episode 2: Shaam ko suraj laal kyun? (about 25 s)
-**Frame-0 text:** "SURAJ LAAL KYUN?"  ·  **Cover:** a big orange setting Sun + "SHARMA RAHA HAI?" sticker
+## Episode 2: Shaam ko suraj laal kyun? (v2 after the virality pass, 34 s)
+**Frame-0 text:** "SURAJ LAAL KYUN?"  ·  **Cover:** "LAAL?" + "SHARMA RAHA HAI?" sticker
 
 | ~Time | Who | Line | Picture |
 |---|---|---|---|
-| 0.0 | IS | "Shaam ko suraj laal kyun ho jaata hai? Sharma raha hai kya?" | Sunset at home: a big orange Sun on the horizon. Question text on screen. |
-| 3.5 | TW | "Sharma nahi raha sahab, lamba raasta!" | The Tapri wala laughs, points at the Sun. |
-| 6.0 | TW | "Dopahar ko dhoop seedhi aati hai. Shaam ko tirchhi, hawa mein bahut lamba safar." | Whip to a side view of Earth with its thin air layer: a short beam straight down at noon, a long slanting beam at sunset. |
-| 11.5 | TW | "Yaad hai, neela sabse zyada bikharta hai? Raaste mein neela kho jaata hai, laal-narangi bach jaata hai." | Along the long beam, blue dots peel away one by one; only orange and red reach the duo. |
-| 17.5 | IS | "Matlab neela rang raaste mein hi utar gaya!" | Snap home; the cop nods, convinced. |
-| 19.5 | IS | "Mars pe sunset kis rang ka hota hai? Comment karo!" | To camera; ~1 s subscribe callout. |
-| 22.5 | IS | "Agla sawaal... chaand humare saath kyun chalta hai?" | Night falls; the Moon rises. |
-| 24.5 | TW | "Sahab, kal subah phir dekhna..." | Loops. |
+| 0.0 | IS | "Shaam ko suraj laal kyun ho jaata hai? Sharma raha hai kya?" | Sunset at home, big orange Sun. Question text. |
+| 4.4 | TW | "Sharma nahi raha sahab, lamba raasta!" | Close-up, laughing. |
+| 7.2 | TW | "Shaam ko dhoop tirchhi aati hai, toh hawa mein dopahar se lagbhag chaalis guna lamba raasta!" | Earth + air layer: noon beam straight down, sunset beam slanting; 3D **40** lands on "chaalis" (GUNA, dopahar se zyada hawa). |
+| 12.3 | TW | "Aur neela sabse zyada bikharta hai, toh raaste mein hi utar jaata hai. Bas laal-narangi pahunchta hai!" | Blue dots peel off the beam, which fades white → red; an orange glow where it arrives. |
+| 17.8 | IS | "Neele ka toh challan banta hai, beech raaste utar gaya!" | Snap home; radar reads CHALLAN!; tag "NEELE KA CHALLAN!" |
+| 21.6 | IS | "Mars toh laal planet hai... wahan sunset kis rang ka? Comment karo!" | To camera; ~1 s subscribe callout. |
+| 26.9 | IS | "Agla sawaal... chaand humare saath kyun chalta hai?" | Night falls; the Moon rises, then fades. |
+| 31.3 | TW | "Dekho sahab, phir laal ho gaya..." | Back to the sunset; loops into the opening question. |
 
-- **Comment answer (pinned):** blue! On Mars, fine dust sends blue light forward around the Sun, so Martian sunsets look
-  bluish (NASA's Curiosity and Spirit rovers photographed this).
-- **Facts:** near the horizon, sunlight crosses many times more air than at noon; the short (blue) wavelengths are
-  scattered out along the way, leaving the reds and oranges. Dust and smoke make sunsets redder.
-- **New visuals:** a sunset sky at home, and a side-on Earth with a glowing atmosphere layer and two beams (noon vs
-  sunset). Reuses Episode 1's "blue dots peel away" effect.
+- **Why v2:** v1 was 36 s with 12 s of diagram, no number, no joke after the answer, a comment question without a
+  wrong-guess setup and a loop line that went nowhere.
+- **Comment answer (pinned reply):** blue! Fine Martian dust sends blue light forward around the Sun (Curiosity, Gale
+  crater, 15 April 2015, NASA image PIA19400).
+- **Facts:** at the horizon sunlight crosses about 38 times the air it crosses straight overhead (relative air mass ≈ 38);
+  short (blue) wavelengths are scattered out on the way. Dust and smoke make sunsets redder.
 
 ---
 

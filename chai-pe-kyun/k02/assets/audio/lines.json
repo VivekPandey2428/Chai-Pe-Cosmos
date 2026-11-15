@@ -2,126 +2,141 @@
  {
   "id": "c1",
   "speaker": "cop",
-  "start": 0.02,
+  "start": 0.038,
   "words": [
    {
     "text": "Why does the Sun turn red in the evening?",
     "start": 0.26,
-    "end": 3.14
+    "end": 2.927
    },
    {
     "text": "Is it blushing?",
-    "start": 3.22,
-    "end": 4.5
+    "start": 3.027,
+    "end": 4.212
    }
   ]
  },
  {
   "id": "g1",
   "speaker": "guy",
-  "start": 3.82,
+  "start": 3.547,
   "words": [
    {
     "text": "Not blushing, sir:",
-    "start": 4.7,
-    "end": 6.3
+    "start": 4.362,
+    "end": 5.843
    },
    {
     "text": "a long road!",
-    "start": 6.46,
-    "end": 7.66
+    "start": 5.991,
+    "end": 7.103
    }
   ]
  },
  {
   "id": "g2",
   "speaker": "guy",
-  "start": 7.7,
+  "start": 7.178,
   "words": [
    {
-    "text": "At noon, sunlight comes straight down.",
-    "start": 7.86,
-    "end": 10.02
+    "text": "In the evening sunlight slants,",
+    "start": 7.252,
+    "end": 8.817
    },
    {
-    "text": "In the evening it slants: a long trip through air.",
-    "start": 10.1,
-    "end": 13.46
+    "text": "so it crosses about 40× more air than at noon!",
+    "start": 8.997,
+    "end": 12.154
    }
   ]
  },
  {
   "id": "g3",
   "speaker": "guy",
-  "start": 13.5,
+  "start": 12.23,
   "words": [
    {
-    "text": "Remember, blue scatters the most?",
-    "start": 13.66,
-    "end": 16.54
+    "text": "And blue scatters the most,",
+    "start": 12.304,
+    "end": 14.36
    },
    {
-    "text": "On the way the blue is lost, red-orange is left.",
-    "start": 16.62,
-    "end": 20.22
+    "text": "so blue gets off on the way.",
+    "start": 14.54,
+    "end": 15.771
+   },
+   {
+    "text": "Only red-orange arrives!",
+    "start": 15.951,
+    "end": 17.627
    }
   ]
  },
  {
   "id": "c2",
   "speaker": "cop",
-  "start": 20.1,
+  "start": 17.753,
   "words": [
    {
-    "text": "So the blue got off on the way!",
-    "start": 20.42,
-    "end": 23.46
+    "text": "Blue deserves a challan:",
+    "start": 17.827,
+    "end": 19.651
+   },
+   {
+    "text": "it got off mid-route!",
+    "start": 19.831,
+    "end": 21.22
    }
   ]
  },
  {
   "id": "c3",
   "speaker": "cop",
-  "start": 23.67,
+  "start": 21.496,
   "words": [
    {
-    "text": "What colour is a sunset on Mars?",
-    "start": 23.91,
-    "end": 26.51
+    "text": "Mars is the RED planet...",
+    "start": 21.57,
+    "end": 23.459
    },
    {
-    "text": "Comment!",
-    "start": 26.71,
-    "end": 27.59
+    "text": "so what colour is its sunset? Comment!",
+    "start": 23.639,
+    "end": 26.037
    }
   ]
  },
  {
   "id": "c4",
   "speaker": "cop",
-  "start": 28.33,
+  "start": 26.789,
   "words": [
    {
     "text": "Next question...",
-    "start": 28.49,
-    "end": 30.17
+    "start": 26.937,
+    "end": 28.493
    },
    {
     "text": "why does the Moon follow us?",
-    "start": 30.25,
-    "end": 32.81
+    "start": 28.593,
+    "end": 30.963
    }
   ]
  },
  {
   "id": "g4",
   "speaker": "guy",
-  "start": 33.0,
+  "start": 31.189,
   "words": [
    {
-    "text": "Sir, watch again tomorrow morning...",
-    "start": 33.16,
-    "end": 35.56
+    "text": "Look, sir,",
+    "start": 31.263,
+    "end": 32.004
+   },
+   {
+    "text": "it's red again...",
+    "start": 32.184,
+    "end": 33.147
    }
   ]
  }

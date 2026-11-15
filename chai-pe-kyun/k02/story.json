@@ -1,8 +1,15 @@
 {
  "title": "Shaam ko suraj laal kyun?",
- "duration": 36.06,
+ "duration": 33.85,
  "scene_note": "Chai Pe Kyun? #2: why the Sun is red at sunset.",
- "caps": [],
+ "caps": [
+  {
+   "unit": "GUNA",
+   "label": "dopahar se zyada hawa!",
+   "in": 10.95,
+   "out": 12.2
+  }
+ ],
  "tags": [
   {
    "hook": true,
@@ -15,49 +22,50 @@
   },
   {
    "top": 330,
-   "text": "Dopahar: chhota raasta",
-   "sub": "seedhi dhoop",
-   "in": 8.0,
-   "out": 10.0
+   "text": "Shaam: tirchhi dhoop",
+   "sub": "dopahar: seedhi",
+   "color": "#FFB385",
+   "in": 7.4,
+   "out": 10.5
   },
   {
    "top": 330,
-   "text": "Shaam: lamba raasta",
-   "sub": "hawa mein bahut door",
+   "text": "Neela raaste mein utar gaya",
+   "sub": "sirf laal-narangi pahuncha",
    "color": "#FFB385",
-   "in": 10.2,
-   "out": 13.5
-  },
-  {
-   "top": 330,
-   "text": "Neela raaste mein bikhar gaya",
-   "sub": "laal-narangi pahuncha",
-   "color": "#FFB385",
-   "in": 16.6,
-   "out": 20.2
+   "in": 14.5,
+   "out": 17.6
   },
   {
    "top": 300,
-   "text": "Mars pe sunset?",
-   "sub": "kis rang ka? Comment karo!",
+   "text": "NEELE KA CHALLAN!",
+   "size": 96,
+   "color": "#FF4D5E",
+   "in": 17.9,
+   "out": 21.2
+  },
+  {
+   "top": 300,
+   "text": "Mars = LAAL planet",
+   "sub": "wahan sunset kis rang ka? Comment!",
    "color": "#FFD23F",
-   "in": 23.86,
-   "out": 27.64
+   "in": 21.52,
+   "out": 26.09
   },
   {
    "top": 300,
    "text": "Subscribe karo",
    "sub": "roz ek naya sawaal",
-   "in": 27.66,
-   "out": 28.59
+   "in": 26.11,
+   "out": 27.04
   },
   {
    "top": 300,
    "text": "Agla sawaal:",
    "sub": "chaand saath kyun chalta hai?",
    "color": "#FFD23F",
-   "in": 28.64,
-   "out": 32.8
+   "in": 27.09,
+   "out": 30.9
   }
  ],
  "captions": [
@@ -65,85 +73,103 @@
    "who": "cop",
    "text": "Why does the Sun turn red in the evening?",
    "in": 0.26,
-   "out": 3.14
+   "out": 2.93
   },
   {
    "who": "cop",
    "text": "Is it blushing?",
-   "in": 3.22,
-   "out": 4.5
+   "in": 3.03,
+   "out": 4.21
   },
   {
    "who": "guy",
    "text": "Not blushing, sir:",
-   "in": 4.7,
-   "out": 6.3
+   "in": 4.36,
+   "out": 5.84
   },
   {
    "who": "guy",
    "text": "a long road!",
-   "in": 6.46,
-   "out": 7.66
+   "in": 5.99,
+   "out": 7.1
   },
   {
    "who": "guy",
-   "text": "At noon, sunlight comes straight down.",
-   "in": 7.86,
-   "out": 10.02
+   "text": "In the evening sunlight slants,",
+   "in": 7.25,
+   "out": 8.82
   },
   {
    "who": "guy",
-   "text": "In the evening it slants: a long trip through air.",
-   "in": 10.1,
-   "out": 13.46
+   "text": "so it crosses about 40× more air than at noon!",
+   "in": 9.0,
+   "out": 12.15
   },
   {
    "who": "guy",
-   "text": "Remember, blue scatters the most?",
-   "in": 13.66,
-   "out": 16.54
+   "text": "And blue scatters the most,",
+   "in": 12.3,
+   "out": 14.36
   },
   {
    "who": "guy",
-   "text": "On the way the blue is lost, red-orange is left.",
-   "in": 16.62,
-   "out": 20.22
+   "text": "so blue gets off on the way.",
+   "in": 14.54,
+   "out": 15.77
+  },
+  {
+   "who": "guy",
+   "text": "Only red-orange arrives!",
+   "in": 15.95,
+   "out": 17.63
   },
   {
    "who": "cop",
-   "text": "So the blue got off on the way!",
-   "in": 20.42,
+   "text": "Blue deserves a challan:",
+   "in": 17.83,
+   "out": 19.65
+  },
+  {
+   "who": "cop",
+   "text": "it got off mid-route!",
+   "in": 19.83,
+   "out": 21.22
+  },
+  {
+   "who": "cop",
+   "text": "Mars is the RED planet...",
+   "in": 21.57,
    "out": 23.46
   },
   {
    "who": "cop",
-   "text": "What colour is a sunset on Mars?",
-   "in": 23.91,
-   "out": 26.51
-  },
-  {
-   "who": "cop",
-   "text": "Comment!",
-   "in": 26.71,
-   "out": 27.59
+   "text": "so what colour is its sunset? Comment!",
+   "in": 23.64,
+   "out": 26.04
   },
   {
    "who": "cop",
    "text": "Next question...",
-   "in": 28.49,
-   "out": 30.17
+   "in": 26.94,
+   "out": 28.49
   },
   {
    "who": "cop",
    "text": "why does the Moon follow us?",
-   "in": 30.25,
-   "out": 32.81
+   "in": 28.59,
+   "out": 30.96
   },
   {
    "who": "guy",
-   "text": "Sir, watch again tomorrow morning...",
-   "in": 33.16,
-   "out": 35.56
+   "text": "Look, sir,",
+   "in": 31.26,
+   "out": 32.0
+  },
+  {
+   "who": "guy",
+   "text": "it's red again...",
+   "in": 32.18,
+   "out": 33.15
   }
  ],
  "end": {

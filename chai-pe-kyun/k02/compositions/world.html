@@ -152,34 +152,40 @@
     </style>
   </head>
   <body>
-    <div id="root" data-composition-id="world" data-start="0" data-duration="36.06" data-width="1080" data-height="1920">
+    <div id="root" data-composition-id="world" data-start="0" data-duration="33.85" data-width="1080" data-height="1920">
       <div id="w-bg"></div>
       <div id="w-police"></div>
       <canvas id="w-canvas" width="1080" height="1920"></canvas>
       <canvas id="w-lines" width="1080" height="1920"></canvas>
       <div id="w-stage" data-layout-allow-overflow>
-
+        <div class="w-cap" id="w-cap1">
+          <span class="w-unit" id="w-unit1">GUNA</span>
+          <span class="w-label" id="w-label1">dopahar se zyada hawa!</span>
+        </div>
         <div class="w-tag" id="w-tag1" style="top: 300px; color: #FFD23F; font-size: 120px;"><span class="w-tag-main">Suraj laal kyun?</span></div>
-        <div class="w-tag" id="w-tag2" style="top: 330px;"><span class="w-tag-main">Dopahar: chhota raasta</span><span class="w-tag-sub">seedhi dhoop</span></div>
-        <div class="w-tag" id="w-tag3" style="top: 330px; color: #FFB385;"><span class="w-tag-main">Shaam: lamba raasta</span><span class="w-tag-sub">hawa mein bahut door</span></div>
-        <div class="w-tag" id="w-tag4" style="top: 330px; color: #FFB385;"><span class="w-tag-main">Neela raaste mein bikhar gaya</span><span class="w-tag-sub">laal-narangi pahuncha</span></div>
-        <div class="w-tag" id="w-tag5" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Mars pe sunset?</span><span class="w-tag-sub">kis rang ka? Comment karo!</span></div>
+        <div class="w-tag" id="w-tag2" style="top: 330px; color: #FFB385;"><span class="w-tag-main">Shaam: tirchhi dhoop</span><span class="w-tag-sub">dopahar: seedhi</span></div>
+        <div class="w-tag" id="w-tag3" style="top: 330px; color: #FFB385;"><span class="w-tag-main">Neela raaste mein utar gaya</span><span class="w-tag-sub">sirf laal-narangi pahuncha</span></div>
+        <div class="w-tag" id="w-tag4" style="top: 300px; color: #FF4D5E; font-size: 96px;"><span class="w-tag-main">NEELE KA CHALLAN!</span></div>
+        <div class="w-tag" id="w-tag5" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Mars = LAAL planet</span><span class="w-tag-sub">wahan sunset kis rang ka? Comment!</span></div>
         <div class="w-tag" id="w-tag6" style="top: 300px;"><span class="w-tag-main">Subscribe karo</span><span class="w-tag-sub">roz ek naya sawaal</span></div>
         <div class="w-tag" id="w-tag7" style="top: 300px; color: #FFD23F;"><span class="w-tag-main">Agla sawaal:</span><span class="w-tag-sub">chaand saath kyun chalta hai?</span></div>
         <div class="cc cc-cop cc-2" id="w-cc1">Why does the Sun turn<br />red in the evening?</div>
         <div class="cc cc-cop" id="w-cc2">Is it blushing?</div>
         <div class="cc cc-guy" id="w-cc3">Not blushing, sir:</div>
         <div class="cc cc-guy" id="w-cc4">a long road!</div>
-        <div class="cc cc-guy cc-2" id="w-cc5">At noon, sunlight<br />comes straight down.</div>
-        <div class="cc cc-guy cc-2" id="w-cc6">In the evening it slants:<br />a long trip through air.</div>
-        <div class="cc cc-guy cc-2" id="w-cc7">Remember, blue<br />scatters the most?</div>
-        <div class="cc cc-guy cc-2" id="w-cc8">On the way the blue is<br />lost, red-orange is left.</div>
-        <div class="cc cc-cop cc-2" id="w-cc9">So the blue got<br />off on the way!</div>
-        <div class="cc cc-cop cc-2" id="w-cc10">What colour is a<br />sunset on Mars?</div>
-        <div class="cc cc-cop" id="w-cc11">Comment!</div>
-        <div class="cc cc-cop" id="w-cc12">Next question...</div>
-        <div class="cc cc-cop cc-2" id="w-cc13">why does the<br />Moon follow us?</div>
-        <div class="cc cc-guy cc-2" id="w-cc14">Sir, watch again<br />tomorrow morning...</div>
+        <div class="cc cc-guy cc-2" id="w-cc5">In the evening<br />sunlight slants,</div>
+        <div class="cc cc-guy cc-2" id="w-cc6">so it crosses about 40×<br />more air than at noon!</div>
+        <div class="cc cc-guy cc-2" id="w-cc7">And blue scatters<br />the most,</div>
+        <div class="cc cc-guy cc-2" id="w-cc8">so blue gets<br />off on the way.</div>
+        <div class="cc cc-guy cc-2" id="w-cc9">Only red-orange<br />arrives!</div>
+        <div class="cc cc-cop cc-2" id="w-cc10">Blue deserves<br />a challan:</div>
+        <div class="cc cc-cop cc-2" id="w-cc11">it got off<br />mid-route!</div>
+        <div class="cc cc-cop cc-2" id="w-cc12">Mars is the<br />RED planet...</div>
+        <div class="cc cc-cop cc-2" id="w-cc13">so what colour is<br />its sunset? Comment!</div>
+        <div class="cc cc-cop" id="w-cc14">Next question...</div>
+        <div class="cc cc-cop cc-2" id="w-cc15">why does the<br />Moon follow us?</div>
+        <div class="cc cc-guy" id="w-cc16">Look, sir,</div>
+        <div class="cc cc-guy" id="w-cc17">it&#x27;s red again...</div>
         <div id="w-end"></div>
       </div>
     </div>
@@ -187,7 +193,7 @@
     <script>
       (function () {
         var root = document.getElementById("root");
-        var duration = parseFloat(root.dataset.duration) || 36.06;
+        var duration = parseFloat(root.dataset.duration) || 33.85;
         var clock = { t: 0 };
         var host = { duration: duration, clock: clock, render: null };
         window.__world = host;
@@ -204,26 +210,26 @@
         var tl = gsap.timeline({ paused: true });
         tl.to(clock, { t: duration, duration: duration, ease: "none", onUpdate: function () { if (host.render) host.render(clock.t); } }, 0);
         // number labels: unit pops as the number lands, label follows, both leave on the next whip
-        [].forEach(function (c) {
+        [{"cap": "#w-cap1", "unit": "#w-unit1", "label": "#w-label1", "inAt": 10.95, "outAt": 12.2}].forEach(function (c) {
           tl.fromTo(c.cap, { opacity: 0 }, { opacity: 1, duration: 0.01 }, c.inAt - 0.01);
           tl.fromTo(c.unit, { y: 40, scale: 0.6 }, { y: 0, scale: 1, duration: 0.32, ease: "back.out(2.2)" }, c.inAt);
           tl.fromTo(c.label, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.8)" }, c.inAt + 0.1);
           tl.to(c.cap, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.outAt);
         });
         // text callouts: slam in like the number labels, leave fast
-        [{"id": "#w-tag1", "in": 0.0, "out": 2.9}, {"id": "#w-tag2", "in": 8.0, "out": 10.0}, {"id": "#w-tag3", "in": 10.2, "out": 13.5}, {"id": "#w-tag4", "in": 16.6, "out": 20.2}, {"id": "#w-tag5", "in": 23.86, "out": 27.64}, {"id": "#w-tag6", "in": 27.66, "out": 28.59}, {"id": "#w-tag7", "in": 28.64, "out": 32.8}].forEach(function (c) {
+        [{"id": "#w-tag1", "in": 0.0, "out": 2.9}, {"id": "#w-tag2", "in": 7.4, "out": 10.5}, {"id": "#w-tag3", "in": 14.5, "out": 17.6}, {"id": "#w-tag4", "in": 17.9, "out": 21.2}, {"id": "#w-tag5", "in": 21.52, "out": 26.09}, {"id": "#w-tag6", "in": 26.11, "out": 27.04}, {"id": "#w-tag7", "in": 27.09, "out": 30.9}].forEach(function (c) {
           tl.fromTo(c.id, { opacity: 0, scale: 1.5, y: -20 }, { opacity: 1, scale: 1, y: 0, duration: 0.22, ease: "back.out(2.2)" }, c.in);
           tl.to(c.id, { opacity: 0, scale: 0.7, duration: 0.14, ease: "power3.in" }, c.out - 0.14);
         });
         // dialogue captions: pop in on the first word, cut out when the phrase ends
-        [{"id": "#w-cc1", "in": 0.26, "out": 3.14}, {"id": "#w-cc2", "in": 3.22, "out": 4.5}, {"id": "#w-cc3", "in": 4.7, "out": 6.3}, {"id": "#w-cc4", "in": 6.46, "out": 7.66}, {"id": "#w-cc5", "in": 7.86, "out": 10.02}, {"id": "#w-cc6", "in": 10.1, "out": 13.46}, {"id": "#w-cc7", "in": 13.66, "out": 16.54}, {"id": "#w-cc8", "in": 16.62, "out": 20.22}, {"id": "#w-cc9", "in": 20.42, "out": 23.46}, {"id": "#w-cc10", "in": 23.91, "out": 26.51}, {"id": "#w-cc11", "in": 26.71, "out": 27.59}, {"id": "#w-cc12", "in": 28.49, "out": 30.17}, {"id": "#w-cc13", "in": 30.25, "out": 32.81}, {"id": "#w-cc14", "in": 33.16, "out": 35.56}].forEach(function (c) {
+        [{"id": "#w-cc1", "in": 0.26, "out": 2.93}, {"id": "#w-cc2", "in": 3.03, "out": 4.21}, {"id": "#w-cc3", "in": 4.36, "out": 5.84}, {"id": "#w-cc4", "in": 5.99, "out": 7.1}, {"id": "#w-cc5", "in": 7.25, "out": 8.82}, {"id": "#w-cc6", "in": 9.0, "out": 12.15}, {"id": "#w-cc7", "in": 12.3, "out": 14.36}, {"id": "#w-cc8", "in": 14.54, "out": 15.77}, {"id": "#w-cc9", "in": 15.95, "out": 17.63}, {"id": "#w-cc10", "in": 17.83, "out": 19.65}, {"id": "#w-cc11", "in": 19.83, "out": 21.22}, {"id": "#w-cc12", "in": 21.57, "out": 23.46}, {"id": "#w-cc13", "in": 23.64, "out": 26.04}, {"id": "#w-cc14", "in": 26.94, "out": 28.49}, {"id": "#w-cc15", "in": 28.59, "out": 30.96}, {"id": "#w-cc16", "in": 31.26, "out": 32.0}, {"id": "#w-cc17", "in": 32.18, "out": 33.15}].forEach(function (c) {
           tl.fromTo(c.id, { opacity: 0, scale: 0.86, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.14, ease: "back.out(2)" }, c.in);
           tl.to(c.id, { opacity: 0, duration: 0.06 }, c.out - 0.06);
         });
         // end card: words slam in, one per beat, and clear before the sign-off
         [].forEach(function (id, i) {
           tl.fromTo(id, { opacity: 0, scale: 1.8, y: -30 }, { opacity: 1, scale: 1, y: 0, duration: 0.24, ease: "back.out(2.4)" }, 99 + i * 0.16);
-          tl.to(id, { opacity: 0, duration: 0.12 }, 36.06 - 0.12);
+          tl.to(id, { opacity: 0, duration: 0.12 }, 33.85 - 0.12);
         });
         window.__timelines = window.__timelines || {};
         window.__timelines["world"] = tl;
