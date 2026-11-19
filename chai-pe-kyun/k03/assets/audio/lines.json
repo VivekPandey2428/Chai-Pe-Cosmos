@@ -2,121 +2,116 @@
  {
   "id": "c1",
   "speaker": "cop",
-  "start": 0.02,
+  "start": 0.084,
   "words": [
    {
     "text": "Wherever I go, the Moon follows me!",
     "start": 0.26,
-    "end": 3.54
+    "end": 3.297
    },
    {
-    "text": "Is it chasing me?",
-    "start": 4.1,
-    "end": 5.3
+    "text": "Chasing an Inspector? The nerve!",
+    "start": 3.477,
+    "end": 5.773
    }
   ]
  },
  {
   "id": "g1",
   "speaker": "guy",
-  "start": 5.356,
+  "start": 5.79,
   "words": [
    {
     "text": "Not chasing, sir: the Moon is very far,",
-    "start": 5.5,
-    "end": 9.036
+    "start": 5.923,
+    "end": 9.197
    },
    {
     "text": "about 3,84,000 km!",
-    "start": 9.076,
-    "end": 12.316
+    "start": 9.297,
+    "end": 12.297
    }
   ]
  },
  {
   "id": "g2",
   "speaker": "guy",
-  "start": 12.436,
+  "start": 12.373,
   "words": [
    {
     "text": "Nearby trees and poles fall behind fast...",
-    "start": 12.516,
-    "end": 15.796
+    "start": 12.447,
+    "end": 15.484
    }
   ]
  },
  {
   "id": "g3",
   "speaker": "guy",
-  "start": 15.927,
+  "start": 15.57,
   "words": [
    {
     "text": "...but something that far never changes direction.",
-    "start": 15.996,
-    "end": 19.047
+    "start": 15.634,
+    "end": 18.459
+   }
+  ]
+ },
+ {
+  "id": "c5",
+  "speaker": "cop",
+  "start": 18.529,
+  "words": [
+   {
+    "text": "So the Moon isn't my fan?",
+    "start": 18.659,
+    "end": 20.77
    }
   ]
  },
  {
   "id": "g4",
   "speaker": "guy",
-  "start": 19.167,
+  "start": 20.896,
   "words": [
    {
     "text": "Watch tonight as you walk:",
-    "start": 19.247,
-    "end": 20.807
+    "start": 20.97,
+    "end": 22.415
    },
    {
     "text": "the tree runs, the Moon stays!",
-    "start": 21.007,
-    "end": 23.727
+    "start": 22.595,
+    "end": 25.113
    }
   ]
  },
  {
   "id": "c2",
   "speaker": "cop",
-  "start": 24.017,
+  "start": 25.367,
   "words": [
    {
-    "text": "Does the Sun move with us too?",
-    "start": 24.177,
-    "end": 26.297
+    "text": "By the way, how fast is the Moon itself moving?",
+    "start": 25.413,
+    "end": 28.173
    },
    {
-    "text": "Comment!",
-    "start": 26.497,
-    "end": 27.297
-   }
-  ]
- },
- {
-  "id": "c3",
-  "speaker": "cop",
-  "start": 28.037,
-  "words": [
-   {
-    "text": "Next question...",
-    "start": 28.197,
-    "end": 29.477
-   },
-   {
-    "text": "why do stars twinkle?",
-    "start": 29.797,
-    "end": 31.877
+    "text": "Guess and comment!",
+    "start": 28.353,
+    "end": 29.714
    }
   ]
  },
  {
   "id": "g5",
   "speaker": "guy",
-  "start": 32.067,
+  "start": 30.566,
   "words": [
    {
     "text": "Sir, the Moon is still behind you...",
-    "start": 32.227,
-    "end": 35.187
+    "start": 30.714,
+    "end": 33.455
    }
   ]
  }

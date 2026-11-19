@@ -1,9 +1,10 @@
 """Chai Pe Kyun? #3 "Chaand humare saath kyun chalta hai?": the Moon is so far away that its direction never changes.
 
-Night at home, the Moon over Sahab's shoulder -> "about 3,84,000 km!" (3D number, KM DOOR) -> a road at night: a little
-scooter with a mini Sahab, trees and lamp posts racing past while the Moon stays put; sight lines show the line to the
-tree swinging and the line to the Moon staying fixed -> home: try it tonight -> comment, subscribe, teaser (stars
-twinkle), loop ("the Moon is still behind you"). Acting and camera: tools/cycle2_beats.kyun().
+v2 (virality pass): opens and ends on the night road (a mini Sahab on a scooter, the Moon behind him: "Inspector ka
+pichha? Himmat toh dekho!") -> home: "about 3,84,000 km!" (3D number) -> the road again: trees and lamp posts race past,
+the Moon stays put; sight lines: the tree line swings, the Moon line stays -> home: "Matlab chaand mera fan nahi hai?" ->
+try it tonight -> comment bait (guess the Moon's speed), subscribe -> back on the road: "Sahab, chaand abhi bhi aapke
+peeche hai..." with the next question as text only, looping into frame 0. Acting and camera: tools/cycle2_beats.kyun().
 """
 import json, os, sys
 
@@ -12,15 +13,18 @@ sys.path.insert(0, os.path.join(HERE, "../../tools"))
 from cycle2_patch import build
 from cycle2_beats import kyun, TWO
 
-DUR = 35.69
-SPACE = [[12.42, 19.15]]
-act, shots, T = kyun(HERE, {"dur": DUR, "space": SPACE, "screen": {"hook": "PICHHA?", "tease": "TAARE?"}, "alt": [[28.3, 31.9]],
-                         "extra_shots": [{"t": 9.2, "blend": 0.35, **TWO, "dist": 10.5}]})
+DUR = 34.15
+SPACE = [[0, 5.86], [12.38, 18.55], [30.62, DUR]]  # the road: the hook, the explanation, and the loop back to frame 0
+act, shots, T = kyun(HERE, {"dur": DUR, "space": SPACE, "screen": {"hook": "PICHHA?", "tease": "TAARE?"}, "tease_at": 30.75,
+                         "extra_shots": [{"t": 9.35, "blend": 0.35, **TWO, "dist": 10.5}]})
 
-nums = [{"value": 384000, "fly": 9.35, "land": 9.68, "lock": 10.6, "out": 12.3, "rim": "#C9D6FF"}]  # "about 3,84,000 km"
+nums = [{"value": 384000, "fly": 9.5, "land": 9.85, "lock": 10.8, "out": 12.25, "rim": "#C9D6FF"}]  # "about 3,84,000 km"
+ROAD = {"look": [0.2, 2.7, 0], "dir": [0.22, 0.05, 1], "dist": 9.6}
 space_shots = [
-    {"t": 12.42, "look": [0, 3.6, 0], "dir": [0.18, 0.04, 1], "dist": 13, "to": {"dist": 12}},  # the scooter on the road
-    {"t": 16.0, "blend": 0.9, "look": [0, 2.6, 0], "dir": [0, 1, 0.35], "dist": 14},  # from above: two sight lines
+    {"t": 0, **ROAD, "to": {"dist": 9.0}},  # frame 0: the scooter, the Moon behind
+    {"t": 12.38, **ROAD, "to": {"dist": 9.0}},
+    {"t": 15.6, "blend": 0.9, "look": [0, 2.6, 0], "dir": [0, 1, 0.35], "dist": 14},  # from above: two sight lines
+    {"t": 30.62, **ROAD, "to": {"dist": 9.0}},  # the loop: back to the frame-0 shot
 ]
 
 WORLD = r"""
@@ -87,7 +91,7 @@ const PROPS = Array.from({ length: 10 }, (_, i) => {
   return { g, x0: i * (SPAN / 10) };
 });
 // the Moon: far up the sky, the same direction whatever happens
-const MOON_P = new THREE.Vector3(-2.0, 8.2, -14);
+const MOON_P = new THREE.Vector3(-2.3, 6.0, -14);
 const roadMoon = new THREE.Mesh(new THREE.IcosahedronGeometry(1.4, 4), glossy("#E6E9F2", { flatShading: true, roughness: 0.7 }));
 roadMoon.position.copy(MOON_P);
 const roadMoonGlow = new THREE.Sprite(haloMat("rgba(220,230,255,0.8)", "rgba(220,230,255,0)"));
@@ -113,12 +117,13 @@ epWorld.add(roadLight);
 const FOCUS = {};
 
 function episodeRender(t, name) {
-  const twinkle = mood(t, ACT.alt, 0.4);
+  const twinkle = t > 30.6 ? 1 : 0; // the next question (stars twinkle), as text over the last road shot
   skyMoon.rotation.y = 0.1 * t;
-  if (name === "chair") {
-    stars.visible = true;
-    stars.material.opacity = 0.8 + 0.2 * twinkle * Math.sin(TAU * 3 * t);
-  }
+  stars.visible = true;
+  stars.material.opacity = 0.8 + 0.2 * twinkle * Math.sin(TAU * 3 * t);
+  // Sahab glances back at the Moon on the road ("पीछे-पीछे", "अभी भी आपके पीछे")
+  const glance = Math.max(seg(t, 1.0, 1.3) * (1 - seg(t, 2.6, 2.9)), seg(t, 4.0, 4.3) * (1 - seg(t, 5.4, 5.7)), seg(t, 31.3, 31.6) * (1 - seg(t, 33.4, 33.8)));
+  rider.group.rotation.y = Math.PI / 2 - 1.2 * inOutSine(glance);
   key.intensity = name === "chair" ? 1.7 : 1.4;
   key.color.set("#dfe6ff");
 
@@ -135,7 +140,7 @@ function episodeRender(t, name) {
   WHEELS.forEach((w) => (w.rotation.z = -s / 0.4));
   scooter.position.y = 0.03 * Math.sin(TAU * 4 * t);
   // the sight lines appear on "...but something that far never changes direction" (16.0)
-  const show = seg(t, 15.9, 16.3);
+  const show = seg(t, 15.7, 16.1) * (t < 18.6 ? 1 : 0);
   toMoon.visible = toTree.visible = show > 0.01;
   const eye = EYE.clone().add(scooter.position);
   lineBetween(toMoon, eye, eye.clone().lerp(MOON_P, 0.92 * show));
@@ -161,15 +166,17 @@ L = json.load(open(os.path.join(HERE, "assets/audio/lines.json"), encoding="utf-
 caps = [{"who": l["speaker"], "text": w["text"], "in": round(w["start"], 2), "out": round(w["end"], 2)} for l in L for w in l["words"]]
 C, S, Z = T["C"], T["S"], T["Z"]
 tags = [
-    {"hook": True, "top": 300, "text": "Chaand pichha kyun karta?", "size": 110, "color": "#FFD23F", "in": 0.0, "out": 2.9},
-    {"top": 330, "text": "Paas ka ped: tezi se peeche", "sub": "disha badal jaati hai", "color": "#7CFF9E", "in": 12.6, "out": 15.8},
-    {"top": 330, "text": "Door ka chaand: disha same", "sub": "isliye saath chalta dikhta", "color": "#BFD4FF", "in": 16.1, "out": 19.0},
-    {"top": 300, "text": "Aaj raat try karo!", "sub": "ped bhaagega, chaand wahin", "color": "#FFD23F", "in": 19.3, "out": 23.7},
-    {"top": 300, "text": "Suraj bhi saath chalta?", "sub": "Comment karo!", "color": "#FFD23F", "in": C + 0.05, "out": S},
+    {"hook": True, "top": 300, "text": "Chaand pichha kyun karta?", "size": 110, "color": "#FFD23F", "in": 0.0, "out": 3.3},
+    {"top": 300, "text": "INSPECTOR KA PICHHA?!", "size": 92, "color": "#FF4D5E", "in": 3.45, "out": 5.8},
+    {"top": 330, "text": "Paas ka ped: tezi se peeche", "sub": "disha badal jaati hai", "color": "#7CFF9E", "in": 12.5, "out": 15.5},
+    {"top": 330, "text": "Door ka chaand: disha same", "sub": "isliye saath chalta dikhta", "color": "#BFD4FF", "in": 15.7, "out": 18.5},
+    {"top": 300, "text": "FAN NAHI HAI?!", "size": 96, "color": "#FF8FA3", "in": 18.7, "out": 20.8},
+    {"top": 300, "text": "Aaj raat try karo!", "sub": "ped bhaagega, chaand wahin", "color": "#FFD23F", "in": 21.0, "out": 25.1},
+    {"top": 300, "text": "Chaand ki speed?", "sub": "guess karo, comment karo!", "color": "#FFD23F", "in": C + 0.05, "out": S},
     {"top": 300, "text": "Subscribe karo", "sub": "roz ek naya sawaal", "in": S + 0.02, "out": round(S + 0.95, 2)},
-    {"top": 300, "text": "Agla sawaal:", "sub": "taare tim-timate kyun hain?", "color": "#FFD23F", "in": round(S + 1.0, 2), "out": 31.9},
+    {"top": 300, "text": "Agla sawaal:", "sub": "taare tim-timate kyun?", "color": "#FFD23F", "in": 30.8, "out": 33.6},
 ]
 json.dump({"title": "Chaand humare saath kyun chalta hai?", "duration": DUR, "scene_note": "Chai Pe Kyun? #3: why the Moon follows you.",
-           "caps": [{"unit": "km", "label": "chaand itna door!", "in": 9.7, "out": 12.3}], "tags": tags, "captions": caps,
+           "caps": [{"unit": "km", "label": "chaand itna door!", "in": 9.9, "out": 12.25}], "tags": tags, "captions": caps,
            "end": {"lines": [], "at": 99}}, open(os.path.join(HERE, "story.json"), "w"), ensure_ascii=False, indent=1)
 print("T", {k: v for k, v in T.items() if k != "L"})

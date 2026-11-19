@@ -2,7 +2,7 @@
  {
   "id": "c1",
   "speaker": "cop",
-  "prompt": "[suspicious] मैं जहाँ जाता हूँ, चाँद पीछे-पीछे आता है! पीछा कर रहा है क्या?"
+  "prompt": "[suspicious] मैं जहाँ जाता हूँ, चाँद पीछे-पीछे आता है! Inspector का पीछा? हिम्मत तो देखो!"
  },
  {
   "id": "g1",
@@ -20,6 +20,11 @@
   "prompt": "[explaining] पर इतनी दूर की चीज़ की दिशा बदलती ही नहीं।"
  },
  {
+  "id": "c5",
+  "speaker": "cop",
+  "prompt": "[disappointed] मतलब चाँद मेरा fan नहीं है?"
+ },
+ {
   "id": "g4",
   "speaker": "guy",
   "prompt": "[excited] आज रात चलते हुए देखो: पेड़ भागेगा, चाँद वहीं रहेगा!"
@@ -27,7 +32,7 @@
  {
   "id": "c2",
   "speaker": "cop",
-  "prompt": "[playful] सूरज भी हमारे साथ चलता है क्या? Comment करो!"
+  "prompt": "[playful] वैसे चाँद ख़ुद कितनी speed से घूम रहा है? Guess करो, Comment करो!"
  },
  {
   "id": "c3",

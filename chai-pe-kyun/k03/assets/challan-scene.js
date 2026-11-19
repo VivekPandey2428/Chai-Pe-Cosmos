@@ -19,15 +19,15 @@ const K = (Math.min(W, H) / 1080) * DPR; // device-pixel scale for 2D drawing an
 
 // ---------------------------------------------------------------- timing (dialogue track: assets/audio/lines.json)
 // Chai Pe Kyun #3: Chaand humare saath kyun chalta hai?: built by tools/cycle2_patch.py from episodes/<ep>/patch-scene.py (all timing and acting is data)
-const DUR = 35.69;
-const SPACE = [[12.42, 19.15]];
-const WHIPS = [{"c": 12.42, "b": 0.22, "a": 0.2, "dir": -1, "k": 1.1}, {"c": 19.15, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}];
-const NUMS = [{"value": 384000, "fly": 9.35, "land": 9.68, "lock": 10.6, "out": 12.3, "rim": "#C9D6FF"}];
-const ACT = {"guy": {"handR": [[0, "SIP_R"], [0.85, "SIP_R"], [1.1, "REST_R", "back"], [5.6, "REST_R"], [5.85, "RAISE_R", "back"], [12.17, "RAISE_R"], [12.47, "REST_R"], [32.18, "REST_R"], [32.43, "SKY_R", "back"], [35.04, "SKY_R"], [35.39, "SIP_R"]], "handL": [[0, "REST_L"], [19.35, "REST_L"], [19.6, "OPEN_L", "back"], [23.58, "OPEN_L"], [23.88, "REST_L"]], "lid": [[0, 1.1], [0.85, 1.1], [1.0, -0.85], [35.34, -0.85], [35.44, 1.1]], "yaw": [[0, 0], [0.95, 0], [1.15, 0.55, "back"], [35.09, 0.55], [35.49, 0]], "mood": {"startle": [], "smug": [[5.4, 12.42], [32.13, 35.29]], "laugh": [], "sip": [[-1, 0.9], [35.39, 99]], "lookUp": [[0.3, 5.5], [28.349999999999998, 31.88]], "confused": []}}, "cop": {"handR": [[0, "LOW"], [35.69, "LOW"]], "handL": [[0, "HIP"], [0.46, "HIP"], [0.71, "STOP", "back"], [5.1, "STOP"], [5.45, "HIP"]], "lid": [[0, -0.75], [35.69, -0.75]], "aim": [[0, "down"], [24.08, "cam"], [28.15, "down"]], "beam": [], "screen": [[0, "PICHHA?", 0], [24.08, "COMMENT", 0], [27.35, "SUBSCRIBE?", 1], [28.15, "TAARE?", 0]], "duty": [[27.35, 28.15]], "lazyFrom": 0, "sweat": [-2, -1], "mood": {"confused": [], "hopeful": [], "smug": [], "suspicious": [[0.16, 5.4]], "toCam": [[24.08, 28.15]], "lookSky": [[-1, 5.5], [28.25, 32.08], [34.49, 99]], "shout": []}}, "k2": {"pop": 99, "give": 99.5, "sipA": 99.6, "sipB": 99.8, "end": 99.9}, "alt": [[28.3, 31.9]]};
+const DUR = 34.15;
+const SPACE = [[0, 5.86], [12.38, 18.55], [30.62, 34.15]];
+const WHIPS = [{"c": 5.86, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}, {"c": 12.38, "b": 0.22, "a": 0.2, "dir": -1, "k": 1.1}, {"c": 18.55, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}, {"c": 30.62, "b": 0.22, "a": 0.2, "dir": -1, "k": 1.1}, {"c": 34.15, "b": 0.09, "a": 0.12, "dir": 1, "k": 1.35}];
+const NUMS = [{"value": 384000, "fly": 9.5, "land": 9.85, "lock": 10.8, "out": 12.25, "rim": "#C9D6FF"}];
+const ACT = {"guy": {"handR": [[0, "SIP_R"], [0.85, "SIP_R"], [1.1, "REST_R", "back"], [6.02, "REST_R"], [6.27, "RAISE_R", "back"], [12.15, "RAISE_R"], [12.450000000000001, "REST_R"], [30.66, "REST_R"], [30.91, "SKY_R", "back"], [33.5, "SKY_R"], [33.85, "SIP_R"]], "handL": [[0, "REST_L"], [21.07, "REST_L"], [21.32, "OPEN_L", "back"], [24.96, "OPEN_L"], [25.26, "REST_L"]], "lid": [[0, 1.1], [0.85, 1.1], [1.0, -0.85], [33.8, -0.85], [33.9, 1.1]], "yaw": [[0, 0], [0.95, 0], [1.15, 0.55, "back"], [33.55, 0.55], [33.95, 0]], "mood": {"startle": [], "smug": [[5.82, 12.4], [30.61, 33.55]], "laugh": [], "sip": [[-1, 0.9], [33.85, 99]], "lookUp": [[0.3, 5.97], [30.9, 32.25]], "confused": []}}, "cop": {"handR": [[0, "LOW"], [34.15, "LOW"]], "handL": [[0, "HIP"], [0.46, "HIP"], [0.71, "STOP", "back"], [5.5729999999999995, "STOP"], [5.923, "HIP"]], "lid": [[0, -0.75], [34.15, -0.75]], "aim": [[0, "down"], [25.31, "cam"], [30.7, "down"]], "beam": [], "screen": [[0, "PICHHA?", 0], [25.31, "COMMENT", 0], [29.76, "SUBSCRIBE?", 1], [30.7, "TAARE?", 0]], "duty": [[29.76, 30.7]], "lazyFrom": 0, "sweat": [-2, -1], "mood": {"confused": [], "hopeful": [], "smug": [], "suspicious": [[0.16, 5.87]], "toCam": [[25.31, 30.7]], "lookSky": [[-1, 5.97], [30.8, 32.45], [32.95, 99]], "shout": []}}, "k2": {"pop": 99, "give": 99.5, "sipA": 99.6, "sipB": 99.8, "end": 99.9}, "alt": []};
 // speaking windows for lip flap (first to last word of each line)
 const TALK = {
-  cop: [[0.26, 5.3], [24.18, 27.3], [28.2, 31.88]],
-  guy: [[5.5, 12.32], [12.52, 15.8], [16.0, 19.05], [19.25, 23.73], [32.23, 35.19]],
+  cop: [[0.26, 5.77], [18.66, 20.77], [25.41, 29.71]],
+  guy: [[5.92, 12.3], [12.45, 15.48], [15.63, 18.46], [20.97, 25.11], [30.71, 33.45]],
 };
 
 // ---------------------------------------------------------------- helpers
@@ -980,7 +980,7 @@ const PROPS = Array.from({ length: 10 }, (_, i) => {
   return { g, x0: i * (SPAN / 10) };
 });
 // the Moon: far up the sky, the same direction whatever happens
-const MOON_P = new THREE.Vector3(-2.0, 8.2, -14);
+const MOON_P = new THREE.Vector3(-2.3, 6.0, -14);
 const roadMoon = new THREE.Mesh(new THREE.IcosahedronGeometry(1.4, 4), glossy("#E6E9F2", { flatShading: true, roughness: 0.7 }));
 roadMoon.position.copy(MOON_P);
 const roadMoonGlow = new THREE.Sprite(haloMat("rgba(220,230,255,0.8)", "rgba(220,230,255,0)"));
@@ -1006,12 +1006,13 @@ epWorld.add(roadLight);
 const FOCUS = {};
 
 function episodeRender(t, name) {
-  const twinkle = mood(t, ACT.alt, 0.4);
+  const twinkle = t > 30.6 ? 1 : 0; // the next question (stars twinkle), as text over the last road shot
   skyMoon.rotation.y = 0.1 * t;
-  if (name === "chair") {
-    stars.visible = true;
-    stars.material.opacity = 0.8 + 0.2 * twinkle * Math.sin(TAU * 3 * t);
-  }
+  stars.visible = true;
+  stars.material.opacity = 0.8 + 0.2 * twinkle * Math.sin(TAU * 3 * t);
+  // Sahab glances back at the Moon on the road ("पीछे-पीछे", "अभी भी आपके पीछे")
+  const glance = Math.max(seg(t, 1.0, 1.3) * (1 - seg(t, 2.6, 2.9)), seg(t, 4.0, 4.3) * (1 - seg(t, 5.4, 5.7)), seg(t, 31.3, 31.6) * (1 - seg(t, 33.4, 33.8)));
+  rider.group.rotation.y = Math.PI / 2 - 1.2 * inOutSine(glance);
   key.intensity = name === "chair" ? 1.7 : 1.4;
   key.color.set("#dfe6ff");
 
@@ -1028,7 +1029,7 @@ function episodeRender(t, name) {
   WHEELS.forEach((w) => (w.rotation.z = -s / 0.4));
   scooter.position.y = 0.03 * Math.sin(TAU * 4 * t);
   // the sight lines appear on "...but something that far never changes direction" (16.0)
-  const show = seg(t, 15.9, 16.3);
+  const show = seg(t, 15.7, 16.1) * (t < 18.6 ? 1 : 0);
   toMoon.visible = toTree.visible = show > 0.01;
   const eye = EYE.clone().add(scooter.position);
   lineBetween(toMoon, eye, eye.clone().lerp(MOON_P, 0.92 * show));
@@ -1170,8 +1171,8 @@ scene.add(galaxyWorld);
 
 // ---------------------------------------------------------------- camera
 const up = new THREE.Vector3(0, 1, 0);
-const SHOTS_V = [{"t": 0, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 10.120000000000001}}, {"t": 2.66, "blend": 0.6, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 5.0}, {"t": 5.35, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 9.2, "blend": 0.35, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 10.5}, {"t": 19.15, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 9.6}, {"t": 19.6, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 24.08, "look": [1.05, 2.75, 0.75], "dir": [0.12, 0.1, 1], "dist": 4.4, "to": {"dist": 4.0}}, {"t": 28.15, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 12.0}, {"t": 32.18, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 5.0, "to": {"dist": 4.7}}, {"t": 34.49, "blend": 0.8, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 11.0}}];
-const SPACE_SHOTS_V = [{"t": 12.42, "look": [0, 3.6, 0], "dir": [0.18, 0.04, 1], "dist": 13, "to": {"dist": 12}}, {"t": 16.0, "blend": 0.9, "look": [0, 2.6, 0], "dir": [0, 1, 0.35], "dist": 14}];
+const SHOTS_V = [{"t": 0, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 10.120000000000001}}, {"t": 5.86, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 9.6}, {"t": 6.27, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 9.35, "blend": 0.35, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 10.5}, {"t": 18.55, "look": [0.2, 2.2, 0.3], "dir": [0.04, 0.22, 1], "dist": 9.6}, {"t": 19.01, "blend": 0.45, "look": [1.0, 2.75, 0.5], "dir": [-0.35, 0.08, 1], "dist": 4.8}, {"t": 20.82, "blend": 0.45, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 4.8}, {"t": 25.31, "look": [1.05, 2.75, 0.75], "dir": [0.12, 0.1, 1], "dist": 4.4, "to": {"dist": 4.0}}, {"t": 30.66, "look": [-0.45, 2.3, 0.2], "dir": [0.3, 0.1, 1], "dist": 5.0, "to": {"dist": 4.7}}, {"t": 30.7, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 12.0}, {"t": 32.95, "blend": 0.8, "look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1], "dist": 11.0, "to": {"dist": 11.0}}];
+const SPACE_SHOTS_V = [{"t": 0, "look": [0.2, 2.7, 0], "dir": [0.22, 0.05, 1], "dist": 9.6, "to": {"dist": 9.0}}, {"t": 12.38, "look": [0.2, 2.7, 0], "dir": [0.22, 0.05, 1], "dist": 9.6, "to": {"dist": 9.0}}, {"t": 15.6, "blend": 0.9, "look": [0, 2.6, 0], "dir": [0, 1, 0.35], "dist": 14}, {"t": 30.62, "look": [0.2, 2.7, 0], "dir": [0.22, 0.05, 1], "dist": 9.6, "to": {"dist": 9.0}}];
 const scaleShots = (list) => list.map((s) => ({ ...s, dist: s.dist * 0.62, to: s.to ? { dist: s.to.dist * 0.62 } : undefined }));
 const SHOTS = VERTICAL ? SHOTS_V : scaleShots(SHOTS_V);
 const SPACE_SHOTS = VERTICAL ? SPACE_SHOTS_V : scaleShots(SPACE_SHOTS_V);

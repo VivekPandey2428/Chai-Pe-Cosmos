@@ -182,14 +182,17 @@ SKY_LOW = {"look": [0.2, 3.4, -0.4], "dir": [0.05, -0.12, 1]}
 def kyun(ep, spec):
     """Beats for "Chai Pe Kyun?" (no challan): Sahab asks, looking up; the Tapri wala explains with hand gestures; the
     question is visual at frame 0 (a low wide shot of the sky); comment and subscribe to camera; teaser; the last shot
-    matches frame 0. spec = {dur, space, screen: {hook, tease}, extra_shots, frame0: shot dict (optional)}."""
+    matches frame 0. spec = {dur, space, screen: {hook, tease}, extra_shots, frame0: shot dict (optional), tease_at: time of a text-only
+    teaser when no line is tagged [mysterious]}."""
     lines = json.load(open(os.path.join(ep, "assets/audio/lines.json"), encoding="utf-8"))
     voice = {l["id"]: l["prompt"] for l in json.load(open(os.path.join(ep, "lines-voice.json"), encoding="utf-8"))}
     D, space = spec["dur"], spec["space"]
     L = [{"id": l["id"], "who": l["speaker"], "a": l["words"][0]["start"], "b": l["words"][-1]["end"],
           "tag": re.match(r"\[(\w+)\]", voice[l["id"]]).group(1), "text": voice[l["id"]]} for l in lines]
     comment = next(l for l in L if "Comment" in l["text"])
-    tease = next(l for l in L if l["tag"] == "mysterious")
+    tease = next((l for l in L if l["tag"] == "mysterious"), None)
+    if tease is None:  # no spoken teaser: it is on-screen text only, at spec["tease_at"]
+        tease = {"id": "_tease", "who": "cop", "tag": "mysterious", "a": spec["tease_at"], "b": spec["tease_at"] + 1.5, "text": ""}
     loop = L[-1]
     C, S, Z, P = round(comment["a"] - 0.1, 2), round(comment["b"] + 0.05, 2), round(tease["a"] - 0.05, 2), round(loop["a"] - 0.05, 2)
     home = lambda t: not in_space(t, space)

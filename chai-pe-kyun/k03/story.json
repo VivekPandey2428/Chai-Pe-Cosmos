@@ -1,13 +1,13 @@
 {
  "title": "Chaand humare saath kyun chalta hai?",
- "duration": 35.69,
+ "duration": 34.15,
  "scene_note": "Chai Pe Kyun? #3: why the Moon follows you.",
  "caps": [
   {
    "unit": "km",
    "label": "chaand itna door!",
-   "in": 9.7,
-   "out": 12.3
+   "in": 9.9,
+   "out": 12.25
   }
  ],
  "tags": [
@@ -18,54 +18,70 @@
    "size": 110,
    "color": "#FFD23F",
    "in": 0.0,
-   "out": 2.9
+   "out": 3.3
+  },
+  {
+   "top": 300,
+   "text": "INSPECTOR KA PICHHA?!",
+   "size": 92,
+   "color": "#FF4D5E",
+   "in": 3.45,
+   "out": 5.8
   },
   {
    "top": 330,
    "text": "Paas ka ped: tezi se peeche",
    "sub": "disha badal jaati hai",
    "color": "#7CFF9E",
-   "in": 12.6,
-   "out": 15.8
+   "in": 12.5,
+   "out": 15.5
   },
   {
    "top": 330,
    "text": "Door ka chaand: disha same",
    "sub": "isliye saath chalta dikhta",
    "color": "#BFD4FF",
-   "in": 16.1,
-   "out": 19.0
+   "in": 15.7,
+   "out": 18.5
+  },
+  {
+   "top": 300,
+   "text": "FAN NAHI HAI?!",
+   "size": 96,
+   "color": "#FF8FA3",
+   "in": 18.7,
+   "out": 20.8
   },
   {
    "top": 300,
    "text": "Aaj raat try karo!",
    "sub": "ped bhaagega, chaand wahin",
    "color": "#FFD23F",
-   "in": 19.3,
-   "out": 23.7
+   "in": 21.0,
+   "out": 25.1
   },
   {
    "top": 300,
-   "text": "Suraj bhi saath chalta?",
-   "sub": "Comment karo!",
+   "text": "Chaand ki speed?",
+   "sub": "guess karo, comment karo!",
    "color": "#FFD23F",
-   "in": 24.13,
-   "out": 27.35
+   "in": 25.36,
+   "out": 29.76
   },
   {
    "top": 300,
    "text": "Subscribe karo",
    "sub": "roz ek naya sawaal",
-   "in": 27.37,
-   "out": 28.3
+   "in": 29.78,
+   "out": 30.71
   },
   {
    "top": 300,
    "text": "Agla sawaal:",
-   "sub": "taare tim-timate kyun hain?",
+   "sub": "taare tim-timate kyun?",
    "color": "#FFD23F",
-   "in": 28.35,
-   "out": 31.9
+   "in": 30.8,
+   "out": 33.6
   }
  ],
  "captions": [
@@ -73,79 +89,73 @@
    "who": "cop",
    "text": "Wherever I go, the Moon follows me!",
    "in": 0.26,
-   "out": 3.54
+   "out": 3.3
   },
   {
    "who": "cop",
-   "text": "Is it chasing me?",
-   "in": 4.1,
-   "out": 5.3
+   "text": "Chasing an Inspector? The nerve!",
+   "in": 3.48,
+   "out": 5.77
   },
   {
    "who": "guy",
    "text": "Not chasing, sir: the Moon is very far,",
-   "in": 5.5,
-   "out": 9.04
+   "in": 5.92,
+   "out": 9.2
   },
   {
    "who": "guy",
    "text": "about 3,84,000 km!",
-   "in": 9.08,
-   "out": 12.32
+   "in": 9.3,
+   "out": 12.3
   },
   {
    "who": "guy",
    "text": "Nearby trees and poles fall behind fast...",
-   "in": 12.52,
-   "out": 15.8
+   "in": 12.45,
+   "out": 15.48
   },
   {
    "who": "guy",
    "text": "...but something that far never changes direction.",
-   "in": 16.0,
-   "out": 19.05
+   "in": 15.63,
+   "out": 18.46
+  },
+  {
+   "who": "cop",
+   "text": "So the Moon isn't my fan?",
+   "in": 18.66,
+   "out": 20.77
   },
   {
    "who": "guy",
    "text": "Watch tonight as you walk:",
-   "in": 19.25,
-   "out": 20.81
+   "in": 20.97,
+   "out": 22.41
   },
   {
    "who": "guy",
    "text": "the tree runs, the Moon stays!",
-   "in": 21.01,
-   "out": 23.73
+   "in": 22.59,
+   "out": 25.11
   },
   {
    "who": "cop",
-   "text": "Does the Sun move with us too?",
-   "in": 24.18,
-   "out": 26.3
+   "text": "By the way, how fast is the Moon itself moving?",
+   "in": 25.41,
+   "out": 28.17
   },
   {
    "who": "cop",
-   "text": "Comment!",
-   "in": 26.5,
-   "out": 27.3
-  },
-  {
-   "who": "cop",
-   "text": "Next question...",
-   "in": 28.2,
-   "out": 29.48
-  },
-  {
-   "who": "cop",
-   "text": "why do stars twinkle?",
-   "in": 29.8,
-   "out": 31.88
+   "text": "Guess and comment!",
+   "in": 28.35,
+   "out": 29.71
   },
   {
    "who": "guy",
    "text": "Sir, the Moon is still behind you...",
-   "in": 32.23,
-   "out": 35.19
+   "in": 30.71,
+   "out": 33.45
   }
  ],
  "end": {
