@@ -60,27 +60,25 @@ further) → the Moon following you.
 
 ---
 
-## Episode 3: Chaand humare saath kyun chalta hai? (about 25 s)
-**Frame-0 text:** "CHAAND PICHHA KAR RAHA HAI?!"  ·  **Cover:** the cop on a scooter, the Moon behind him +
-"PICHHA KYUN?" sticker
+## Episode 3: Chaand humare saath kyun chalta hai? (v2 after the virality pass, 34 s)
+**Frame-0 text:** "CHAAND PICHHA KYUN KARTA?" over the night road  ·  **Cover:** "PICHHA?" + "HIMMAT TOH DEKHO!" sticker
 
 | ~Time | Who | Line | Picture |
 |---|---|---|---|
-| 0.0 | IS | "Main jahan jaata hoon, chaand peeche-peeche aata hai! Pichha kar raha hai kya?" | Night: the cop rides a little scooter around the tiny planet, glancing back at the Moon. Question text. |
-| 4.0 | TW | "Pichha nahi sahab, chaand bahut door hai: lagbhag 3 lakh 84 hazaar kilometre!" | 3D number **3,84,000** km lands, label "KM DOOR". |
-| 8.5 | TW | "Paas ke ped aur khambe tezi se peeche chhoot jaate hain..." | The scooter rides past trees and lamp posts that whoosh by. |
-| 11.5 | TW | "...par itni door ki cheez ki disha badalti hi nahi." | Top-down diagram: the cop at three positions, sight lines to the faraway Moon all parallel; sight lines to a near tree swing wildly. |
-| 16.0 | TW | "Aaj raat chalte hue dekho: ped bhaagega, chaand wahin rahega!" | Text: "AAJ RAAT TRY KARO". |
-| 19.0 | IS | "Suraj bhi humare saath chalta hai kya? Comment karo!" | To camera; ~1 s subscribe callout. |
-| 22.0 | IS | "Agla sawaal... taare tim-timate kyun hain?" | Stars twinkle overhead. |
-| 24.0 | TW | "Sahab, chaand abhi bhi aapke peeche hai..." | The cop glances back: the Moon is still there. Loops. |
+| 0.0 | IS | "Main jahan jaata hoon, chaand peeche-peeche aata hai! Inspector ka pichha? Himmat toh dekho!" | Night road: mini Sahab on a pink scooter glances back at the Moon. Tag "INSPECTOR KA PICHHA?!" |
+| 5.9 | TW | "Pichha nahi sahab, chaand bahut door hai: lagbhag 3 lakh 84 hazaar kilometre!" | Home; 3D **3,84,000** km lands. |
+| 12.4 | TW | "Paas ke ped aur khambe tezi se peeche chhoot jaate hain..." | The road: trees and lamp posts race past, the Moon stays. |
+| 15.6 | TW | "...par itni door ki cheez ki disha badalti hi nahi." | From above: the line to the tree swings, the line to the Moon stays. |
+| 18.7 | IS | "Matlab chaand mera fan nahi hai?" | Home, disappointed. Tag "FAN NAHI HAI?!" |
+| 21.0 | TW | "Aaj raat chalte hue dekho: ped bhaagega, chaand wahin rahega!" | "AAJ RAAT TRY KARO!" |
+| 25.4 | IS | "Waise chaand khud kitni speed se ghoom raha hai? Guess karo, comment karo!" | To camera; ~1 s subscribe callout. |
+| 30.7 | TW | "Sahab, chaand abhi bhi aapke peeche hai..." | Back on the road (the frame-0 shot), Sahab glances back; text "Agla sawaal: taare tim-timate kyun?". Loops. |
 
-- **Comment answer (pinned):** yes, for the same reason. The Sun is even farther away (about 15 crore km), so it also
-  seems to "follow" you.
-- **Facts:** the Moon's average distance is about 384,400 km (NASA). Nearby objects shift a lot against the background
-  as you move (parallax); very distant ones barely shift, so the Moon keeps the same direction and seems to keep pace.
-- **New visuals:** a toy scooter, roadside trees and lamp posts, and a top-down sight-line diagram. The 3D number system
-  already exists (and the "," glyph is in the font).
+- **Why v2:** v1 opened on two people sitting, the hook didn't use the inspector, no joke after the answer, an easy
+  yes/no comment question, a spoken teaser at the end (swipe-away point), 36 s.
+- **Comment answer (pinned reply):** the Moon orbits at about 1 km/s, roughly 3,700 km/h, faster than a rifle bullet.
+- **Facts:** the Moon's average distance is about 384,400 km. Nearby objects shift a lot against the background as you
+  move (parallax); very distant ones barely shift, so the Moon keeps the same direction and seems to keep pace.
 
 ---
 
