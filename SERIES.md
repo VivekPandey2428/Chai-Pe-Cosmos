@@ -158,6 +158,10 @@ Kept by the user for the series after that (do not drop them):
 | 1 | Chai Peete Hue Challan Kat Gaya! (Challan) | Earth spin 1,670 km/h; orbit 107,000 km/h; around the Milky Way 720,000+ km/h | guy, cop | `renders/challan_9x16_1080x1920.mp4`, `renders/challan_9x16_4K_2160x3840.mp4`, `thumbs/out/ep01-*` |
 | 2 | Wazan Ka Challan (Challan #2) | Mass vs weight: 168 kg on Earth reads 28 kg on the Moon (g 1/6), 400+ kg on Jupiter (g 2.53x); mass is the same everywhere | Tapri wala, Inspector Sahab | `episodes/ep02/renders/challan-2-wazan-1080.mp4`, `thumbs/out/ep02-*`, `episodes/ep02/PUBLISH.md` |
 | 3 | Chand ki FIR (Challan #3) | The Moon recedes 3.8 cm/yr (lunar laser ranging, Apollo retroreflectors); tides; Earth's day lengthens ~2 ms per century | Tapri wala, Inspector Sahab | `episodes/ep03/renders/challan-3-chand-ki-fir-1080.mp4`, `thumbs/out/ep03-*`, `episodes/ep03/PUBLISH.md` |
+| K1 | Aasmaan neela kyun hai? (Chai Pe Kyun #1) | Air scatters blue light most (Rayleigh); milk-water + torch experiment | Tapri wala, Inspector Sahab | `chai-pe-kyun/k01/renders/kyun-1-aasmaan-neela-kyun-1080.mp4`, `thumbs/out/k01-*`, `chai-pe-kyun/k01/PUBLISH.md` |
+| K2 | Suraj shaam ko laal kyun? (Chai Pe Kyun #2, v2) | At sunset light crosses ~38-40x more air; blue scatters out on the way; Mars sunsets are blue | Tapri wala, Inspector Sahab | `chai-pe-kyun/k02/renders/kyun-2-suraj-laal-kyun-1080.mp4`, `thumbs/out/k02-*`, `chai-pe-kyun/k02/PUBLISH.md` |
+| K3 | Chaand pichha kyun karta? (Chai Pe Kyun #3, v2) | The Moon is ~3,84,000 km away, so its direction barely changes as you move (parallax); it orbits at ~3,700 km/h | Tapri wala, Inspector Sahab (mini, on a scooter) | `chai-pe-kyun/k03/renders/kyun-3-chaand-pichha-1080.mp4`, `thumbs/out/k03-*`, `chai-pe-kyun/k03/PUBLISH.md` |
+| K4 | Taare tim-timate kyun? (Chai Pe Kyun #4) | Starlight is bent back and forth by moving warm/cold air; planets (tiny discs) barely twinkle; brightest star is Sirius, Polaris is ~48th | Tapri wala, Inspector Sahab | `chai-pe-kyun/k04/renders/kyun-4-taare-timtimate-1080.mp4`, `thumbs/out/k04-*`, `chai-pe-kyun/k04/PUBLISH.md` |
 
 Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad from the hoodie pocket,
 "Sab ___ mein hain" end cards, the beacon dying when the cop loses.
@@ -188,3 +192,11 @@ Running jokes to reuse: "same to same", the cop's radar gun, the second kulhad f
   Views stopped at ~330 after the first test. Fix: shorter (30-40 s), show the Moon number early, no long speeches.
 - Challan #3 was re-cut before posting to 39.6 s: laser detour, the orbit clause, the spoken subscribe gag and the sign-off
   were removed (`episodes/ep03/edl.txt`).
+- Chai Pe Kyun (`chai-pe-kyun/kNN/`): `tools/cycle2_beats.kyun()` builds the acting and cameras (no challan beats);
+  pass `tease_at` for a text-only teaser. `tools/build-dialogue-ep.py ep 0.7 --tempo=1.08 --pause=0.18` gives Shorts pacing
+  (1.08x voice, inner pauses capped) without re-recording.
+- Virality checklist used for Chai Pe Kyun #2-#4 (from #5 Venus: relatable curiosity hooks hold viewers): the hook is a joke
+  in character; frame 0 is a picture (#3: the scooter with the Moon), not two people sitting; one surprising number on
+  the key word; an Inspector Sahab punchline right after the answer (usually a challan); a comment question whose
+  obvious guess is wrong (Mars sunset is blue, Dhruv tara is not the brightest); a last line that runs straight into the
+  first; the next question as on-screen text only (a spoken teaser at the end is a swipe-away point); 30-34 s.
