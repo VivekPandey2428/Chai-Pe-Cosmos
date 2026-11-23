@@ -1,0 +1,190 @@
+{
+ "title": "Taare tim-timate kyun?",
+ "duration": 33.88,
+ "scene_note": "Chai Pe Kyun? #4: why stars twinkle (and planets don't).",
+ "caps": [],
+ "tags": [
+  {
+   "hook": true,
+   "top": 300,
+   "text": "Taara aankh maar raha?!",
+   "size": 104,
+   "color": "#FFD23F",
+   "in": 0.0,
+   "out": 3.2
+  },
+  {
+   "top": 300,
+   "text": "Taara: 40 lakh crore km door",
+   "sub": "bas ek chhota sa point",
+   "color": "#BFD4FF",
+   "in": 7.9,
+   "out": 9.95
+  },
+  {
+   "top": 300,
+   "text": "Garam-thandi hawa hilti hai",
+   "sub": "roshni ka raasta mudta hai",
+   "color": "#FFB385",
+   "in": 10.1,
+   "out": 12.55
+  },
+  {
+   "top": 300,
+   "text": "Roshni jhatke khaati hai",
+   "sub": "isliye TIM-TIM!",
+   "color": "#7FD8FF",
+   "in": 12.7,
+   "out": 15.45
+  },
+  {
+   "top": 300,
+   "text": "HAWA KA CHALLAN!",
+   "size": 96,
+   "color": "#FF4D5E",
+   "in": 18.1,
+   "out": 19.8
+  },
+  {
+   "top": 300,
+   "text": "Planet timtimata nahi!",
+   "sub": "taara: hilta  ·  planet: steady",
+   "color": "#FFD23F",
+   "in": 20.0,
+   "out": 22.45
+  },
+  {
+   "top": 300,
+   "text": "Aaj raat try karo!",
+   "sub": "jo point nahi hilta, woh planet",
+   "color": "#FFD23F",
+   "in": 22.55,
+   "out": 25.3
+  },
+  {
+   "top": 300,
+   "text": "Sabse chamakdaar taara?",
+   "sub": "Dhruv tara? Comment karo!",
+   "color": "#FFD23F",
+   "in": 25.52,
+   "out": 29.84
+  },
+  {
+   "top": 300,
+   "text": "Subscribe karo",
+   "sub": "roz ek naya sawaal",
+   "in": 29.86,
+   "out": 30.79
+  },
+  {
+   "top": 300,
+   "text": "Agla sawaal:",
+   "sub": "din mein taare kahan jaate hain?",
+   "color": "#FFD23F",
+   "in": 30.9,
+   "out": 33.3
+  }
+ ],
+ "captions": [
+  {
+   "who": "cop",
+   "text": "This star keeps winking at me!",
+   "in": 0.26,
+   "out": 2.53
+  },
+  {
+   "who": "cop",
+   "text": "Is it signalling me?",
+   "in": 2.71,
+   "out": 3.95
+  },
+  {
+   "who": "guy",
+   "text": "Not winking, sir:",
+   "in": 4.1,
+   "out": 6.29
+  },
+  {
+   "who": "guy",
+   "text": "the air is dancing!",
+   "in": 6.47,
+   "out": 7.62
+  },
+  {
+   "who": "guy",
+   "text": "Its light passes through our air,",
+   "in": 7.77,
+   "out": 9.87
+  },
+  {
+   "who": "guy",
+   "text": "and the air keeps shifting, warm and cold.",
+   "in": 10.05,
+   "out": 12.45
+  },
+  {
+   "who": "guy",
+   "text": "So the light gets jolted:",
+   "in": 12.63,
+   "out": 14.22
+  },
+  {
+   "who": "guy",
+   "text": "the star twinkles!",
+   "in": 14.4,
+   "out": 15.45
+  },
+  {
+   "who": "cop",
+   "text": "So the AIR is winking?",
+   "in": 15.65,
+   "out": 17.95
+  },
+  {
+   "who": "cop",
+   "text": "The air deserves a challan!",
+   "in": 18.13,
+   "out": 19.72
+  },
+  {
+   "who": "guy",
+   "text": "And planets don't twinkle!",
+   "in": 19.92,
+   "out": 22.41
+  },
+  {
+   "who": "guy",
+   "text": "Tonight, look: a bright point that stays steady is a planet!",
+   "in": 22.59,
+   "out": 25.27
+  },
+  {
+   "who": "cop",
+   "text": "Which is the brightest star at night?",
+   "in": 25.57,
+   "out": 28.01
+  },
+  {
+   "who": "cop",
+   "text": "The Pole Star? Comment!",
+   "in": 28.19,
+   "out": 29.79
+  },
+  {
+   "who": "guy",
+   "text": "Sir, look...",
+   "in": 30.79,
+   "out": 32.15
+  },
+  {
+   "who": "guy",
+   "text": "it winked again!",
+   "in": 32.33,
+   "out": 33.18
+  }
+ ],
+ "end": {
+  "lines": [],
+  "at": 99
+ }
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "gap": 0.26
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "gap": 0.15
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "gap": 0.15
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "gap": 0.2
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "gap": 0.2
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "gap": 0.3
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "gap": 1.0
+ }
+]

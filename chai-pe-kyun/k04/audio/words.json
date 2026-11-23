@@ -1,0 +1,108 @@
+{
+ "c1": [
+  {
+   "text": "This star keeps winking at me!",
+   "start": 0.19,
+   "end": 2.64
+  },
+  {
+   "text": "Is it signalling me?",
+   "start": 3.38,
+   "end": 4.72
+  }
+ ],
+ "g1": [
+  {
+   "text": "Not winking, sir:",
+   "start": 0.05,
+   "end": 2.42
+  },
+  {
+   "text": "the air is dancing!",
+   "start": 2.71,
+   "end": 3.95
+  }
+ ],
+ "g2": [
+  {
+   "text": "A star is so far, it's just a tiny point.",
+   "start": 0.05,
+   "end": 3.55
+  },
+  {
+   "text": "Even the nearest is 40 lakh crore km away!",
+   "start": 4.03,
+   "end": 7.42
+  }
+ ],
+ "g3": [
+  {
+   "text": "Its light passes through our air,",
+   "start": 0.05,
+   "end": 2.32
+  },
+  {
+   "text": "and the air keeps shifting, warm and cold.",
+   "start": 2.75,
+   "end": 5.34
+  },
+  {
+   "text": "So the light gets jolted:",
+   "start": 5.65,
+   "end": 7.36
+  },
+  {
+   "text": "the star twinkles!",
+   "start": 7.86,
+   "end": 9.0
+  }
+ ],
+ "c2": [
+  {
+   "text": "So the AIR is winking?",
+   "start": 0.05,
+   "end": 2.53
+  },
+  {
+   "text": "The air deserves a challan!",
+   "start": 3.06,
+   "end": 4.78
+  }
+ ],
+ "g4": [
+  {
+   "text": "And planets don't twinkle!",
+   "start": 0.05,
+   "end": 2.74
+  },
+  {
+   "text": "Tonight, look: a bright point that stays steady is a planet!",
+   "start": 2.97,
+   "end": 5.86
+  }
+ ],
+ "c3": [
+  {
+   "text": "Which is the brightest star at night?",
+   "start": 0.05,
+   "end": 2.69
+  },
+  {
+   "text": "The Pole Star? Comment!",
+   "start": 3.06,
+   "end": 4.79
+  }
+ ],
+ "g5": [
+  {
+   "text": "Sir, look...",
+   "start": 0.05,
+   "end": 1.52
+  },
+  {
+   "text": "it winked again!",
+   "start": 2.02,
+   "end": 2.93
+  }
+ ]
+}

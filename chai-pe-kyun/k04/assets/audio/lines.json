@@ -1,0 +1,131 @@
+[
+ {
+  "id": "c1",
+  "speaker": "cop",
+  "start": 0.084,
+  "words": [
+   {
+    "text": "This star keeps winking at me!",
+    "start": 0.26,
+    "end": 2.528
+   },
+   {
+    "text": "Is it signalling me?",
+    "start": 2.708,
+    "end": 3.949
+   }
+  ]
+ },
+ {
+  "id": "g1",
+  "speaker": "guy",
+  "start": 4.053,
+  "words": [
+   {
+    "text": "Not winking, sir:",
+    "start": 4.099,
+    "end": 6.294
+   },
+   {
+    "text": "the air is dancing!",
+    "start": 6.474,
+    "end": 7.622
+   }
+  ]
+ },
+ {
+  "id": "g3",
+  "speaker": "guy",
+  "start": 7.726,
+  "words": [
+   {
+    "text": "Its light passes through our air,",
+    "start": 7.772,
+    "end": 9.874
+   },
+   {
+    "text": "and the air keeps shifting, warm and cold.",
+    "start": 10.054,
+    "end": 12.452
+   },
+   {
+    "text": "So the light gets jolted:",
+    "start": 12.632,
+    "end": 14.216
+   },
+   {
+    "text": "the star twinkles!",
+    "start": 14.396,
+    "end": 15.451
+   }
+  ]
+ },
+ {
+  "id": "c2",
+  "speaker": "cop",
+  "start": 15.605,
+  "words": [
+   {
+    "text": "So the AIR is winking?",
+    "start": 15.651,
+    "end": 17.948
+   },
+   {
+    "text": "The air deserves a challan!",
+    "start": 18.128,
+    "end": 19.72
+   }
+  ]
+ },
+ {
+  "id": "g4",
+  "speaker": "guy",
+  "start": 19.874,
+  "words": [
+   {
+    "text": "And planets don't twinkle!",
+    "start": 19.92,
+    "end": 22.411
+   },
+   {
+    "text": "Tonight, look: a bright point that stays steady is a planet!",
+    "start": 22.591,
+    "end": 25.267
+   }
+  ]
+ },
+ {
+  "id": "c3",
+  "speaker": "cop",
+  "start": 25.521,
+  "words": [
+   {
+    "text": "Which is the brightest star at night?",
+    "start": 25.567,
+    "end": 28.012
+   },
+   {
+    "text": "The Pole Star? Comment!",
+    "start": 28.192,
+    "end": 29.794
+   }
+  ]
+ },
+ {
+  "id": "g5",
+  "speaker": "guy",
+  "start": 30.747,
+  "words": [
+   {
+    "text": "Sir, look...",
+    "start": 30.793,
+    "end": 32.154
+   },
+   {
+    "text": "it winked again!",
+    "start": 32.334,
+    "end": 33.177
+   }
+  ]
+ }
+]
